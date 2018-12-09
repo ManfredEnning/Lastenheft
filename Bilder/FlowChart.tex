@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+\node (BV) at (6,0) [rectangle, rounded corners=8pt,draw=black,fill=white,minimum size=20mm,thick] {Be- und Entladevorgang};
+\node (BF) at (1,-4) [circle, rounded corners=8pt,draw=black,fill=white,minimum size=20mm, thick]
+	{Betriebsfahrt};
+\node (RF) at (4,-4) [circle, rounded corners=8pt,draw=black,fill=white,minimum size=20mm, thick]
+	{Rangierfahrt};
+\node (SF) at (7,-4) [circle, rounded corners=8pt,draw=black,fill=white,minimum size=20mm, thick]
+	{Sperrfahrt};
+\node (ZF) at (10,-4) [circle, rounded corners=8pt,draw=black,fill=white,minimum size=20mm, thick] {Zugfahrt};
+\node (Sbf) at (0,-10) [rectangle, rounded corners=8pt,draw=black,fill=white,minimum size=20mm, thick] {Satellitenbahnhof};
+\node (ZBA) at (4,-10) [rectangle, rounded corners=8pt,draw=black,fill=white,minimum size=20mm, thick] {Zugbildungsanlage};
+\node (ZBAA) at (9,-10) [rectangle, rounded corners=8pt,draw=black,fill=white,minimum size=20mm, thick] {Zugbildungsanlage mit Ablaufberg};
+
+\draw[<->, black!100, thick] (BV) to (BF);
+\draw[<->, black, thick] (BV) to (RF);
+\draw[<->, black, thick] (BV) to (SF);
+\draw[<->, black, thick] (BV) to (ZF);
+\draw[<->, black, thick] (BF) to (Sbf);
+\draw[<->, black, thick] (BF) to (ZBA);
+\draw[<->, black, thick] (BF) to (ZBAA);
+\draw[<->, black, thick] (RF) to (Sbf);
+\draw[<->, black, thick] (RF) to (ZBA);
+\draw[<->, black, thick] (RF) to (ZBAA);
+\draw[<->, black, thick] (SF) to (Sbf);
+\draw[<->, black, thick] (SF) to (ZBA);
+\draw[<->, black, thick] (SF) to (ZBAA);
+\draw[<->, black, thick] (ZF) to (Sbf);
+\draw[<->, black, thick] (ZF) to (ZBA);
+\draw[<->, black, thick] (ZF) to (ZBAA);
+\draw[->, red!50, very thick] (BV) to[bend right=10] (BF);
+\draw[<-, red!50, very thick] (BV) to[bend left=10] (BF);
+\draw[->, red!50, very thick] (BF) to[bend right=10] (Sbf);
+\draw[<-, red!50, very thick] (BF) to[bend left=10] (Sbf);
+\draw[->, red!50, very thick] (Sbf) to[bend left=10] (ZF);
+\draw[->, red!50, very thick] (ZF) to[bend left=10] (Sbf);
+\draw[->, red!50, very thick] (ZF) to[bend right=10] (ZBAA);
+\draw[<-, red!50, very thick] (ZF) to[bend left=10] (ZBAA);
+
+
+\end{tikzpicture}

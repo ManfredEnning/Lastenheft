@@ -1,0 +1,71 @@
+\section{Anforderungsbeschreibung}
+Es sind fünf Ausbaustufen für den Güterwagen 4.0 geplant. Hier eine Kurzbeschreibung der geplanten Ausbaustufen:\\\\
+\textbf{Ausbaustufe 1: Stromversorgung, Telematik und Datenvernetzung}\\
+\textit{ Hier Bild Klasse 1 einfügen}\\
+In der ersten Ausbaustufe ist geplant Bordelektronik und eine entsprechende Spannungsversorgung anzubringen. Diese kann als Batterie mit Speisung durch einen Radsatzgenerator, Solarpanels oder ähnlichem realisiert werden oder auch als Pufferbatterie mit Speisung durch AK. Dazu kommen verschiedene Antennen und Kurzstreckenfunk zur Kommunikation mit anderen Wagen. Auch Sensoren zur Erfassung verschiedener Telematikfunktionen sind geplant. \\
+In diesem Stadium ist der Wagen an sich noch nicht 'schlauer' als ein nicht ausgerüsteter Wagen, aber er kann sich mitteilen. Mitteilungen könne sein: Standort, Belandung, Laufleistung, (ungewöhnliche) Vibrationen (beispielsweise durch Falschstellen), Heißläuferdedektion, letzte Wartungsintervalle, Zustand der Bremse und vieles mehr.\\\\
+\textbf{Ausbaustufe 2: Ausbaustufe 1 + Automatisierung der Bremsbedienung}\\
+\textit{ Hier Bild Klasse 2 einfügen}\\
+In der zweiten Ausbaustufe ist eine zusätzliche Aktorik für Endabsperrhähne und Handbremse geplant. Dadurch kann ein Teil der Bremsbedienung automatisiert werden. \textbf{HIER MEHR INFOS}\\
+In diesem Stadium kann der Wagen die Bremsbedienung so weit selbst automatisieren, dass ein Einstellen der Bremsart anhand von anderen Wagen im Wagenzug, Gewicht und Bremsfähigkeit möglich ist. Außerdem ist die automatische Parkbremse realisiert.\\\\
+\textbf{Ausbaustufe 3: Ausbaustufe 2 + ep-''light''-Bremsen}\\
+\textit{Hier Bild Klasse 3 einfügen}\\
+In der dritten Ausbaustufe kommt zusätzlich zur Bremsbedienung auch die Ep-''light''-Bremse hinzu. Diese sorgt für eine für kürzere Bremswege und/oder höhere Geschwindigkeiten.\\
+In diesem Stadium \textit{TEXT}\\\\
+\textbf{Ausbaustufe 4: Ausbaustufe 3 + Automatisierter Zugschluss}\\
+\textit{Hier Bild Klasse 4 einfügen}\\
+In der vierten Ausbaustufe ist ein automatisierter Zugschluss geplant, neben der dann noch lästigen Aufgabe den kompletten Wagenzug langzulaufen um am letzen Wagen ein Zugschluss-Signal zu stecken soll mit dieser Funktion auch die Zugintigrität gewährleistet werden.\\\\
+\textbf{Ausbaustufe 5: Ausbaustufe 4 + Rangierantrieb}\\
+\textit{Hier Bild Klasse 5 einfügen}\\
+In der fnften ausbaustufe kommt der Rangierantrieb hinzu. Damit dieser ohne Probleme funktioniert brauch er er zusätzlich eine weitere Batterie und Umrichter. Zur Speisung der zweiten Batterie wird auch ein zweiter Radsatzgenerator eingebaut.\\
+In diesem Stadium kann von einem automatisierten Güterwagen gesprochen werden. Er kann selbstständig bei der Briefkastenbedienung assistieren und auf dem Werksgelände ohne Rangierlok verfahren.\\\\
+Die ersten drei Ausbaustufen sollen in diesem Projekt stattfinden. Ausbaustufe 4 und 5 in Folgeprojekten. Eine Zulassung soll über mindestens gleichbleibende Sicherheit bei kompletter Abschaltung des Systems stattfinden. Diese in Schritten stattfindende Automatisierung führt zu einem hohen Mehrwert des Güterwagens, nicht nur, im Einzelwagenverkehr.
+\subsection{Nicht funktionale Anforderungen}
+\begin{tabular}{r|l}
+	\hline
+	Anf. 0.0.0.0.	& 	Umgebungsbedingungen nach DIN EN 50155\\
+					& 	mindestens gleichbleibende Sicherheit des Systems\\
+	
+	\hline
+\end{tabular} \\
+\subsection{Bremse}
+\begin{tabular}{r|l}
+	\hline
+	Anf. 0.0.0.0.	&	elektrisches Lösen der Handbremse möglich 	\\
+	Anf.			&	elektrisches Lösen der Bremse möglich		\\
+	Anf.			&	automatische Bremsprobe für Bedienfahrt		\\
+	Anf.			&	automatische Bremsprobe für Rangierfahrt	\\
+	Anf.			&	automatische Bremsprobe für Sperrfahrt		\\
+	Anf.			&	automatische Bremsprobe für Zugfahrt		\\
+	Anf.			&	automatische Bremsberechnung anhand des Wagenzuges und der Lok möglich		\\
+	
+	\hline
+\end{tabular} \\
+\subsection{Kupplung}
+\begin{tabular}{r|l}
+	\hline
+	Anf. 0.0.0.0.	&	elektrische Vorbereitung von Kuppelstellen möglich\\
+					&	elektrische Vorbereitung von Trennstellen möglich\\
+	\hline
+\end{tabular}\\
+\subsection{Rechnerbasierte Anfordungen}
+\begin{tabular}{r|l}
+	\hline
+	Anf. 0.0.0.0.	&	digitales Bilden einer Wagengruppe möglich	\\
+	Anf. 0.0.0.0.	&	Betriebsparameter für Bedienfahrt			\\
+					&	Betriebsparameter für Rangierfahrt			\\
+					&	Betriebsparameter für Sperrfahrt			\\
+					&	Betriebsparameter für Zugfahrt				\\
+					&	automatische Wagengruppenbildung möglich	\\
+					&	Überprüfung der Wagenreihung möglich		\\
+					&	Überprüfung des technischen Zustands aus vorheriger Fahrt möglich\\
+					&	automatische Übermittlung von Transportunterlagen möglich\\
+	\hline
+\end{tabular}\\
+\subsection{Ideenspeicher}
+\begin{tabular}{r|l}
+	\hline
+	Anf. 0.0.0.0.	&	automatische Zugschlussanzeige				\\
+					&	Rangierantrieb								\\
+	\hline
+\end{tabular}

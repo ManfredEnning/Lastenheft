@@ -1,0 +1,45 @@
+\documentclass[11pt,a4paper,parskip]{scrartcl}
+%\def\xcolorversion{2.00}
+%\def\xkeyvalversion{1.8}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage[ngerman]{babel}
+\usepackage{pdfpages}
+\bibliographystyle{alphadin}
+%\usepackage[version=0.96]{pgf}
+\usepackage{tikz}
+%\usetikzlibrary{arrows,shapes,snakes,automata,backgrounds,petri}
+%\usepackage[latin1]{inputenc}
+\usepackage{verbatim}
+\author{Daniela Wilbring}
+\renewcommand{\familydefault}{\sfdefault}
+\title{Lastenheft}
+\subtitle{Neue Elektronik- und Kommunikationssysteme für den intelligenten, vernetzten Güterwagen\\FKZ 16ES0850K}
+
+\date{\today}
+
+\begin{document}
+\maketitle \newpage
+\tableofcontents \newpage
+\input{Kapitel/Zweck}% \newpage
+\input{Kapitel/Einleitung} %\newpage
+\input{Kapitel/Ist-Zustand} %\newpage
+\\
+\input{Bilder/FlowChart}
+\input{Kapitel/Anforderungsbeschreibung} %\newpage
+%\input{Kapitel/Schnittstellen} %\newpage
+%\input{Kapitel/Inbetriebnahme} %\newpage
+%\input{Kapitel/Qualitaetsanforderungen} %\newpage
+%\input{Kapitel/Projektdurchfuehrung} %\newpage
+%\bibliography{Literatur}
+%Anhang
+\appendix
+\input{Kapitel/Anhang_Abkuerzungen}
+\input{Kapitel/Anhang_Begriffserklaerung}
+\end{document}

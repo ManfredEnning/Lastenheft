@@ -1,80 +1,57 @@
 \section{Ist-Zustand}
-\textbf{bis zum 29.11.2018}
-
 Im Folgenden wir der Umlauf eines gedeckten Güterwagens beschrieben. Der Wagen wird in einem Gleisanschluss/RailPort mit palletiertem Gut beladen, läuft dann durch das deutsche/europäische Einzelwagensystem und wird in einer Ladestelle an einem Gleisanschluss oder RailPort entladen. Fokus der Beschreibung sind die durchzuführenden manuellen Tätigkeiten. Davon leitet sich im Folgenden ein Anforderungskatalog an einen aktiven, kommunikativen Güterwagen 4.0 ab, der viele oder alle der manuellen Tätigkeiten durch Technikfunktionen ersetzt.
 
-\subsection{Vorgänge an der Ladestelle/ im Gleisanschluss}
-
+\subsection{Vorgänge an der Ladestelle/im Gleisanschluss}
 \subsubsection{Fahrzeugbewegung}
-
-Die Bewegung von Wagen erfolgt prinzipiell auf Gleisen; Verzweigung von Fahrwegen erfordert Weichen. In kleinen und mittleren Gleisanschlüssen sind dies überwiegend handbetätigte Weichen. Je nach Wagenaufkommen kommen folgenden Methoden der Wagenbewegung in Betracht
+Die Bewegung von Wagen erfolgt prinzipiell auf Gleisen eine Verzweigung von Fahrwegen erfordert Weichen. In kleinen und mittleren Gleisanschlüssen sind dies überwiegend handbetätigte Weichen. Je nach Wagenaufkommen kommen folgenden Methoden der Wagenbewegung in Betracht:
 \begin{itemize}
 	\item Bedienung durch das EVU, welches auch die Zustellfahrten durchführt
 	\item Eigene Rangierlokomotive
 	\item Eigenes Rangierhilfsmittel
-		\subitem Gleisfahrbar (Rangierroboter)
-		\subitem Zweiwegefahrzeug
+	\begin{itemize}
+	    \item Gleisfahrbar (Rangierroboter)
+	    \item Zweiwegefahrzeug
+	\end{itemize}
 	\item Stationäre Verschubeinrichtung (Seilzuganlage)
 \end{itemize}
-Allen Methoden ist gemeinsam, dass Sie spezielle Personal-Fähigkeiten/-Ausbildung benötigen. Dies ist nicht zuletzt auf die Tatsache zurückzuführen, dass ein einmal in Bewegung gesetzter Güterwagen auch bei langsamer Fahrt eine hohe kinetische Energie aufweist und die Bedienung der Wagenbremsen (Luft- und/oder Handbremse) für ungeschultes Personal kompliziert und fehleranfällig ist.
+Allen Methoden ist gemeinsam, dass Sie spezielle Personalfähigkeiten bzw. eine entsprechende Ausbildung benötigen. Dies ist nicht zuletzt auf die Tatsache zurückzuführen, dass ein einmal in Bewegung gesetzter Güterwagen auch bei langsamer Fahrt eine hohe kinetische Energie aufweist. Zusätzlich ist die Bedienung der Wagenbremsen (Luft- und/oder Handbremse) für ungeschultes Personal kompliziert und fehleranfällig.
 
 \subsubsection{Beladen}
-
-Das Beladen von Güterwagen mit Paletten erfolgt von einer Rampe aus in der Regel per Gabelstapler. Im Gegensatz zur Heckbeladung von Lkw existieren kaum Lösungen zur Automatisierung der Beladung. Eine Ladekante ist meist für Einzelwagen oder kleine Gruppen (bis max. ca. 4 Wagen) gestaltet, so dass häufig Wagen an der Ladestelle getauscht werden müssen.
-
-Während/nach der Beladung muss die Ladung gegen Verrutschen gesichert werden. Bei Schiebewandwagen erfolgt dies häufig durch von Hand verschiebbare und zu sichernde Zwischenwände.
- 
+Das Beladen von Güterwagen mit Paletten erfolgt von einer Rampe aus in der Regel per Gabelstapler. Im Gegensatz zur Heckbeladung von Lkw existieren kaum Lösungen zur Automatisierung der Beladung. Eine Ladekante ist meist für Einzelwagen oder kleine Gruppen (bis max. ca. 4 Wagen) gestaltet, so dass häufig Wagen an der Ladestelle getauscht werden müssen.\\
+Während oder nach der Beladung muss die Ladung gegen Verrutschen gesichert werden. Bei Schiebewandwagen erfolgt dies häufig durch von Hand verschiebbare und zu sichernde Zwischenwände.\\
 Im Lkw-Bereich entstehen bereits Lösungen zur papierlosen Transportabwicklung einschließlich Behandlung von Gefahrgutdokumenten. Bei Bahntransport herrscht die klassische Methode der Übergabe von Frachtdokumenten an das EVU vor. Gelegentlich werden auch Wagen noch "`bezettelt"'.
-
-
-
-
 %Der Lkw wird meist in Längsrichtung durch das Heck an einem Tor / Vorsatzschleuse beladen. Für die eigentliche Beladung ist es  ungünstiger als die Seitenbeladung, es führt aber zu einer effizienten Flächennutzung in der Halle (Zeilenstruktur). Daher ist die Heckbeladung gerade bei Logistik/Verteilzentren und Speditionen heute die vorherrschende Methode.  
-
 %Für spezielle Güter / Wagen ist Beladung mit Hallenkran von oben üblich (Papier, Stahlcoils)
+
 \subsection{Abholen im Gleisanschluss}
-Die Abholung von Wagen erfolgt entweder durch das EVU unmittelbar an der Ladestelle oder -- wenn lokale Rangierhilfsmittel zur Verfügung stehen -- von einem Übergabegleis im Werksgelände. Die Bedienung des Anschlusses ist in der Regel Teil eines Umlaufs, in dem mehrere Anschlüsse nacheinander bedient werden. 
-
-Der oder die Wagen stehen im festgelegten Zustand zur Abholung bereit. Die Luftbremse ist gewöhnlich außer Funktion, der Reserveluftbehälter ist leer. Nach dem Ansetzen der Lok bzw. des aktuell letzten Wagens der Rangierabteilung ist manuell zu kuppeln. Der Lokführer oder Rangierbegleiter "`taucht"' dazu unter den Puffern durch und verbindet zunächst manuell die Schraubenkupplung. Danach wird die Hauptluftleitung gekuppelt und der Absperrhahn der HL geöffnet. Im Anschluss erfolgt eine (vereinfachte) Bremsprobe. Dazu wird zunächst am letzten Wagen der Gelöstzustand überprüft, dann der HL-Druck abgesenkt und das Führerbremsventil abgesperrt. Die Bremsen müssen anlegen. Im Anschluss wird zur Durchgängigkeitsprüfung wieder die Fahrstellung eingenommen und das HL Absperrventil des letzten Wagen für mindestens 15 Sekunden geöffnet. Die Bremsen müssen anlegen und wieder lösen.
-
+Die Abholung von Wagen erfolgt entweder durch das EVU unmittelbar an der Ladestelle oder -- wenn lokale Rangierhilfsmittel zur Verfügung stehen -- von einem Übergabegleis im Werksgelände. Die Bedienung des Anschlusses ist in der Regel Teil eines Umlaufs, in dem mehrere Anschlüsse nacheinander bedient werden. \\
+Der oder die Wagen stehen im festgelegten Zustand zur Abholung bereit. Die Luftbremse ist gewöhnlich außer Funktion, der Reserveluftbehälter ist leer. Nach dem Ansetzen der Lok bzw. des aktuell letzten Wagens der Rangierabteilung ist manuell zu kuppeln. Der Lokführer oder Rangierbegleiter "`taucht"' dazu unter den Puffern durch und verbindet zunächst manuell die Schraubenkupplung. Danach wird die Hauptluftleitung gekuppelt und der Absperrhahn der HL geöffnet. Im Anschluss erfolgt eine (vereinfachte) Bremsprobe. Dazu wird zunächst am letzten Wagen der Gelöstzustand überprüft, dann der HL-Druck abgesenkt und das Führerbremsventil abgesperrt. Die Bremsen müssen anlegen. Im Anschluss wird zur Durchgängigkeitsprüfung wieder die Fahrstellung eingenommen und das HL Absperrventil des letzten Wagen für mindestens 15 Sekunden geöffnet. Die Bremsen müssen anlegen und wieder lösen.\\
 Vor Beginn der Rangier-/Sperrfahrt sind ggf. Bremsstellungen und Lastwechseleinstellungen zu prüfen und eine Sichtprüfung (tWb, Stufe 1) der Wagen durchzuführen. Wenn die Zustellfahrt über die freie Strecke erfolgt, ist die Strecke durch das Stellwerk für Zugfahrten zu sperren die Fahrt über den Streckenabschnitt zwischen Anschluss und nächstgelegenem Bahnhof (Satellitenbahnhof) erfolgt als Sperrfahrt. Andernfalls handelt es sich um eine Rangierfahrt. In jedem Fall ist es eine Fahrt auf Sicht mit geringer Geschwindigkeit.
 
 \subsection{Fahrt zum Knotenbahnhof und Zugbildung}
-
-Satellitenbahnhöfe sind Bahnhöfe, in dem im Einzelwagenverkehr Zugfahrten enden oder beginnen. Sie sind in der Regel für die Übergabegruppe nur Durchgangsstation. Die Kombination der Übergabe mit weiteren Übergaben von anderen Anschlüssen/Satelliten erfolgt im Knotenbahnhof. Weil die Fahrt vom Satelliten- zum Knotenbahnhof eine Zugfahrt (mit in der Regel Geschwindigkeiten $\ge 80 km/h$) darstellt, ist vor Beginn der Fahrt eine Berechnung des Bremsgewichts und eine volle Bremsprobe durchzuführen..
-
-Knotenbahnhöfe können über Ablaufberge verfügen, in der Regel ist dies aber nicht der Fall und die Rangiervorgänge finden im so genannten Umsetzbetrieb statt. Dabei werden jeweils Wagengruppen angekuppelt (je nach Lok ist die Kupplung der Luft meist nicht notwendig) und durch eine Sägefahrt in ein anderes Gleis versetzt und dort angekuppelt. Das Stellen der Weichen für diese Vorgänge erfolgt meist vom Stellwerk des Bahnhofs aus oder durch eine EOW-Anlage.
-
+Satellitenbahnhöfe sind Bahnhöfe, in dem im Einzelwagenverkehr Zugfahrten enden oder beginnen. Sie sind in der Regel für die Übergabegruppe nur Durchgangsstation. Die Kombination der Übergabe mit weiteren Übergaben von anderen Anschlüssen/Satelliten erfolgt im Knotenbahnhof. Weil die Fahrt vom Satelliten- zum Knotenbahnhof eine Zugfahrt (mit in der Regel Geschwindigkeiten $\ge 80 km/h$) darstellt, ist vor Beginn der Fahrt eine Berechnung des Bremsgewichts und eine volle Bremsprobe durchzuführen.\\
+Knotenbahnhöfe können über Ablaufberge verfügen, in der Regel ist dies aber nicht der Fall und die Rangiervorgänge finden im so genannten Umsetzbetrieb statt. Dabei werden jeweils Wagengruppen angekuppelt (je nach Lok ist die Kupplung der Luft meist nicht notwendig) und durch eine Sägefahrt in ein anderes Gleis versetzt und dort angekuppelt. Das Stellen der Weichen für diese Vorgänge erfolgt meist vom Stellwerk des Bahnhofs aus oder durch eine EOW-Anlage.\\
 Auch vor der Abfahrt des aus Übergaben zusammengestellten Zuges ist wieder ein Bremsprobe und eine technische Wagenbehandlung fällig. Außerdem ist wieder das Bremsgewicht und die Bremshunderstel zu berechnen. Bei jeder Zugzusammenstellung sind Papiere zu prüfen und zu übergeben.
 
 \subsection{Fahrt zum Knotenbahnhof des Zielbereichs über einen oder mehrere Rangierbahnhöfe}
-Ab dem Knotenbahnhof sind die weiteren Fahrten/ Umstellvorgänge wie folgt charakterisiert:
+Ab dem Knotenbahnhof sind die weiteren Fahrten/Umstellvorgänge wie folgt charakterisiert:
 \begin{itemize}
     \item Züge haben idealerweise die volle Länge von 700 m
     \item Zugumstellungen erfolgen in den großen Rangierbahnhöfen
 \end{itemize}
-
-Wie bei einem Postverteilsystem haben die Rangierbahnhöfe die Aufgabe, hereinkommende Züge aufzulösen und die Wagen auf neue Züge umzustellen, die sie ihrem Ziel näher bringen. Dieser Abschnitt des Einzelwagenverkehrs ist hochautomatisiert und -produktiv. Dennoch verbleiben auch hier große Automatisierungslücken. Am Beispiel der Behandlung der Wagen in einem automatisierten Rangierbahnhof wird dies deutlich:
-
-Nach der Einfahrt des Zuges in die Einfahrgruppe wird durch den so genannten "`Vergleicher"' die Übereinstimmung der übermittelten Zugliste mit der tatsächlichen Reihung geprüft. Grund für diesen scheinbar überflüssigen Schritt ist die Tatsache, dass das Herausrangieren von fehlerhaften Wagen auf der Strecke (meist in der Folge einer Alarmmeldung einer Heißläuferortungsanlage) nicht in der IT berücksichtigt wird.
-
+Wie bei einem Postverteilsystem haben die Rangierbahnhöfe die Aufgabe, hereinkommende Züge aufzulösen und die Wagen auf neue Züge umzustellen, die sie ihrem Ziel näher bringen. Dieser Abschnitt des Einzelwagenverkehrs ist hochautomatisiert und -produktiv. Dennoch verbleiben auch hier große Automatisierungslücken. Am Beispiel der Behandlung der Wagen in einem automatisierten Rangierbahnhof wird dies deutlich:\\
+Nach der Einfahrt des Zuges in die Einfahrgruppe wird durch den so genannten "`Vergleicher"' die Übereinstimmung der übermittelten Zugliste mit der tatsächlichen Reihung geprüft. Grund für diesen scheinbar überflüssigen Schritt ist die Tatsache, dass das Herausrangieren von fehlerhaften Wagen auf der Strecke (meist in der Folge einer Alarmmeldung einer Heißläuferortungsanlage) nicht in der IT berücksichtigt wird.\\
 Die weiteren Schritt bei der Vorbereitung sind wie folgt:
 \begin{enumerate}
     \item Zugbremse anlegen, HL entlüften, Lok abkuppeln
     \item Zug festlegen (i.d.R. durch Hemmschuhe)
-    \item Wagen/ -gruppen vereinzeln. Dafür an den vorgesehenen Trennstellen nach Zerlegeliste Luft- und mechanische Schraubenkupplungen trennen und Luftbremse durch Ziehen am Lösezug lösen (Entlüften der A-Kammer/ des Reserveluftbehälters). Je nach Rangierverfahren wird die Schraubenkupplung komplett ausgehängt (vorentkuppelt abdrücken) oder sie wird lose eingehängt gelassen und erst am Ablaufberg durch den "`Stangler"' ausgeworfen.
+    \item Wagen/-gruppen vereinzeln. Dafür an den vorgesehenen Trennstellen nach Zerlegeliste Luft- und mechanische Schraubenkupplungen trennen und Luftbremse durch Ziehen am Lösezug lösen (Entlüften der A-Kammer/des Reserveluftbehälters). Je nach Rangierverfahren wird die Schraubenkupplung komplett ausgehängt (vorentkuppelt abdrücken) oder sie wird lose eingehängt gelassen und erst am Ablaufberg durch den "`Stangler"' ausgeworfen.
 \end{enumerate}
-
-Wenn diese Vorbereitungen abgeschlossen sind, ist der Zug zum Abdrücken freigegeben. Die Abdrücklokomotive schiebt dann -- nach dem Entfernen der Hemmschuhe -- den Zug mit Geschwindigkeiten von 1,2 bis 3 m/s über den Ablaufberg. Hinter dem Gipfel vereinzeln sich die Wagen durch den Schwerkrafteinfluss, werden durch ein gestaffeltes System von mechanischen Gleisbremsen auf die Eintrittsgeschwindigkeit im Richtungsgleis heruntergebremst und laufen langsam in die Richtungsgleise ein.  Klassisch ist das das Arbeitsfeld der Hemmschuhleger, die durch gezieltes Platzieren von Hemmschuhen die Wagen punktgenau vor dem letzten Wagen im Richtungsgleis abbremsen.
-
-In den großen Rangierbahnhöfen sind die Fortschritte der Automatisierungstechnik sichtbar. In allen Anlagen gibt es automatische Steuerungen der Verteilweichen. In einigen Anlagen sind die Ablaufsteuerungen mit einer automatischen Steuerung der Abdrücklokomotiven gekuppelt, so das während des Abdrückvorgangs kein manueller Steuereingriff notwendig ist (Die Rückfahrt zum nächsten Einsatz bleibt aber Handarbeit).
-
-In allen Anlagen werden die Bremsen (Bergbremse und Talbremse) geregelt betrieben, so dass unterschiedliche Laufeigenschaften der Wagen und Windeinflüsse automatisch kompensiert werden und in den meisten Anlagen ist das Legen von Hemmschuhen zur Zielbremsung ersetzt worden durch automatische Fördereinrichtungen (Räum- und Beidrückförderer).
-
-Wenn dieser hochautomatisierte Prozess für den betrachteten Wagen im Richtungsgleis abgeschlossen ist, geht es wieder in Handarbeit weiter:
-
+Wenn diese Vorbereitungen abgeschlossen sind, ist der Zug zum Abdrücken freigegeben. Die Abdrücklokomotive schiebt dann -- nach dem Entfernen der Hemmschuhe -- den Zug mit Geschwindigkeiten von 1,2 bis 3 m/s über den Ablaufberg. Hinter dem Gipfel vereinzeln sich die Wagen durch den Schwerkrafteinfluss, werden durch ein gestaffeltes System von mechanischen Gleisbremsen auf die Eintrittsgeschwindigkeit im Richtungsgleis heruntergebremst und laufen langsam in die Richtungsgleise ein.  Klassisch ist das das Arbeitsfeld der Hemmschuhleger, die durch gezieltes Platzieren von Hemmschuhen die Wagen punktgenau vor dem letzten Wagen im Richtungsgleis abbremsen.\\
+In den großen Rangierbahnhöfen sind die Fortschritte der Automatisierungstechnik sichtbar. In allen Anlagen gibt es automatische Steuerungen der Verteilweichen. In einigen Anlagen sind die Ablaufsteuerungen mit einer automatischen Steuerung der Abdrücklokomotiven gekuppelt, so das während des Abdrückvorgangs kein manueller Steuereingriff notwendig ist (Die Rückfahrt zum nächsten Einsatz bleibt aber Handarbeit).\\
+In allen Anlagen werden die Bremsen (Bergbremse und Talbremse) geregelt betrieben, so dass unterschiedliche Laufeigenschaften der Wagen und Windeinflüsse automatisch kompensiert werden und in den meisten Anlagen ist das Legen von Hemmschuhen zur Zielbremsung ersetzt worden durch automatische Fördereinrichtungen (Räum- und Beidrückförderer).\\
+Wenn dieser hochautomatisierte Prozess für den betrachteten Wagen im Richtungsgleis abgeschlossen ist, geht es wieder in Handarbeit weiter:\\
 Nach dem Schließen des Richtungsgleise für weitere Abläufe werden die Wagen provisorisch miteinander gekuppelt und die Wagengruppe wird in ein Gleis für die Nachbehandlung gezogen. (In einigen Anlagen erfolgt die Nachbehandlung im Richtungsgleis). Dort werden die folgenden Schritte durchgeführt:
-
 \begin{enumerate}
     \item Mechanisch kuppeln
     \item Luftleitungen kuppeln, HL Absperrhähne öffnen
@@ -82,18 +59,7 @@ Nach dem Schließen des Richtungsgleise für weitere Abläufe werden die Wagen p
     \item Bremsberechnung (Zuggewicht, Bremsgewicht, Lokeigenschaften)
     \item Bremsstellungswechsel je nach Bremsart der folgenden Zugart
     \item Volle Bremsprobe, in der Regel mittels stationärer Bremsprobeanlage
-    \item Technische Wagenbehandlung Stufe 3
+    \item Technische Wagenbehandlung, Stufe 3
 \end{enumerate}
-
-Der so vorbereitete Zug wird dann für den nächsten Abschnitt von der vorgesehenen Streckenlok übernommen. Nach einer vereinfachten Bremsprobe kann die Zugfahrt beginnen.
-
-
-
-
-
-
-
-
-
-
-
+Der so vorbereitete Zug wird dann für den nächsten Abschnitt von der vorgesehenen Streckenlok übernommen. Nach einer vereinfachten Bremsprobe kann die Zugfahrt beginnen.\\
+\textbf{Hier fehlt irgendwas wie der Zug wieder an einer Ladestelle ankommt}

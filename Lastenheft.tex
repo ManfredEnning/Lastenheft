@@ -13,26 +13,44 @@
 \usepackage{pdfpages}
 \bibliographystyle{alphadin}
 %\usepackage[version=0.96]{pgf}
-\usepackage{tikz}
-%\usetikzlibrary{arrows,shapes,snakes,automata,backgrounds,petri}
-%\usepackage[latin1]{inputenc}
+\usepackage{tikz} %Tikz
+
 \usepackage{verbatim}
+
+
+%Deckblatt Beginn
 \author{Daniela Wilbring}
 \renewcommand{\familydefault}{\sfdefault}
 \title{Lastenheft}
 \subtitle{Neue Elektronik- und Kommunikationssysteme für den intelligenten, vernetzten Güterwagen\\FKZ 16ES0850K}
-
 \date{\today}
+%Deckblattt Ende
 
 \begin{document}
+%Anforderungsnummerierung nach Raphael Beginn
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\theoremstyle{definition}
+\newtheorem{feat}{Merkmal}
+\newtheoremstyle{definition}% name of the style to be used
+  {5pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {5pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {}% measure of space to indent
+  {\bfseries}% name of head font
+  {}% punctuation between head and body
+  {\newline}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+%Anforderungsnummerierung nach Raphael Ende
+
+\setlength{\parskip}{5mm plus5mm minus5mm} %Absatzlänge
 \maketitle \newpage
 \tableofcontents \newpage
 \input{Kapitel/Zweck}% \newpage
 \input{Kapitel/Einleitung} %\newpage
-\input{Kapitel/Ist-Zustand} %\newpage
-\\
-%\input{Bilder/FlowChart}
+\input{Kapitel/Ist-Zustand} \newpage
 \input{Kapitel/Anforderungsbeschreibung} %\newpage
+\input{Kapitel/Anforderungen.tex}%\newpage
 %\input{Kapitel/Schnittstellen} %\newpage
 %\input{Kapitel/Inbetriebnahme} %\newpage
 %\input{Kapitel/Qualitaetsanforderungen} %\newpage

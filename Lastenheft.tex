@@ -14,6 +14,10 @@
 \bibliographystyle{alphadin}
 %\usepackage[version=0.96]{pgf}
 \usepackage{tikz} %Tikz
+\usepackage[acronym, toc]{glossaries} %Glossar
+\makeglossaries
+\input{Kapitel/Glossar.tex}
+\input{Kapitel/Abkuerzungen.tex}
 \usepackage{verbatim}
 
 %Anforderungsnummerierung nach Raphael Beginn
@@ -58,6 +62,6 @@
 %\bibliography{Literatur}
 %Anhang
 \appendix
-\input{Kapitel/Anhang_Abkuerzungen}
-\input{Kapitel/Anhang_Begriffserklaerung}
+\printglossary[title= Abkürzungen, toctitle=Abkürzungen, type=\acronymtype]
+\printglossary
 \end{document}

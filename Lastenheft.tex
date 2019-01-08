@@ -48,20 +48,26 @@
 
 \setlength{\parskip}{5mm}% plus5mm minus5mm} %Absatzlänge
 \maketitle \newpage
+\input{Kapitel/Zweck}
+\input{Kapitel/Revisionshistorie.tex}\newpage
 \tableofcontents \newpage
-\input{Kapitel/Zweck}% \newpage
+\printglossary[title= Abkürzungen, toctitle=Abkürzungen, type=\acronymtype]
+\printglossary\newpage
 \input{Kapitel/Einleitung} %\newpage
 \input{Kapitel/Ist-Zustand} %\newpage
 \input{Kapitel/Soll-Zustand.tex} %\newpage
 \input{Kapitel/Anforderungsbeschreibung} %\newpage
 \input{Kapitel/Anforderungen.tex}%\newpage
-%\input{Kapitel/Schnittstellen} %\newpage
+
 %\input{Kapitel/Inbetriebnahme} %\newpage
 %\input{Kapitel/Qualitaetsanforderungen} %\newpage
 %\input{Kapitel/Projektdurchfuehrung} %\newpage
+
+%Verzeichnisse
 %\bibliography{Literatur}
+\newpage
 %Anhang
 \appendix
-\printglossary[title= Abkürzungen, toctitle=Abkürzungen, type=\acronymtype]
-\printglossary
+\input{Kapitel/Anhang_TWb.tex}
+\input{Kapitel/Anhang_Bremsprobe.tex}
 \end{document}

@@ -12,6 +12,52 @@ mit Lust = ungebremst, ohne Luft = gebremst
 Die Bremshundertstel werden bisher, genau wie das Bremsgewicht, händisch mittels Bremszettel berechnet. \textbf{BILD}. Auf diesem Vordruck trägt der Triebfahrzeugführer Achszahl, Zugmasse und Bremsgewichte des Zuges ein. Daraus berechnen sich die Bremshundertstel. Nach Vergleich dieser mit den Mindest-Bremshundertstel der Strecke, ergibt sich Höchstgeschwindigkeit und Bremsstellung. die Bremsstellung wird nach jeder neuen Zusammenstellung und vor Fahrtantritt, siehe Kapitel \ref{sec:UEdWagen}, neu berechnet.\par
 Diese manuelle Berechnung ist für Triebfahrzeugführer tägliche Arbeit, dennnoch ist sie Fehleranfällig und kann durch Rechnereinsatz einfach automatisiert werden.
 
+\subsubsection{automatische Bremse}
+\textbf{TSI-Konformität des Steuerventils}\\ Bremsarten G und P mittels Umsteller und automatische Lastabbremsung (sichere Rückmeldung!)\\ 1.	Das Relaisventil ist für automatische Lastabbremsung mit Wiegeventil vorgesehen. \par
+\textbf{fernbetättigte Absperrhähne}\\1.	Die Endabsperrhähne verfügen über einen freien Querschnitt von 1,25".
+2.	Die Endabsperrhähne sind bistabil, d.h. verbleiben ohne Betätigung in ihrem letzten Zustand.
+3.	Die Betätigungszeit für den Übergang Öffnen-Schließen beträgt maximal 60 s.
+4.	Das Funktionsprinzip der Hähne ist geeignet, die Anforderungen der DIN EN 14601 erfüllen zu können. Für die Demonstratoren und Labormuster muss diese Norm nicht erfüllt werden.
+5.	Eine fahrzeugseitige Verschraubung nach G1 1$/$4i (DIN EN ISO 228-1) ist zu bevorzugen. Für den Demonstrator kann die Kompatibilität durch einen Adapter hergestellt werden.
+6.	Kupplungsseitig ist eine Verschraubung mit Whitworth-Gewinde mit stumpfen Gewinden für G1 1⁄4i—Leitungen zu bevorzugen. Für den Demonstrator kann die Kompatibilität durch einen Adapter hergestellt werden.
+ \par
+\textbf{Zustandsanzeige Bremse}\\ BILD, kann man kaufen. Norgren nachzertifizierbar?\\ 1.	Mindestens eine Anzeige je Fahrzeugende zum Einbau am Pufferträger ist vorzusehen.2.	Die Anzeige stellt den Zustand der Bremskupplung (drucklos/druckbeaufschlagt) dar.
+3.	Die Anzeige muss Überdrücke > 0,5 bar in den Bremskupplungen anzeigen, bspw. durch die Farbe "Rot" im Schauglas.
+4.	Bei Unterschreiten des Drucks wird bspw. die Farbe "Grün" angezeigt.
+5.	Die Anzeige muss im stromlosen Zustand verfügbar sein.\par
+\textbf{Fernbetätigung BRemse}\\ Schnelllösen, Bremse aus, Bremsstellung, Feststellbremse\\ 1.	Es müssen folgende Funktionen fernbetätigt werden können:
+–	Schnelllösen 1.	Ein Löseimpuls löst die Schnelllösefunktion des Steuerventils aus.
+2.	Der Löseimpuls kann elektromechanisch oder pneumatisch auf das Steuerventil übertragen werden.
+–	Bremse aus: 1.	Die Funktion ist bistabil umzusetzen.
+2.	Es werden folgende Verbindungen geöffnet bzw. geschlossen:
+.	HLL - SV (Entlüftung zum SV)
+.	SV - R (Entlüftung zum SV)
+.	SV - Cv (Entlüftung zum Relaisventil)
+3.	Die Betätigung muss in weniger als 10 Sekunden durchgeführt werden.
+–	Bremsstellung 1.	Die Bremsstellung wird elektrisch bistabil durch Verstellen des SV umgestellt.
+2.	Eine Rückmeldung ist vorzusehen.\\
+1.	Die Feststellbremse kann unabhängig von der pneumatischen Energie im Wagen angelegt und gelöst werden.
+2.	Das Anlegen und Lösen erfolgt bistabil durch eletrischen Impuls.
+3.	Eine Rückmeldefunktion für den gelösten Zustand ist vorzusehen.
+4.	Die Bremskraft am Bremszylinder beträgt 7500 kN (für 2%-Gefälle, 90 t, Klotzbremse).
+5.	Alternative Lösungen, wie Federspeicher oder FT Park Lock können vorgeschlagen werden.\par
+\textbf{ep-bremsen}\par
+1.	Ein ep-Brems-Ventil wird mit der HLL verbunden.
+2.	Das Ventil wird zum Bremsen bestromt.
+3.	Das Ventil entlüftet die HLL im Wagen in (3,5...5) s von Regelbetriebsdruck auf 3,5 bar.
+\textbf{Messung C-Druck}\\
+1.	Der Bremszylinderdruck (D-Cruck) wird gemessen.
+2.	Der Sensor arbeitet als Stromsensor (4-20 mA).
+3.	Der Messbereich ist (0...5) bar.
+4.	Die Messunsicherheit und Auflösing ist so gewählt, dass die erste und letzte Bremsstufe (0,45 bar Cv) sicher erkannt werden. Eine Messunsicherheit von 0,05 bar erfüllt diese Anforderung.
+\par
+\textbf{Steuerventil} \\ Aus Zulassungsgründen wird ein UIC/TSI-kompatibels Steuerventil eingesetzt\\1.	Es wird ein TSI-konformes Steuerventil für die pneumatische Bremse eingesetzt.
+2.	Das Steuerventil verfügt über die Bremsstellungen G und P.
+3.	Das Steuerventil verfügt über automatisches Schnelllösen.
+4.	Das Relaisventil ist vorzugsweise nicht integriert.
+
+
+
 \subsection{Kupplung}
 Wie in Kapitel \ref{sec:Personal} angedeutet und in Kapitel \ref{sec:LuftumechKup} beschrieben, ist das mechanische Kuppeln und das Kuppeln von Luft aufwändig, körperlich anstrengend und fehlerbehaftet. \par
 Zur Automatisierung von mechanischen Kupplungen gibt es Kupplungsrobotoren\footnote{Zum Beispiel die Bahn-Kupplungs-Robotoren BaKuRo und EntKuRo}, dort muss aber weiter händisch Luft gekuppelt werden \textbf{Ist das so?}. Alternativ ist die Automatische Kupplung eine Lösung, aber auch nach deren Einführung im vorigen Jahrhundert ist eine flächendeckende Nutzung im Güterverkehr noch nicht realisiert.\par
@@ -33,6 +79,7 @@ Neue Systeme benötigen immer Zeit zur Einführung und Schulung des Personlas. D
 \textit{\textbf{Probleme:} Annahme der Systeme, Kosten für die Schulung}
 
 \subsection{Informationstechnische Prozesse}
+1.	Alle elektrischen Komponenten arbeiten mit 24 V.
 \subsubsection{Bremsprobe}
 \textbf{SIL-Bewertung - liegt nicht an, liegt an, sicheres lösen, sicheres stellen}.\par
 Die \gls{Bremsprobe} findet zur Vorbereitung einer Sperr-, Rangier- oder Zugfahrt statt und überprüft die Funktionsfähigkeit des Bremssystems im Zug- oder Wagenverbund.\par

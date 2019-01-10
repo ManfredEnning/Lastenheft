@@ -13,6 +13,7 @@
 \usepackage{pdfpages}
 %\usepackage[version=0.96]{pgf}
 \usepackage{tikz} %Tikz
+\usepackage{pgfplots}
 \usepackage[acronym, toc]{glossaries} %Glossar
 \makeglossaries
 \input{Kapitel/Glossar.tex}
@@ -81,16 +82,14 @@
 
 \input{Kapitel/Revisionshistorie.tex}\newpage
 \tableofcontents \newpage
-\printglossary[title= Abkürzungen, toctitle=Abkürzungen, type=\acronymtype]
-\printglossary\newpage
-\input{Kapitel/Einleitung} %\newpage
+%\printglossary[title= Abkürzungen, toctitle=Abkürzungen, type=\acronymtype]
+%\printglossary\newpage
+%\input{Kapitel/Einleitung} %\newpage
 \input{Kapitel/Ist-Zustand} %\newpage
 \input{Kapitel/Soll-Zustand.tex} %\newpage
 \input{Kapitel/Anforderungsbeschreibung} %\newpage
-\input{Kapitel/Anforderungen.tex}%\newpage
-\input{Kapitel/Fazit.tex} %\newpage
-%\input{Kapitel/Qualitaetsanforderungen} %\newpage
-%\input{Kapitel/Projektdurchfuehrung} %\newpage
+%\input{Kapitel/Anforderungen.tex}%\newpage
+%\input{Kapitel/Fazit.tex} %\newpage
 
 %Verzeichnisse
 \listoffigures \addcontentsline{toc}{section}{Abbildungsverzeichnis}

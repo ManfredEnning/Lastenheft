@@ -1,62 +1,81 @@
 \section{Soll-Zustand}
 Der Ist-Zustand im vorigen Kapitel hat gezeigt, dass viele manuelle Tätigkeiten für die Beladung und Abfertigung sowie die Rangiervorgänge von Güterwagen im Einzelwagenverkehr notwendig sind.\par
-Dies verursacht hohe (Personal-)Kosten durch die benötigte Zeit und das benötigte Personal, sowie auch Kosten an der Verladestelle, wenn diese aufgrund von Kupplungs- und Rangiervorgängen still steht.\par
-Bei einem Umbau für die Demonstratoren muss darauf geachtet werden, dass ein vollständiger Rückbau der neuen einrichtungen möglich ist, aber alls so bahntauglich ist, dass die Demonstratoren für ein Folgeprojekt oder Feldversuche genutzt werden können. Diese Projekt muss nicht sofort zulassungsfähig sein, sollte aber eine Basis dazu bilden. \par
-An der Bewegung der Wagen im Wagenverband an sich mit Hilfe einer Lok oder eines anderen Rangierhilfsmittel kann nichts groß automatisiert werden. Siehe dazu auch Kapitel \ref{sec:Zustellfahrt}, \ref{sec:Zugfahrt} und \ref{sec:Rangierfahrt}. Automatisierungen können aber selbst verständlich im Bereich der Kupplung, Bremse oder auch der informationstechnischen Prozesse stattfinden.\par
-Zur besseren Einordnung sollen nun einige Komponenten definiert und erläutert werden aus denen sich verschiedene Stufen ergeben und aus denen sich wiederum später verschiedene Anforderungen ergeben.
+Dies verursacht hohe Kosten durch die benötigte Zeit (siehe dazu auch den Zeitvergleich in Abbildung \ref{fig:Zeitvergleich} auf Seite \pageref{fig:Zeitvergleich}) und das benötigte Personal, sowie auch Kosten an der Verladestelle, wenn diese aufgrund von Kupplungs- und Rangiervorgängen still steht.\par
+Bei einem Umbau für die Demonstratoren muss darauf geachtet werden, dass ein voll- ständiger Rückbau der neuen Einrichtungen möglich ist, aber auch so bahntauglich ist, dass die Demonstratoren für ein Folgeprojekt oder Feldversuche genutzt werden können. Diese Projekt muss nicht sofort zulassungsfähig sein, sollte aber eine Basis dazu bilden. \par
+An der Bewegung der Wagen im Wagenverband an sich mit Hilfe einer Lok oder eines anderen Rangierhilfsmittel soll hier nichts automatisiert werden. Siehe dazu auch Kapitel \ref{sec:Zustellfahrt}, \ref{sec:Zugfahrt} und \ref{sec:Rangierfahrt}. Automatisierungen können und sollen aber selbst verständlich im Bereich der Kupplung, Bremse oder auch der informationstechnischen Prozesse stattfinden.\par
+Zur besseren Einordnung sollen nun diese Komponenten definiert und erläutert werden aus denen sich verschiedene Stufen ergeben und aus denen sich wiederum später verschiedene Anforderungen ergeben.
 
 \subsection{Bremse}
-\subsubsection{Parkbremse}
-mit Lust = ungebremst, ohne Luft = gebremst
-\subsubsection{Bremshundertstel/Bremsberechnung}
-Die Bremshundertstel werden bisher, genau wie das Bremsgewicht, händisch mittels Bremszettel berechnet. \textbf{BILD}. Auf diesem Vordruck trägt der Triebfahrzeugführer Achszahl, Zugmasse und Bremsgewichte des Zuges ein. Daraus berechnen sich die Bremshundertstel. Nach Vergleich dieser mit den Mindest-Bremshundertstel der Strecke, ergibt sich Höchstgeschwindigkeit und Bremsstellung. die Bremsstellung wird nach jeder neuen Zusammenstellung und vor Fahrtantritt, siehe Kapitel \ref{sec:UEdWagen}, neu berechnet.\par
-Diese manuelle Berechnung ist für Triebfahrzeugführer tägliche Arbeit, dennnoch ist sie Fehleranfällig und kann durch Rechnereinsatz einfach automatisiert werden.
+Die Einführung einer automatischen Bremse soll vor allem zur Zeitersparnis bei der Zugvorbereitung und Bremsprobe führen.\par
+Besonders wichtig zur Einführung der automatisierten Bremse ist die Fernbetätigung dieser. Sie sollte vorallem die Möglichkeiten zum Schnelllösen, aus- und einschalten der Bremse, Änderung der Bremsstellung und Einstellen der Feststellbremse (auch automatische Parkbremse) haben.
+Durch ein TSI-konformes Steuerventil soll die Umstellung der Bremsarten mittels G/P-Umsteller automatisiert werden. Auch eine automatische Lastabbremsung mittels Wiegeventil ist vorgesehen. Hier ist bei beiden Funktionen vor allem auf eine sichere Funktion und Rückmeldung zu achten.
+Für diese sichere Übertragung ist die Messung des C-Drucks von größter Wichtigkeit.
+Auch fernbetätigte Absperrhähne sollen zu dieser Zeiteinsparung führen. 
+Da der Zustand der Bremse nicht mehr zwangsläufig von außen sichtbar ist, ist eine Bremszustandsanzeige am Wagen anzubringen. 
+Durch eine Automatisierung der Bremse ist nun auch eine ep-Bremsung möglich.
 
-\subsubsection{automatische Bremse}
-\textbf{TSI-Konformität des Steuerventils}\\ Bremsarten G und P mittels Umsteller und automatische Lastabbremsung (sichere Rückmeldung!)\\ 1.	Das Relaisventil ist für automatische Lastabbremsung mit Wiegeventil vorgesehen. \par
-\textbf{fernbetättigte Absperrhähne}\\1.	Die Endabsperrhähne verfügen über einen freien Querschnitt von 1,25".
-2.	Die Endabsperrhähne sind bistabil, d.h. verbleiben ohne Betätigung in ihrem letzten Zustand.
-3.	Die Betätigungszeit für den Übergang Öffnen-Schließen beträgt maximal 60 s.
-4.	Das Funktionsprinzip der Hähne ist geeignet, die Anforderungen der DIN EN 14601 erfüllen zu können. Für die Demonstratoren und Labormuster muss diese Norm nicht erfüllt werden.
-5.	Eine fahrzeugseitige Verschraubung nach G1 1$/$4i (DIN EN ISO 228-1) ist zu bevorzugen. Für den Demonstrator kann die Kompatibilität durch einen Adapter hergestellt werden.
-6.	Kupplungsseitig ist eine Verschraubung mit Whitworth-Gewinde mit stumpfen Gewinden für G1 1⁄4i—Leitungen zu bevorzugen. Für den Demonstrator kann die Kompatibilität durch einen Adapter hergestellt werden.
- \par
-\textbf{Zustandsanzeige Bremse}\\ BILD, kann man kaufen. Norgren nachzertifizierbar?\\ 1.	Mindestens eine Anzeige je Fahrzeugende zum Einbau am Pufferträger ist vorzusehen.2.	Die Anzeige stellt den Zustand der Bremskupplung (drucklos/druckbeaufschlagt) dar.
-3.	Die Anzeige muss Überdrücke > 0,5 bar in den Bremskupplungen anzeigen, bspw. durch die Farbe "Rot" im Schauglas.
-4.	Bei Unterschreiten des Drucks wird bspw. die Farbe "Grün" angezeigt.
-5.	Die Anzeige muss im stromlosen Zustand verfügbar sein.\par
-\textbf{Fernbetätigung BRemse}\\ Schnelllösen, Bremse aus, Bremsstellung, Feststellbremse\\ 1.	Es müssen folgende Funktionen fernbetätigt werden können:
-–	Schnelllösen 1.	Ein Löseimpuls löst die Schnelllösefunktion des Steuerventils aus.
-2.	Der Löseimpuls kann elektromechanisch oder pneumatisch auf das Steuerventil übertragen werden.
-–	Bremse aus: 1.	Die Funktion ist bistabil umzusetzen.
-2.	Es werden folgende Verbindungen geöffnet bzw. geschlossen:
-.	HLL - SV (Entlüftung zum SV)
-.	SV - R (Entlüftung zum SV)
-.	SV - Cv (Entlüftung zum Relaisventil)
-3.	Die Betätigung muss in weniger als 10 Sekunden durchgeführt werden.
-–	Bremsstellung 1.	Die Bremsstellung wird elektrisch bistabil durch Verstellen des SV umgestellt.
-2.	Eine Rückmeldung ist vorzusehen.\\
-1.	Die Feststellbremse kann unabhängig von der pneumatischen Energie im Wagen angelegt und gelöst werden.
-2.	Das Anlegen und Lösen erfolgt bistabil durch eletrischen Impuls.
-3.	Eine Rückmeldefunktion für den gelösten Zustand ist vorzusehen.
-4.	Die Bremskraft am Bremszylinder beträgt 7500 kN (für 2%-Gefälle, 90 t, Klotzbremse).
-5.	Alternative Lösungen, wie Federspeicher oder FT Park Lock können vorgeschlagen werden.\par
-\textbf{ep-bremsen}\par
-1.	Ein ep-Brems-Ventil wird mit der HLL verbunden.
-2.	Das Ventil wird zum Bremsen bestromt.
-3.	Das Ventil entlüftet die HLL im Wagen in (3,5...5) s von Regelbetriebsdruck auf 3,5 bar.
-\textbf{Messung C-Druck}\\
-1.	Der Bremszylinderdruck (D-Cruck) wird gemessen.
-2.	Der Sensor arbeitet als Stromsensor (4-20 mA).
-3.	Der Messbereich ist (0...5) bar.
-4.	Die Messunsicherheit und Auflösing ist so gewählt, dass die erste und letzte Bremsstufe (0,45 bar Cv) sicher erkannt werden. Eine Messunsicherheit von 0,05 bar erfüllt diese Anforderung.
-\par
-\textbf{Steuerventil} \\ Aus Zulassungsgründen wird ein UIC/TSI-kompatibels Steuerventil eingesetzt\\1.	Es wird ein TSI-konformes Steuerventil für die pneumatische Bremse eingesetzt.
-2.	Das Steuerventil verfügt über die Bremsstellungen G und P.
-3.	Das Steuerventil verfügt über automatisches Schnelllösen.
-4.	Das Relaisventil ist vorzugsweise nicht integriert.
+\subsubsection{Fernbetätigung Bremse}
+Die Fernbetätigung der Bremse soll vorallem die Zeit des entlanglaufen des Zuges beim Prüfen der Bremse ersparen. Es müssen folgende Funktionen fernbetätigt werden können:
+\begin{itemize}
+    \item Schnelllösen
+    \begin{itemize}
+        \item Ein Löseimpuls löst die Schnelllösefunktion des Steuerventils aus.
+        \item Der Löseimpuls kann elektromechanisch oder pneumatisch auf das Steuerventil übertragen werden.
+    \end{itemize}
+    \item Bremse aus
+    \begin{itemize}
+        \item Die Funktion ist bistabil umzusetzen.
+        \item 	Es werden folgende Verbindungen geöffnet bzw. geschlossen:
+        \begin{itemize}
+            \item HLL - SV (Entlüftung zum SV)
+            \item SV - R (Entlüftung zum SV)
+            \item SV - Cv (Entlüftung zum Relaisventil)
+        \end{itemize}
+        \item Die Betätigung muss in weniger als 10 Sekunden durchgeführt werden.
+    \end{itemize}
+    \item Bremsstellung
+    \begin{itemize}
+        \item Die Bremsstellung wird elektrisch bistabil durch Verstellen des SV umgestellt.
+        \item Eine Rückmeldung ist vorzusehen.
+    \end{itemize}
+    \item Festellbremse
+    \begin{itemize}
+        \item Die Feststellbremse kann unabhängig von der pneumatischen Energie im Wagen angelegt und gelöst werden.
+        \item Das Anlegen und Lösen erfolgt bistabil durch eletrischen Impuls.
+        \item Eine Rückmeldefunktion für den gelösten Zustand ist vorzusehen.
+        \item Die Bremskraft am Bremszylinder beträgt ??kN (für 2\%-Gefälle, 90 t, Klotzbremse).
+        \item Alternative Lösungen, wie Federspeicher oder FT Park Lock können vorgeschlagen werden
+        \item mit Luft = ungebremst, ohne Luft = gebremst
+    \end{itemize}
+\end{itemize}
 
+\subsubsection{Steuerventil}
+Die Bremsarten G und P sollen mittels Aktor sicher umgestellt und detektiert werden. Auch eine Übertragung der aktuellen Stellung soll sicher gemeldet werden. Aus Zulassungsgründen soll ein UIC/TSI-kompatibels Steuerventil eingesetzt werden. Dieses verfügt dann über die Bremsstellungen G und P, über automatisches Schnelllösen. \par
+Ein zusätzliches Relaisventil ist für die automatische Lastabbremsung mittels Wiegeventil vorgesehen. Dieses ist vorzugsweise nicht im Steuerventil integriert.
 
+\subsubsection{Messung C-Druck}
+Der Bremszylinderdruck (D-Cruck) wird gemessen. 
+%2.	Der Sensor arbeitet als Stromsensor (4-20 mA).
+%3.	Der Messbereich ist (0...5) bar.
+Die Messunsicherheit und Auflösing ist so gewählt, dass die erste und letzte Bremsstufe %(0,45 bar Cv) 
+sicher erkannt werden. %Eine Messunsicherheit von 0,05 bar erfüllt diese Anforderung.
+
+\subsubsection{Fernbetätigte Absperrhähne}
+Die Endabsperrhähne sind bistabil, d.h. verbleiben ohne Betätigung in ihrem letzten Zustand. Ein freier Querschnitt von 1,25'' wird für sinnhaft erachtet. Die Betätigungszeit für den Übergang Öffnen-Schließen beträgt maximal 60 s. Die Hähne sind von ihrem Funktionsprinzip für Anforderungen nach DIN EN 14601 geeignet, diese muss allerdings noch nicht von Demonstratoren und Labormuster erfüllt sein. Eine fahrzeugseitige Verschraubung nach G1 1$/$4i (DIN EN ISO 228-1) ist zu bevorzugen. Für den Demonstrator kann die Kompatibilität durch einen Adapter hergestellt werden. Kupplungsseitig ist eine Verschraubung mit Whitworth-Gewinde mit stumpfen Gewinden für G1 1$⁄$4i—Leitungen zu bevorzugen. Für den Demonstrator kann die Kompatibilität durch einen Adapter hergestellt werden.
+
+\subsubsection{Zustandsanzeige Bremse}
+\begin{figure}[htbp]
+    \centering
+    \input{Bilder/Wagon40UserInterface.tex}
+    \caption{Zustandsanzeige Bremse \cite{ETR_3}}
+    \label{fig:ZustandBremse}
+\end{figure} 
+Da der Zustand der Bremse nicht mehr zwangsläufig von außen sichtbar ist, siehe dazu Abbildung \ref{fig:ZustandBremse}, ist eine Bremszustandsanzeige am Wagen anzubringen. Hier ist mindestens eine Anzeige je Fahrzeugende zum Einbau am Pufferträger ist vorzusehen, so dass
+ der Zustand der Bremse im Drehgestell immer zu erkennen ist. Die Anzeige stellt den Zustand der Bremskupplung (drucklos/druckbeaufschlagt) dar. Die Anzeige muss Überdrücke %> 0,5 bar 
+ in den Bremskupplungen anzeigen, bspw. durch die Farbe "Rot'' im Schauglas. Bei Unterschreiten des Drucks wird bspw. die Farbe "Grün'' angezeigt. Die Anzeige muss auch im stromlosen Zustand verfügbar sein.
+
+\subsubsection{ep-Bremse}
+Das ep-Brems-Ventil wird mit der HLL verbunden und zum Bremsen bestromt. Das Ventil entlüftet die HLL im Wagen in (3,5...5) s von Regelbetriebsdruck auf 3,5 bar.
 
 \subsection{Kupplung}
 Wie in Kapitel \ref{sec:Personal} angedeutet und in Kapitel \ref{sec:LuftumechKup} beschrieben, ist das mechanische Kuppeln und das Kuppeln von Luft aufwändig, körperlich anstrengend und fehlerbehaftet. \par
@@ -80,6 +99,9 @@ Neue Systeme benötigen immer Zeit zur Einführung und Schulung des Personlas. D
 
 \subsection{Informationstechnische Prozesse}
 1.	Alle elektrischen Komponenten arbeiten mit 24 V.
+\subsubsection{Bremshundertstel/Bremsberechnung}
+Die Bremshundertstel werden bisher, genau wie das Bremsgewicht, händisch mittels Bremszettel berechnet. \textbf{BILD}. Auf diesem Vordruck trägt der Triebfahrzeugführer Achszahl, Zugmasse und Bremsgewichte des Zuges ein. Daraus berechnen sich die Bremshundertstel. Nach Vergleich dieser mit den Mindest-Bremshundertstel der Strecke, ergibt sich Höchstgeschwindigkeit und Bremsstellung. die Bremsstellung wird nach jeder neuen Zusammenstellung und vor Fahrtantritt, siehe Kapitel \ref{sec:UEdWagen}, neu berechnet.\par
+Diese manuelle Berechnung ist für Triebfahrzeugführer tägliche Arbeit, dennnoch ist sie Fehleranfällig und kann durch Rechnereinsatz einfach automatisiert werden.
 \subsubsection{Bremsprobe}
 \textbf{SIL-Bewertung - liegt nicht an, liegt an, sicheres lösen, sicheres stellen}.\par
 Die \gls{Bremsprobe} findet zur Vorbereitung einer Sperr-, Rangier- oder Zugfahrt statt und überprüft die Funktionsfähigkeit des Bremssystems im Zug- oder Wagenverbund.\par

@@ -12,12 +12,16 @@
 \usepackage[ngerman]{babel}
 \usepackage{pdfpages}
 %\usepackage[version=0.96]{pgf}
-\usepackage{tikz} %Tikz
-\usepackage{pgfplots}
-\usepackage[acronym, toc]{glossaries} %Glossar
-\makeglossaries
-\input{Kapitel/Glossar.tex}
-\input{Kapitel/Abkuerzungen.tex}
+%Tikz Beginn
+    \usepackage{tikz} 
+    \usepackage{pgfplots}
+%Tikz Ende
+%Glossar, Abkürzungsverzeichnis Beginn
+    \usepackage[acronym]{glossaries} %Glossar %\usepackage[acronym, toc]{glossaries} %Glossar mit Aufruf im Inhaltsverzeichnis
+    \makeglossaries
+    \input{Kapitel/Glossar.tex}
+    \input{Kapitel/Abkuerzungen.tex}
+%Glossar, Abkürzungsverzeichnis Ende
 \usepackage{verbatim}
 %Quellen Beginn
     \usepackage[backend=bibtex,
@@ -49,55 +53,66 @@
 
 \setlength{\parskip}{5mm}% plus5mm minus5mm} %Absatzlänge
 %Deckblatt Beginn
-\begin{titlepage}
-    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
-    \center % Center everything on the page
-    \vspace*{2cm}
-    \textsc{\LARGE Neue Elektronik- und Kommunikationssysteme für den intelligenten, vernetzten Güterwagen}\\[1.5cm] % Name of your university/college
-%    \textsc{\Large Neue Elektronik- und Kommunikationssysteme für den intelligenten, vernetzten Güterwagen}\\[0.5cm] % Major heading such as course name
-    \textsc{\large FKZ 16ES0850K}\\[0.5cm] % Minor heading such as course title
-    \HRule \\[0.4cm]
-    { \huge \bfseries Lastenheft}\\[0.4cm] % Title of your document
-    \HRule \\[1.5cm]
-    \begin{minipage}{0.4\textwidth}
-    \begin{flushleft} \large
-    \emph{FH Aachen}\\
-    Daniela \textsc{Wilbring}\\
-    Prof. Dr.-Ing. Manfred \textsc{Enning},\\
-    Prof. Dr.-Ing. Bernd \textsc{Schmidt},\\
-    Prof. Dr. Raphael \textsc{Pfaff}\\
-    \end{flushleft}
-    \end{minipage}
-    ~
-    \begin{minipage}{0.4\textwidth}
-    \begin{flushright} \large
-    \end{flushright}
-    \end{minipage}\\[2cm]
-    {\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
-    \vfill % Fill the rest of the page with whitespace
-\end{titlepage}
+    \begin{titlepage}
+        \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+        \center % Center everything on the page
+        \vspace*{2cm}
+        \textsc{\LARGE Neue Elektronik- und Kommunikationssysteme für den intelligenten, vernetzten Güterwagen}\\[1.5cm] % Name of your university/college
+        %    \textsc{\Large Neue Elektronik- und Kommunikationssysteme für den intelligenten, vernetzten Güterwagen}\\[0.5cm] % Major heading such as course name
+        \textsc{\large FKZ 16ES0850K}\\[0.5cm] % Minor heading such as course title
+        \HRule \\[0.4cm]
+        { \huge \bfseries Lastenheft}\\[0.4cm] % Title of your document
+        \HRule \\[1.5cm]
+        \begin{minipage}{0.4\textwidth}
+        \begin{flushleft} \large
+        \emph{FH Aachen}\\
+        Daniela \textsc{Wilbring}\\
+        Prof. Dr.-Ing. Manfred \textsc{Enning},\\
+        Prof. Dr.-Ing. Bernd \textsc{Schmidt},\\
+        Prof. Dr. Raphael \textsc{Pfaff}\\
+        \end{flushleft}
+        \end{minipage}
+        ~
+        \begin{minipage}{0.4\textwidth}
+        \begin{flushright} \large
+        \end{flushright}
+        \end{minipage}\\[2cm]
+        {\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+        \vfill % Fill the rest of the page with whitespace
+    \end{titlepage}
 %Deckblattt Ende
+
+\pagenumbering{roman}
 \input{Kapitel/Zweck}
 
+%Verzeichnisse Beginn
+    \input{Kapitel/Revisionshistorie.tex}\newpage
+    \tableofcontents \newpage
+    \listoffigures %\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+    %\listoftables %Tabellenverzeichnis 
+    \printglossary[title= Abkürzungen, 
+        %toctitle=Abkürzungen, 
+        type=\acronymtype]
+    \printglossary\newpage
+%Verzeichnisse Ende
 
-\input{Kapitel/Revisionshistorie.tex}\newpage
-\tableofcontents \newpage
-%\printglossary[title= Abkürzungen, toctitle=Abkürzungen, type=\acronymtype]
-%\printglossary\newpage
-%\input{Kapitel/Einleitung} %\newpage
-\input{Kapitel/Ist-Zustand} %\newpage
-\input{Kapitel/Soll-Zustand.tex} %\newpage
-\input{Kapitel/Anforderungsbeschreibung} %\newpage
-%\input{Kapitel/Anforderungen.tex}%\newpage
-%\input{Kapitel/Fazit.tex} %\newpage
+%Hauptteil Beginn
+\pagenumbering{arabic}
+    \input{Kapitel/Einleitung} %\newpage
+    \input{Kapitel/Ist-Zustand} %\newpage
+    \input{Kapitel/Soll-Zustand.tex} %\newpage
+    \input{Kapitel/Anforderungsbeschreibung} %\newpage
+    \input{Kapitel/Anforderungen.tex}%\newpage
+    \input{Kapitel/Fazit.tex} %\newpage
+    \newpage
+%Hauptteil Ende
 
-%Verzeichnisse
-\listoffigures \addcontentsline{toc}{section}{Abbildungsverzeichnis}
-\printbibliography[heading=bibintoc, title={Quellenverzeichnis}]
+%Anhang Beginn
+\pagenumbering{Roman}
+    \printbibliography[heading=bibintoc, title={Quellenverzeichnis}] \newpage
+    \appendix
+    \input{Kapitel/Anhang_Bremsprobe.tex}\newpage
+    \input{Kapitel/Anhang_TWb.tex}
+%Anhang Ende
 
-\newpage
-%Anhang
-\appendix
-\input{Kapitel/Anhang_Bremsprobe.tex}\newpage
-\input{Kapitel/Anhang_TWb.tex}
 \end{document}

@@ -48,7 +48,6 @@ Die Fernbetätigung der Bremse soll vorallem die Zeit des entlanglaufen des Zuge
         \item mit Luft = ungebremst, ohne Luft = gebremst
     \end{itemize}
 \end{itemize}
-
 \subsubsection{Steuerventil}
 Die Bremsarten G und P sollen mittels Aktor sicher umgestellt und detektiert werden. Auch eine Übertragung der aktuellen Stellung soll sicher gemeldet werden. Aus Zulassungsgründen soll ein UIC/TSI-kompatibels Steuerventil eingesetzt werden. Dieses verfügt dann über die Bremsstellungen G und P, über automatisches Schnelllösen. \par
 Ein zusätzliches Relaisventil ist für die automatische Lastabbremsung mittels Wiegeventil vorgesehen. Dieses ist vorzugsweise nicht im Steuerventil integriert.
@@ -62,7 +61,7 @@ sicher erkannt werden. %Eine Messunsicherheit von 0,05 bar erfüllt diese Anford
 
 \subsubsection{Fernbetätigte Absperrhähne}
 Die Endabsperrhähne sind bistabil, d.h. verbleiben ohne Betätigung in ihrem letzten Zustand. Ein freier Querschnitt von 1,25'' wird für sinnhaft erachtet. Die Betätigungszeit für den Übergang Öffnen-Schließen beträgt maximal 60 s. Die Hähne sind von ihrem Funktionsprinzip für Anforderungen nach DIN EN 14601 geeignet, diese muss allerdings noch nicht von Demonstratoren und Labormuster erfüllt sein. Eine fahrzeugseitige Verschraubung nach G1 1$/$4i (DIN EN ISO 228-1) ist zu bevorzugen. Für den Demonstrator kann die Kompatibilität durch einen Adapter hergestellt werden. Kupplungsseitig ist eine Verschraubung mit Whitworth-Gewinde mit stumpfen Gewinden für G1 1$⁄$4i—Leitungen zu bevorzugen. Für den Demonstrator kann die Kompatibilität durch einen Adapter hergestellt werden.
-
+Gleichzeitig sollte der Wagen erkennen ob er in einem Wagenverbund oder alleine ist. Sollte er in einem Wagenverbund unterwegs sein, ist der Normalzustand für einen Wagen, dass die HL-Absperrventile die mit einem weiteren Wagen verbunden sind, offen sind und HL-Absperrventile am Rand des Zuges geschlossen sind.
 \subsubsection{Zustandsanzeige Bremse}
 \begin{figure}[htbp]
     \centering
@@ -75,8 +74,9 @@ Da der Zustand der Bremse nicht mehr zwangsläufig von außen sichtbar ist, sieh
  in den Bremskupplungen anzeigen, bspw. durch die Farbe "Rot'' im Schauglas. Bei Unterschreiten des Drucks wird bspw. die Farbe "Grün'' angezeigt. Die Anzeige muss auch im stromlosen Zustand verfügbar sein.
 
 \subsubsection{ep-Bremse}
-Das ep-Brems-Ventil wird mit der HLL verbunden und zum Bremsen bestromt. Das Ventil entlüftet die HLL im Wagen in (3,5...5) s von Regelbetriebsdruck auf 3,5 bar.
-
+Das ep-Brems-Ventil wird mit der HLL verbunden und zum Bremsen bestromt. Das Ventil entlüftet die HLL im Wagen in (3,5...5) s von Regelbetriebsdruck auf 3,5 bar.\par
+Vorteile von ep-Bremsen sind, dass längere Züge möglich sind, weil die Zeit die die hinteren Wagen brauchen um die Absenkung des Luftdrucks mitzubekommen verkürzt wird. So drücken die sich noch schneller bewegenden Wagen weniger auf die sich langsamer bewegenden Wagen. Dies reduziert Verschleiß und sit nachhaltiger weil weniger Beschleunigungszyklen notwendig sind. Auch wird die Wartung, der Abrieb und die Gefahr von Flachstellen verringert.\par
+Solange die ep-Bremse nicht auf die Bremshundertstel angerechnet wird, bedeutet sie auch keine Veränderung der Sicherheit. Soll sie angerechnet werden ist ein Nachweis über mindestens die gleiche Sicherheit notwendig.
 \subsection{Kupplung}
 Wie in Kapitel \ref{sec:Personal} angedeutet und in Kapitel \ref{sec:LuftumechKup} beschrieben, ist das mechanische Kuppeln und das Kuppeln von Luft aufwändig, körperlich anstrengend und fehlerbehaftet. \par
 Zur Automatisierung von mechanischen Kupplungen gibt es Kupplungsrobotoren\footnote{Zum Beispiel die Bahn-Kupplungs-Robotoren BaKuRo und EntKuRo}, dort muss aber weiter händisch Luft gekuppelt werden \textbf{Ist das so?}. Alternativ ist die Automatische Kupplung eine Lösung, aber auch nach deren Einführung im vorigen Jahrhundert ist eine flächendeckende Nutzung im Güterverkehr noch nicht realisiert.\par
@@ -135,3 +135,7 @@ Durch eine durchgängige Stromversorgung auf dem Wagen und einen bahntauglichen 
 \ref{sec:Vorpruefung}
 \subsubsection{Zugvorbereitung}
 \ref{sec:Vorpruefung}
+\subsection{Batterie}
+Wie lange muss die Batterie durchhalten? Welche Verbraucher hängen daran?
+\subsection{Migration}
+Fernfunk zu Lok

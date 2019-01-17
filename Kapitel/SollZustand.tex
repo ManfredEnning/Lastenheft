@@ -136,6 +136,38 @@ Die Sicherheit muss mindestens genauso bleiben, wie sie beim bisherigen System i
 Eine sichere Übertragung der Zugintegrität ist in diesem Projekt nicht geplant.
 
 \subsection{Migration}
-Fernfunk zu Lok
+ine große betriebliche Herausforderung besteht in der Tatsache, dass GW40 planmäßig oder unplanmäßig in ZBA auftauchen können. Sollten Sie dort den Betrieb stören, wäre das das Aus für ein solches Konzept.\par
+Worst-case Szenario. Es gibt kein Strom. Nur Hilfsbedienungen möglich. Diese müssen an geeigneter Stelle (Chassis-Unterseite) durch einen Schlüssel durchgeführt werden. Dieser Schlüssel muss nicht individuell sein. Er kann in der Anlage standardmäßig vorhanden sein oder (wie der Nothammer im ÖPNV) in einem verplombten Halter sein.\par
+Man kann mit diesem Schlüssel alle Bedienhandlungen (Bremse ein/aus, Zugschluss, G/P, Last) vornehmen. Die Handbremse allerdings nicht. Der Wagen hat in diesem Szeanrio keinen Handbremse.\par
+Um dieses Szenario immer verfügbar zu haben, findet sich an geeigneter Stelle eine Anweisung für den Notfall in den UIC-Sprachen und mit Pictogrammen. \par
+Sobald der Wagen wieder Energie hat, also nach den ersten paar Metern Rangier- oder Zugfahrt, wird folgendes geprüft und eine entsprechende Statusmeldung in die Cloud gesandt.
+\begin{itemize}
+\item Notschlüssel entnommen / wieder vorhanden
+\item Übereinstimmung der Ventilstellungen mit dem Steuerungsstatus
+\end{itemize}
+In Abhängigkeit der Überprüfung kann der nächsten Behandlungsstelle eine Warnung oder Information gegeben werden, was mit dem Wagen geschehen sollte.\par
+Normales Szenario in der Migrationsphase. Außer einer generellen Bedienungsanweisung ist in der Behandlungsstelle nichts über die Eigenschaften des Wagens bekannt. Geringfügiger Nutzen ist vorhanden. Jede normale Bedienhandlung ist durch Tastenbedienung mit Leuchtmelderrückmeldung ersetzt.\par
+Der fehlende Absperrhahn an der Pufferbohle erfordert genau dort eine Bedieneinrichtung. Es wäre unzumutbar, den Rangierer wieder aus dem Berner Raum treten zu lassen um die Vorbedingung HL druckfrei herzustellen.\par
+Im normalen Betrieb taucht der Rangierer in den Berner Raum. Er sperrt die Hähne und entlüftet damit gleichzeitig die Kuppelstücke, so dass er gefahrlos trennen kann.\par
+Wenn einer der Wagen oder beide ein GW40 ist, so ist das Schließen durch einen Tastendruck und Überwachen der Rückmeldung zu ersetzen. Der Arbeitsablauf bleibt aber ansonsten identisch.\par
+Nach dem Kuppeln ist enstprechend durch Drücken der Taste wieder der verbundene Zustand einzustellen. Das Erlöschen des  Leuchtmelders muss kontrolliert werden.\par
+Alle Bedienhandlungen werden im Migrationsszenario durch Tastenbedienungen ersetzt.
+\begin{itemize}
+\item Mit Bremse aus wird ohne Einfluss auf die HL das SV abgetrennt und der R-Behälter abgesperrt. In diesem Zustand kann der Wagen mit abgeschalteter Bremse gefahren werden. Die HL ist aber durchverbunden
+\item Lösegriff entfällt ersatzlos. Es gibt keinen betrieblichen Grund, den R-Behälter zu entlüften. Für Werkstätten gibt es ein manuell zu betätigendes monostabiles Ventil am Wagenboden. 
+\item Bremsartumschaltung G/P. Wird durch eine Taste mit zwei Leuchtmeldern oder ggf. Textanzeige ersetzt
+\item (Lastumschaltung) GW40 haben automatische Lastbremse
+\item GW40 haben eine elektromechanische Feststellbremse. Diese wird durch Tastendruck aktiviert und über Leuchtmelder angezeigt.
+\end{itemize} 
+Die TSI WAG erfordert eine eindeutige Erkennbarkeit der gelösten Stellung der Handbremse von außen. Hierfür muss ggf. eine passive Anzeige vorhanden sein.\par
+Im Migrationsszenario ist noch kein elektrisches Zugschlusssignal vorgesehen.\par
+Statt über Tasten können alle Bedienhandlungen auch über externe Bediengeräte (Datenhandschuh, Tablet) vorgenommen werden. Ebenso können alle Zustandsanzeigen und weitere Informationen zum Wagen (Wagennummer, km-Stand, Ladungsstöße, Fehlerspeicher, Gefahrgut ...) über Tablet oder Datenbrille übermittelt werden.\par
+Durch Vergleich der Behandlungsliste und Bedienhandlungen des Rangierers kann eine Verwechslung erkannt werden und der Rangierer  z.B. über Smartphone sofort informiert werden. Dies kann helfen, die Irrläufer-Quote weiter zu senken. Beispiel: Wenn an einer nicht vorgesehenen Trennstelle der Kuppelschlauch drucklos gemacht wird, kann das heißen, das der Rangierer hier irrtümlich eine Trennung setzen will. In einer ZBA würde dies zu einem Irrläufer führen.\par
+In einem späteren Szenario mit Zügen, die blockweise oder ganz aus GW40 bestehen und in denen ein Zugbus gekuppelt ist, stellt dies kein Problem mehr da, da über den Zugbus ständig der Zustand der Wagen überwacht werden kann.\par
+Auch in der Migration sind schon Überwachungen denkbar, die aber nicht sofort wirken, sondern nur über den Umweg über eine Zentrale. Ein verdächtiger Zustand (z.B. mehr als 40 km/h mit abgeschalteter Bremse. Nicht durchgängige HL ohne eingestecktes Zugschlusssignal) kann eine Meldung in die Cloud auslösen. Wenn keine dazu passende Ausnahmemeldung vorliegt (der Wagen könnte absichtlich mit abgeschalteter Bremse gefahren werden) erfolgt automatisch Meldung an den Lokführer und/oder FDL\par
+Es muss immer die manuelle Bedienung per Schlüssel möglich sein, damit ein nicht mehr funktionierender Wagen (Steuerung defekt, Batterie komplett entleert) zumindest ausrangiert werden kann. Alle Zustände, die hiermit eingenommen werden, müssen zumindest eine durchgängige HL hinterlassen (Fail-safe). Das bedeutet, dass ein derart beeinträchtigter Wagen nur noch als ungebremster Wagen betrachtet werden darf.
+
+
+\textbf{Fernfunk zu Lok}
 \subsection{Zielgruppe}
 Zielgruppe - Rangierende, WagenmeisterInnen, Bremsprobeberechtige, Tf, ...

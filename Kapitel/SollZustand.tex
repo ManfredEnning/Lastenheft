@@ -6,9 +6,9 @@ Eine Aufteilung findet in Anlehnung an den Projektantrag statt. \textbf{Nach kur
 \subsection{Vorbemerkungen}
 Bei einem Umbau für die Demonstratoren muss darauf geachtet werden, dass ein voll- ständiger Rückbau der neuen Einrichtungen möglich ist, aber auch so bahntauglich ist, dass die Demonstratoren für ein Folgeprojekt oder Feldversuche genutzt werden können. Diese Projekt muss nicht sofort zulassungsfähig sein, sollte aber eine Basis dazu bilden. \par
 An der Bewegung der Wagen im Wagenverband an sich mit Hilfe einer Lok oder eines anderen Rangierhilfsmittel soll hier nichts automatisiert werden. Siehe dazu auch in den Kapiteln \ref{sec:Zustellfahrt}, \ref{sec:Zugfahrt} und \ref{sec:Rangierfahrt}. Automatisierungen können und sollen aber selbst verständlich im Bereich der Kupplung, Bremse oder auch der informationstechnischen Prozesse stattfinden.\par
-Wie in Kapitel \ref{sec:Personal} angedeutet und in Kapitel \ref{sec:LuftumechKup} beschrieben, ist das mechanische Kuppeln und das Kuppeln von Luft aufwändig, körperlich anstrengend und fehlerbehaftet. \par
+Wie in Kapitel \ref{sec:Personal} angedeutet und in Kapitel \ref{sec:LuftumechKup} beschrieben, ist das mechanische Kuppeln und das Kuppeln von Luft aufwendig, körperlich anstrengend und fehlerbehaftet. \par
 Zur Automatisierung von mechanischen Kupplungen gibt es Kupplungsrobotoren\footnote{Zum Beispiel die Bahn-Kupplungs-Robotoren BaKuRo und EntKuRo}. Alternativ ist die Automatische Kupplung \acrshort{AK} eine Lösung, aber auch nach deren Einführung im vorigen Jahrhundert ist eine flächendeckende Nutzung im Güterverkehr noch nicht realisiert.\par
-Aufgrund dieser Punkte ist es erst einmal sinnvoll mich der mechanischen Kupplung weiter zu machen und Lösungen für die \acrshort{AK} kompatibel zu halten. Eine starke Vereinfachung würden die bereits in den vorigen Abschnitten beschriebene automatische Bremse mit ihren fernstellbaren Ventilen bringen.
+Aufgrund dieser Punkte ist es erst einmal sinnvoll mit der mechanischen Kupplung weiter zu machen und Lösungen für die \acrshort{AK} kompatibel zu halten. Eine starke Vereinfachung würden die bereits in den vorigen Abschnitten beschriebene automatische Bremse mit ihren fernstellbaren Ventilen bringen.
 
 \subsection{Gesamtsystem}
 Das Gesamtsystem besteht aus den Komponenten des Güterwagens. Der Güterwagen 4.0 soll im Vergleich zum konventionellen Güterwagen eine aktive Rolle in der Zugvorbereitung und an der Ladestelle spielen. Dafür ist eine Stromversorgung, Telematik und Datenvernetzung zu anderen Güterwagen sowie Logistiksystemen notwendig. Zusätzlich soll ein Automatisierung der Bremsbedienung stattfinden. Ist hier eine sichere Übertragung über den gesamten Zug, auch bei der Fahrt, möglich, ist auch eine ep-Bremse möglich. Diese Punkte sollen auch in diesem Projekt bereits umgesetzt werden. Weitere Punkte, die in Folgeprojekten umgesetzt werden sollen, ist ein automatisierter Zugschluss und ein Rangierantrieb.\par
@@ -22,7 +22,7 @@ Alle elektrischen Komponenten arbeiten mit 24 V.
 
 \subsubsection{Automatisierte Bremsbedienung}
 Die Einführung einer automatischen Bremse soll vor allem zur Zeitersparnis bei der Zugvorbereitung und \gls{Bremsprobe} führen.\par
-Besonders wichtig zur Einführung der automatisierten Bremse ist die Fernbetätigung dieser. Sie sollte vorallem die Möglichkeiten zum Schnelllösen, aus- und einschalten der Bremse, Änderung der Bremsstellung und Einstellen der Feststellbremse (auch automatische Parkbremse) haben.
+Besonders wichtig zur Einführung der automatisierten Bremse ist die Fernbetätigung dieser. Sie sollte vor allem die Möglichkeiten zum Schnelllösen, Aus- und Einschalten der Bremse, Änderung der Bremsstellung und Einstellen der Feststellbremse (auch automatische Parkbremse) haben.
 Durch ein TSI-konformes Steuerventil soll die Umstellung der Bremsarten mittels G/P-Umsteller automatisiert werden. Auch eine automatische Lastabbremsung mittels Wiegeventil ist vorgesehen. Hier ist bei beiden Funktionen vor allem auf eine sichere Funktion und Rückmeldung zu achten.
 Für diese sichere Übertragung ist die Messung des C-Drucks von größter Wichtigkeit.
 Auch fernbetätigte Absperrhähne sollen zu dieser Zeiteinsparung führen. 
@@ -36,7 +36,7 @@ Durch eine Automatisierung der Bremse ist nun auch eine ep-Bremsung möglich.
 \subsection{Sensorik}
 \textbf{Hier muss was hin}
 \subsubsection{Messung C-Druck}
-Der Bremszylinderdruck (D-Cruck) wird gemessen. 
+Der Bremszylinderdruck (C-Druck) wird gemessen. 
 %2.	Der Sensor arbeitet als Stromsensor (4-20 mA).
 %3.	Der Messbereich ist (0...5) bar.
 Die Messunsicherheit und Auflösing ist so gewählt, dass die erste und letzte Bremsstufe %(0,45 bar Cv) 
@@ -45,7 +45,7 @@ sicher erkannt werden. %Eine Messunsicherheit von 0,05 bar erfüllt diese Anford
 \subsection{Aktorik}
 \textbf{Hier muss was hin}
 \subsubsection{Fernbetätigung Bremse}
-Die Fernbetätigung der Bremse soll vor allem die Zeit des entlanglaufen des Zuges beim Prüfen der Bremse ersparen. Es müssen folgende Funktionen fernbetätigt werden können:
+Die Fernbetätigung der Bremse soll vor allem die Zeit des Entlanglaufens des Zuges beim Prüfen der Bremse ersparen. Es müssen folgende Funktionen fernbetätigt werden können:
 \begin{itemize}
     \item Schnelllösen
     \begin{itemize}

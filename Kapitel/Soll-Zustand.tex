@@ -1,22 +1,64 @@
 \section{Soll-Zustand}
+In diesem Kapitel sollen einzelne Themen aus dem Ist-Zustand herausgegriffen und mittels für das Projekt ausgebautem Güterwagen 4.0 beschrieben werden.\par
+Hier werden vorstellbare Punkte ausgeführt, die aber nicht alle zur Standardausrüstung gehören müssen oder sollten. Eine einfache Nachrüstung soll möglich sein.\par
+Durch eine Energieversorung als Basis des Güterwagens 4.0 ist es möglich verschiedene Seonsorik des Wagens speisen sowie die Kommunikation zwischen einzelnen Güterwagen sowie einem Server und verschiedenen mobilen Endgeräten herstellen, aber auch eine sporadische Aktorik für die Bremse ermöglichen. Die Punkte werden einzeln anhand von Aufgaben aus der Ist-Beschreibung beschrieben. \par
+Durch diese Erweiterung des konventionellen Güterwagens soll der Güterwagen ein besseres Arbeitsmittel auf dem Werksgelände und in Zugbildungsanlagen werden.
+\subsection{Allgemeines}
+Es wird der Sollzustand des Demonstrators beschrieben und nicht des späteren vollständig ausgebauten Güterwagen 4.0.\par
+Die Aufbauten auf dem Demonstrator sollen vor Zugfahrten vollständig abschaltbar sein.
+\subsection{Energieversorgung}
+Dieses Kapitel beschreibt die Energieversorgung des Güterwagens 4.0 für dieses Projekt. Es beschreibt weder die Energieversorgung des späteren 'vollständig' ausgebauten Güterwagen 4.0  noch die Energieversorgung der VDI-Richtlinie 5905. Dabei wird es wahrscheinlich Überschneidungen geben, auch werden Erfahrungen aus den Arbeitsrunden mitgenommen und einfließen, aber es wird keine exemplarische Realisierung dessen.\par
+Aufgrund der Prototypenentwicklung in diesem Projekt erscheint eine 24 V-Spannungs- versorgung für dieses Projekt sinnvoll. Sowohl werden alle Grenzen der Berührspannungen im Kleinspannungsbereich eingehalten, als auch gibt es bereits sehr viele Produkte auf dieser Spannungsebene. Namentlich genannt die SPS, aber auch diverse Sensoren und Aktoren.\par
+Gepuffert werden soll das System durch eine Batterie. Diese Batterie soll genügend Leistung liefern um sämtliche Daten-, Kommunikations- und Aktorsteuerungesprozesse speisen zu können. Außerdem soll sie genug Energie für den Erprobungsbetrieb bieten. Sie soll mittels Ladegerät nachladbar sein, aber auch eine Schnittstelle für einen Achsdeckelgenerator haben. Zum Aufladen wird dieser wahrscheinlich nicht geeignet sein, da keine entsprechenden Umlaufzyklen während der Testphase möglich sind. Diese sollen aber während des Projektes simuliert werden.\par
+Eine Ausstattung als Nachrüstung von konventionellen Güterwagen muss in der Konstruktion bedacht werden. Eine Beladung des Güterwagens und im restlichen Umlauf soll im Projektverlauf simuliert werden.\par
+Für die Versorgung von Sensoren und Aktoren ist für dieses Projekt ein Klemmkasten vorzusehen, der in zukünftigen Projekten professionalisiert werden kann. Die Batterie ist in einem Einschubkasten so anzubringen, dass sie von außen zugänglich ist, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist. Die Verrohrung für Daten- und Stromleitungen ist vorzusehen, sodass diese geschützt sind und klare Linien zur Verlegung von Leitungen zu sehen sind. Ein Anschluss im Anschlusskasten anzusetzen. Für die Batterie ist eine Ladeschnittstelle von 230 V anzusetzen. Sämtliche Anbauten sollen unter ATEX-gerechten Bedingungen angebracht werden, das bedeutet unter anderem, dass keine zur Explosion neigenden Materialien verwendet werden dürfen, kein Gasaustausch stattfindet und alles bahnrobust ausgelegt ist.\par
+\subsection{Verhalten an der Ladestelle}
 
+Verladung von Paletten:
+Sensoren für alle Komponenten der Ladungssicherung
+Technische Überwachtung von verschiedenen Sensoren/Hebeln (DK) Ladungssicherung - Railbuisness S. 3 > Näherungsschalter und Stellhebel -- königszapfen
+automobilverladung --Ladeverstellung
+Containertragwagen -- Tragzapfen
+Coiltransporter
+Schiebewandwagen - verstellbare und verschließbare Trennwände
+Spanngurt mit Sensoren in Textilien?
 
+Sensoren können Probleme bei Funkkommunikation machen -- Kabel besser? Diskussion
+Vorstellbar auch temperatursensoren - Licht um den Güterwagen zur Warnung, Alarmanlage
+\subsection{Wagenbewegungen}
+Wagenbewegung mittels Rangierhilfsmittel 
+mit und ohne Luft
+Regel: Festgebremst, wenn keine Luft, lose, wenn Luft. + manuelle Einstellung
+Handbremse leicht bedienbar. Beispielsweise über Device, oder "Knopfdruck" am Wagen
+Stillstandsüberwachung - Warnlichter - Rundumlicht (Hat auf Werksgelände sonst alles (ist das so? Joachim fragen) oder/und Akustik
+Warnfunktion an der Spitze beim Rangieren + Kamera für Unimogfahrer? Fahrer eines Zwei-Wege-Fahrzeuges auf LKW-Basis
+Automatische Notbremsfunktion - Handbremse anlegen bei Hindernis - Vorstellbar, aber Standardausrüstung? Wirtschaftliche Betrachtung
+\subsection{Wagenzusammenstellung}
+TWb und Bremsprobe
+BP: Wagen soll Bremsfähigkeit angeben und erproben, eine Rückmeldung geben, Druck im Reservebehälter anzeigen über Sensorik, HL/C-Druck für Bremsprobe, Wie viel Druck brauche ich außer Druck auf dem Bremszylinder?
+Bremseinstellung / Lastwechsel vornehmen - Abgeschaltete Bremse melden
+Alle Sensoren prüfen - Bereitschaft und Wert iO - und rückmeldung geben
+Beispiele: Dreh-(Kugel)Pfanne am Drehgestell (VTG), Bremsbelag überwachung, Lagerzustände (während der Fahrt), erste Meter: Lagerschaden, Flachstelle, Entgleisungssicherheit (vRang = 25 km/h)
+HL-Absperrventile immer automatisch in richtiger Position: REgel: Wagen dran = offen, Wagen ende = zu
 
+Mit anderen Sprechen wegen automatischer BRemsprobe
+\subsection{Zugfahrt}
+Volle Bremsprobe
+LL Einstellbar
 
-\subsubsection{Vergleicher}
-\ref{sec:Vorpruefung}
+\subsection{Datenhaltung und -übertragung}
+Daten im Wagen über separates Kabel, zum nächsten Wagen nur kurze Funkstrecken
+Es soll eine Kommunikation relaisiert werden. Sowohl zw. Sensoren und Rechner, Wagen, Wagen und Wagen - Device
+Bedienung erfordert Datentechnische Verbindung. Auch zu Device in der ok
+Reichweite? ausreichend, nicht von außen störbar, nicht abhörbar
+Bandbreite? ausreichend
+Zugriffsmöglichkeiten auf Daten nach Authorisierung. Verschiedene Authorisierungsstufen und Geofencing.
+\subsection{Diagnosefunktionen}
+vorausschauende Wartung
+alles über sich wissen, was er wissen muss und speichern und abrufbar machen
 
-\ref{sec:Vorpruefung}
-
-\subsubsection{Stromversorgung}
-
-
-\subsection{Batterie}
-
-
-\subsection{Sicherheit}
-
-
-%\subsubsection{Personalschulung}
-%Neue Systeme benötigen immer Zeit zur Einführung und Schulung des Personlas. Das gilt auch für dieses Projekt, aber auch jetzt schon sind die Handgriffe, wie in Kapitel \ref{sec:Personal} angesprochen, kompliziert und fehleranfällig. Durch informationstechnische Prozesse \textbf{MEHR DAZU UNTER}, die zusätzlich im Hintergrund laufen und durch weniger Handgriffe im üblichen Betrieb, sollen diese Prozesse einfacher und sicherer werden. Zusätzlich sollen die neu benötigten Handgriffe intuitiv zu den alten Handgriffen passen oder leicht erlenrnbar sein. Zusätzliches Schulungsmaterial soll leicht verständlich und intuitiv gestaltet werden.\par
-%\textit{\textbf{Probleme:} Annahme der Systeme, Kosten für die Schulung}
+\subsection{Wagen als Bestandteil im IT-Güterverkehr}
+Wagen als Bestandteil im IT-Güterverkehr
+elektronischer Ladezettel
+Betriebsinfos lokal auf Wagen
+Wartungsinfos in der Cloud

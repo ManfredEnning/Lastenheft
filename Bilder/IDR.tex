@@ -1,28 +1,34 @@
 % Define block styles
-\tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=5em, text centered, rounded corners, minimum height=4em, text width=8em]
-\tikzstyle{cloud} = [draw, rectangle,fill=grey!20, node distance=2.5cm, minimum height=2em]
+\tikzstyle{block} = [rectangle, fill=blue!20, text width=5em, text centered, rounded corners, minimum height=4em, text width=8em]
+\tikzstyle{cloud} = [draw, rectangle, fill=gray!20, node distance=2.5cm, minimum height=2em]
+\tikzstyle{invisible} = [rectangle]
 
 
-\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{tikzpicture}[scale=0.75, every node/.style={scale=0.6}]
 % Place nodes
+    \node[invisible] at (-8, -1.5) (anmeldung) {};
     \node[cloud, scale=1.5] at (-4,0.3)      (dispo)         {Disposition};
     \node[cloud, scale=1.5] at (0.2, 0.3)      (verlader)      {Verlader} ;
     \node[cloud, scale=1.5] at (4.8,0.3)       (rangierende)   {Lokrangierführer};
+        \node[invisible] at (-8, -1.5) (anmeldung) {};
     \node[block] at (-4, -1.5)  (Wagen)         {Wagen wird telefonisch angemeldet};
     \node[block] at (-4, -3.7)  (Waamf)         {Ausfüllen des Wagenan- und -abmeldungs- formulars};
+        \node[invisible] at (0.2, -3.7) (vInfo) {};
     \node[block] at (-4, -6)    (RA)            {Erstellung eines Rangierauftrags im DVS};
     \node[block] at (4.8, -6)     (RA2)           {Erhält Rangierauftrag und erfüllt diesen};
     \node[block] at (0.2, -8.3)   (beladung)      {Wagen wird beladen, kontrolliert und evtl. verschoben};
     \node[block] at (0.2, -10.3)  (ueprot)        {Übertragungs- protokoll wird ausgefüllt};
+        \node[invisible] at (-4, -10.3) (dInfo) {};
     \node[block] at (-4, -12.3) (RA3)           {Erstellung eines Rangierauftrags im DVS};
-    \node[block] at (4.8, -13.7)  (RA4)           {Erhält Rangierauftrag, holt Wagen ab, verweigt ihn und trägt das Gewicht ins DVS ein und bringt Wagen ins Ausfahrgleis};
-    \node[block] at (-4, -15)   (Lieferdoc)     {Erstellt Lieferdokumente mit Nettogewicht, Transportmittelart, Route und Versantdbedingungen};
+    \node[block] at (4.8, -13.7)  (RA4)           {Erhält Rangierauftrag, holt Wagen ab, verwiegt ihn und trägt das Gewicht ins DVS ein und bringt Wagen ins Ausfahrgleis};
+    \node[block] at (-4, -15)   (Lieferdoc)     {Erstellt Lieferdokumente mit Nettogewicht, Transportmittelart, Route und Versandtbedingungen};
     \node[block] at (-4, -17.6) (Transportdoc)  {Erstellt Transportauftrag};
     \node[block] at (-4, -19.6) (abmelden)      {Meldet den Wagen ab. Damit ist die Ware im Warenausgang};
     \node[block] at (-4, -22.4) (Frachtbrief)   {Erstellt mittels Transportnummer, Liefernummer und Übertragungs- protokoll einen Frachtbrief};
-    \node[block] at (4.8, -23.2)  (Zettel)        {Bezettel Wagen};
+    \node[block] at (4.8, -23.2)  (Zettel)        {Bezettelung von Wagen};
     \node[block] at (-4, -25.0) (RA5)           {Erstellung eines Rangierauftrags im DVS};
     \node[block] at (4.8, -25.3)  (RA6)           {Erhält Rangierauftrag und bringt Wagen in den Vorbahnhof};
+        \node[invisible] at (9.5, -25.3) (ende) {};
 
 % Draw edges
     %Kasten Dispo
@@ -41,6 +47,25 @@
     \draw[dashed] (2.25, -26.5) -- (7.35, -26.5);
     \draw[dashed] (7.35, 1.2) -- (7.35, -26.5);
     
-    %Pfeile ohne Ende
+    %Pfeile ohne Beginn
+    \draw[->, color=violet] (anmeldung) -- (Wagen);
+    %Pfeile ohne Ende 
+    \draw[->, color=red] (Waamf) -- (vInfo);
+    \draw[->, color=red] (ueprot) -- (dInfo);
+    \draw[->, color=violet] (RA6) -- (ende);
     %Pfeile mit Ende
+    \draw[-, color=blue!100] (Wagen) -- (Waamf);
+    \draw[-, color=blue] (Waamf) -- (RA);
+    \draw[->, color=red] (RA) -- (RA2);
+    \draw[->, color=red] (RA2) |- (beladung);
+    \draw[-, color=blue] (beladung) -- (ueprot);
+    \draw[->, color=red] (RA3) -- (3.5, -12.3);
+    \draw[-, color=blue] (RA3) -- (Lieferdoc);
+    \draw[-, color=blue] (Lieferdoc) -- (Transportdoc);
+    \draw[-, color=blue] (Transportdoc) -- (abmelden);
+    \draw[-, color=blue] (abmelden) -- (Frachtbrief);
+    \draw[->, color=red] (-2.7, -23.2) -- (Zettel);
+    \draw[-, color=blue] (Frachtbrief) -- (RA5);
+    \draw[->, color=red] (-2.7, -25.3) -- (RA6);
+    
 \end{tikzpicture}

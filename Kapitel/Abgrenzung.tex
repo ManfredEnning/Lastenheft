@@ -1,56 +1,26 @@
 \section{Abgrenzung des Projektes}
-In diesem Kapitel soll eine Abgrenzung des Projektes gegenüber einem konventionellen Güterwagen, anderen bereits vorhandenen Lösungen und dem späteren vollständig ausgebildeten Güterwagen 4.0 stattfinden. \par
+In diesem Kapitel soll eine Konzeptabgrenzung des Projektes gegenüber einem konventionellen Güterwagen, anderen bereits vorhandenen Lösungen und dem späteren vollständig ausgebildeten Güterwagen 4.0 stattfinden. Dafür ist dieses Kapitel in drei Unterkapitel aufgeteilt.
+
+\subsection{Railmap}
 \begin{figure}[hbp]
     \centering
     \input{Bilder/Railmap.tex}
-    \caption{Railmap \cite{GAK}}
+    \caption{Railmap angelehnt an \cite{GAK}}
     \label{fig:Railmap}
 \end{figure}
 Bereits in Vorträgen, zum Beispiel auf der 1. BME-VDV-Gleisanschluss-Konferenz \cite{GAK}, kam es zur Vorstellung der sogenannten Railmap, siehe dazu auch Abbildung \ref{fig:Railmap}, diese zeigt einen Plan für zukünftige Entwicklungen im Schienengüterverkehr. Auf ihr ist der Weg abgebildet, den unter anderem auch der Güterwagen 4.0  gehen soll, aber auch weitere Punkte, die danach für die Automatisierung des Schienengüterverkehrs folgen sollen.\par
 Die Railmap beginnt mit dem Hauptpunkt, der auch ein Schwerpunkt dieses Projektes sein soll, der autarken Stromversorgung des Wagens. Siehe dazu auch Kapitel \ref{sec:EV} Energieversorgung.\par
-Der zweite Punkt der Railmap besteht dann aus dem vollständigen Güterwagen (siehe dazu auch Kapitel \ref{sec:Ausbaustufen} Beschreibung der Ausbaustufen, bzw. Kapitel \ref{sec:A5} Ausbaustufe 5 mit Automatisierung verschiedener Systeme, Überwachung von einzelnen Subsystemen und einem Rangierantrieb. In diesem Projekt soll eine Ausrüstung des Wagens bis Ausbaustufe 3 erfolgen. Ein Ausbau der Klassen 4 und 5 ist nicht geplant. \par
+Der zweite Punkt der Railmap besteht aus zwei Unterpunkten. Beide Punkte zusammen bilden den voll ausgestatteten Güterwagen 4.0 wie er in Kapitel \ref{sec:Ausbaustufen} gezeigt wird. %\\
+Der Unterpunkt 2a beschreibt den Güterwagen 4.0 nach diesem Projekt. Darin enthalten ist die Ausstattung mit den Ausbaustufen 1 - Stromversorgung, 2 - Automatisierung der Bremse und 3 - die ep-''light'-Bremse. %\\
+Der Unterpunkt 2b beschreibt die Ausbaustufen 4 und 5 des Güterwagen 4.0 und damit die Einführung der Zugintigrität und des Rangierantriebs. %\\
+Siehe dazu auch die einzelnen Punkte des Kapitels \ref{sec:Ausbaustufen}.\par
 Als Drittes ist dann bereits eine dezentrale, unabhängige Intelligenz von Güterwagen geplant. Diese soll dem Internet of Things entsprechen; dem Internet of Rail Assets. In diesem Punkt soll es für den Güterwagen möglich sein mit anderen 'Dingen' der Eisenbahn zu kommunizieren.\par
-Im vierten Punkt geht es bereits um halbautomatiserten Gleisanschlussverkehr und den sogeannten Gleisanschluss 4.0. auch hierzu gibt es bereits vorgestellte Ideen. Zum Beispiel auf der 1. BME-VDV-Gleisanschluss-Konferenz \cite{GAK}. \par
+Im vierten Punkt geht es bereits um halbautomatiserten Gleisanschlussverkehr und den sogenannten Gleisanschluss 4.0. auch hierzu gibt es bereits vorgestellte Ideen. Zum Beispiel auf der 1. BME-VDV-Gleisanschluss-Konferenz \cite{GAK}. \par
 Im fünften und letzten Punkt dieser Railmap soll die automatische Kupplung flächen- deckend eingeführt und ein automatischer Gleisanschlussverkehr möglich sein.\par
 In diesem Projekt soll der Güterwagen ein konventioneller Güterwagen mit konventionellen Fahrwerken und Luftbremse bleiben. Einzig ein zusätzlicher Aufbau von Leistungs- und sicherheitsgerichteten Komponenten ist geplant. Sowie eine erste Realisierung der Bremse 4.0\cite{Stephenson, ETR_2}.\par
 
-\subsection{Leistungsniveau und Energieversorgung}
-Diese Stromversorgung soll in diesem Projekt nur für ein geringes Leistungsniveau bereitstehen. Es ist keine Anwendung mit größerer Stromzufuhr geplant. Ein später folgender Güterwagen 4.0  kann dies aber eventuell fordern.\par
-In diesem Projekt wird weder die Energieversorgung des späteren 'vollständig' ausgebauten Güterwagen 4.0 noch die Energieversorgung nach der VDI-Richtlinie 5905 entwickelt. Dabei wird es wahrscheinlich Überschneidungen geben, auch werden Erfahrungen aus den Arbeitsrunden mitgenommen und einfließen, aber es wird keine exemplarische Realisierung dessen.\par
-Eine vollständige Stromversorgung nach der VDI-Richtlinie 5905 oder ein Prototyp der diese Richtlinie präget, soll nicht entstehen. 
-
-\subsection{Bremse}
-Die Bremse stellt, neben dem Rechner, ein Herzstück des Güterwagen 4.0  dar.
-Hier ist eine Teilautomatisierung der Bremse im Bereich der Hauptluftleitung, Bremsumsteller, Lastwechsel und Feststellbremse geplant. Diese soll mit Aktoren automatisch oder auf Befehl umgestellt werden. Dadurch soll auch eine automatische Bremsprobe und eine automatische Bremsberechnung möglich sein. Ebenso eine Stillstandsüberwachung.\par
-Nicht geplant ist dagegen eine automatische Notbremsfunktion, die beispielsweise die Handbremse anlegt, wenn ein Hindernis auftaucht. Dies ist als Aufbau möglich, soll aber nicht zur Standardausrüstung gehören. Auch eine entsprechende wirtschaftliche Betrachtung findet nicht statt.\par
-Während dieses Projektes ist eine Ausstattung der Wagen mit einer ep-light-Bremse als Versuch geplant. Diese wird allerdings ohne Anrechnung auf die Bremsleistung im Testbetrieb stattfinden, sodass eine erste Einführung probehalber unkritisch ist. Eine angerechnete ep-Bremse im Güterverkehr wäre aus vielen Gründen sehr interessant, muss allerdings aus Sicherheitsgründen weitreichender geplant sein.\par
-
-\subsection{Beladung und Ladungssicherung}
-Bei der Beladung und Ladungssicherung ist es möglich diverse Sensoren, auch unabhängig von der Beladung mit palletiertem Gut, zum Beispiel für Hafenverkehr einzubauen und zu überwachen. Beispiele dafür sind:
-\begin{itemize}
-    \item Königszapfen
-    \item Ladeverstellung bei der Automobilverladung
-    \item Tragzapfenverstellung bei Containertragwagen
-    \item Coiltransporter ?
-    \item Verstellbare und verschließbare Trennwände bei Schiebewandwagen
-    \item Technische Überwachung von diversen Hebeln und Schaltern
-    \item Temperatursensoren an temperaturempfindlichem Gut
-    \item ...
-\end{itemize}
-Auch möglich ist es Spanngurte mit Sensoren in den Textilien zu entwickeln, die über Funkverbindung mit dem Wagen kommunizieren können.\par
-Diese Sensoren können mittels Funkkommunikation oder mittels Datenleitung ausgelesen werden. Hier ist auf eine sichere Übertragung zu achten.\par
-Im Rahmen des Projektes sollen diese Punkte nicht umgesetzt werden.
-
-\subsection{weitere Möglichkeiten}
-Die durch die Stromversorgung ermöglichten Aussichten sind quasi grenzenlos. So sind Warnlichter oder Rundumlichter bei der Bewegung des Güterwagens möglich, der Einbau einer Alarmanlage oder auch 'nur' Akustikfunktionen bei Bewegung. Auch eine anbaubare Front- oder Rückfahrkamera für Fahrer eines Zwei-Wege-Fahrzeuges auf LKW-Basis oder das bereits vorgestellte Prinzip der technisch überwachten Spitze von Rangierabteilungen\cite{RTUS} ist möglich. Diese Punkte werden im Rahmen des Projektes jedoch nicht umgesetzt.
-
-\subsection{Labormuster und Demonstrator}
-Beim Aufbau ist wichtig, dass sowohl Labormuster als auch Demonstrator nicht später als vollständige Güterwagen 4.0 nutzbar sein werden. Außerdem ist es möglich, dass ein Umbau an der Bremse die Zulassung des Wagens so sehr einschränkt, dass keine Fahrten auf freier Strecke möglich sind. Darum ist darüber zu diskutieren, ob nur ein Erprobungsträger mit automatischer Bremse auszustatten ist, aber eventuell eine dritte (tragbare) Kommunikationsbasis zu erstellen ist, die während einer Erprobung auf freier Strecke auf einen weiteren Wagen zu Testzwecken gesetzt werden kann.\par
-Eine Zulassung soll, über mindestens gleichbleibende Sicherheit bei kompletter Abschaltung des Systems, stattfinden. %Diese in Schritten stattfindende Automatisierung führt zu einem hohen Mehrwert des Güterwagens, nicht nur, im Einzelwagenverkehr.
-
 \subsection{Beschreibung der Ausbaustufen}\label{sec:Ausbaustufen}
 Anhand des Ist- und Soll-Zustandes (siehe voriges und folgendes Kapitel) sind fünf Ausbaustufen für den Güterwagen 4.0 geplant, die diese Zeiteinsparung bringen sollen. In den folgenden Abschnitten werden die geplanten Ausbaustufen kurz beschrieben.\par
-%Die ersten drei Ausbaustufen sollen in diesem Projekt stattfinden. Ausbaustufe 4 und 5 in Folgeprojekten. 
 
 \subsubsection{Ausbaustufe 1: Stromversorgung, Telematik und Datenvernetzung}
 \begin{figure}[hbp] 
@@ -70,6 +40,7 @@ In diesem Stadium ist der Wagen an sich noch nicht 'schlauer' als ein nicht ausg
     \item Zustand der Bremse
     \item ...
 \end{itemize}
+
 \subsubsection{Ausbaustufe 2: Ausbaustufe 1 + Automatisierung der Bremsbedienung}
 \begin{figure}[htbp] 
     \includegraphics[width=\textwidth]{Bilder/Ausbaustufen_2.PNG}
@@ -77,25 +48,68 @@ In diesem Stadium ist der Wagen an sich noch nicht 'schlauer' als ein nicht ausg
     \label{fig:Klasse2}
 \end{figure} 
 In der zweiten Ausbaustufe, siehe Abbildung \ref{fig:Klasse2}, ist eine zusätzliche Aktorik für Endabsperrhähne und Handbremse geplant. Dadurch kann ein Teil der Bremsbedienung so weit automatisiert werden, dass ein Einstellen der Bremsart anhand von anderen Wagen im Wagenzug, Gewicht und Bremsfähigkeit möglich ist. Außerdem ist die automatische Parkbremse realisiert.\par
+Nach einer vollständigen Zugzusammenstellung kann das System vollständig abgeschaltet und durch einen Wagenmeister abgenommen werden. Sicherheitsfunktionen des Wagens und der Bremse bleiben für Zugfahrten unangetastet. Wichtig dafür ist eine Nutzung von bistabilen Ventilen im System. Diese sorgen für einen sicheren Zustand auch bei abgeschaltetem System und es ist nur ein Nachweiß über die Bistabilität dieser zu führen.
+
 \subsubsection{Ausbaustufe 3: Ausbaustufe 2 + ep-''light''-Bremsen}
 \begin{figure}[htbp] 
     \includegraphics[width=\textwidth]{Bilder/Ausbaustufen_3.PNG}
     \caption{Klasse 3 bestehend aus Klasse 2 und der eingeführten ep-''light'-Bremse - angelehnt an \cite{ETR_3}}
     \label{fig:Klasse3}
 \end{figure} 
-In der dritten Ausbaustufe, siehe Abbildung \ref{fig:Klasse3}, kommt zusätzlich zur Bremsbedienung auch die ep-''light''-Bremse hinzu. Diese sorgt für eine für kürzere Bremswege und/oder höhere Geschwindigkeiten.\par
+In der dritten Ausbaustufe, siehe Abbildung \ref{fig:Klasse3}, kommt zusätzlich zur Bremsbedienung auch eine Vorform der \gls{ep-Bremse} hinzu: die ep-''light''-Bremse. Diese sorgt für eine für kürzere Bremswege und/oder höhere Geschwindigkeiten.\par
+Dafür muss dieses System richtig eingestellt werden. Die ep-Bremse ist die erste Komponente, die auch bei Zugfahrten eingeschaltet bleibt. Es ist zu verhindern, dass ein oder mehrere Wagen zur Unzeit bremsen.
+
 \subsubsection{Ausbaustufe 4: Ausbaustufe 3 + automatisierter Zugschluss}
 \begin{figure}[htbp] 
     \includegraphics[width=\textwidth]{Bilder/Ausbaustufen_4.PNG}
     \caption{Klasse 4 bestehend aus Klasse 3 und der Automatisierung des Zugschlusses - angelehnt an \cite{ETR_3}}
     \label{fig:Klasse4}
 \end{figure} 
-In der vierten Ausbaustufe, siehe Abbildung \ref{fig:Klasse4}, ist ein automatisierter Zugschluss geplant. Dieser soll das Anbringen des Zugschlusssignals am letzten Wagen ablösen. Dies wird vom Personal noch manuell erledigt. Dazu muss die Person den gesamten Zug von bis zu 700 m ablaufen um die die entsprechenden Signale am letzten Wagen anzubringen. Das Zugschlusssignal hat außerdem die Funktion die Zugintigrität zu gewährleisten und ist somit sicherheitsrelevant. 
+In der vierten Ausbaustufe, siehe Abbildung \ref{fig:Klasse4}, ist unter anderem ein automatisierter Zugschluss geplant. Dieser soll das Anbringen des Zugschlusssignals am letzten Wagen ablösen. Dies wird vom Personal noch manuell erledigt. Dazu muss die Person den gesamten Zug von bis zu 700 m ablaufen um die die entsprechenden Signale am letzten Wagen anzubringen. Vor allem aber soll diese Funktion aber den Mehrwert der technischen Sicherheit bei der Zugintigrität bieten. Durch eine Integration eines echtzeitfähigem Zugschlusses bietet diese Funktion eine durchgängige Möglichkeit der Zugintigrität. Damit ist in Zukunft auch eine Fahrt von Güterzügen in ETCS Level 3 möglich.
+
 \subsubsection{Ausbaustufe 5: Ausbaustufe 4 + Rangierantrieb} \label{sec:A5}
 \begin{figure}[htbp] 
     \includegraphics[width=\textwidth]{Bilder/Ausbaustufen_5.PNG}
     \caption{Klasse 5 bestehend aus Klasse 4 und einem Rangierantrieb - angelehnt an \cite{ETR_3}}
     \label{fig:Klasse5}
 \end{figure} 
-In der fünften Ausbaustufe, siehe Abbildung \ref{fig:Klasse5}, kommt der Rangierantrieb hinzu. Damit dieser ohne Probleme funktioniert braucht er neben einem Antrieb zusätzlich eine weitere Batterie und Umrichter. Zur Speisung der zweiten Batterie wird auch ein zweiter Radsatzgenerator benötigt.\par
+In der fünften Ausbaustufe, siehe Abbildung \ref{fig:Klasse5}, kommt der Rangierantrieb hinzu. dieser kann allerdings auch bereits auf einen Wagen der nur mit Stufe 1 und 2 ausgestattet ist aufgesetzt werden. Damit dieser ohne Probleme funktioniert braucht er neben einem Antrieb zusätzlich eine weitere Batterie und Umrichter. Zur Speisung der zweiten Batterie wird auch ein zweiter Radsatzgenerator benötigt.\par
 In diesem Stadium kann von einem automatisierten Güterwagen gesprochen werden. Er kann selbstständig bei der ''Briefkastenbedienung'' (siehe \cite{GAK}) assistieren und auf dem Werksgelände ohne Rangierlok oder andere Verschiebemechanismen verfahren.
+
+\subsection{Abgrenzung des Güterwagen 4.0 vom konventionellen Güterwagen}
+\subsubsection{Leistungsniveau und Energieversorgung}
+Diese Stromversorgung soll in diesem Projekt nur für ein geringes Leistungsniveau bereitstehen. Es ist keine Anwendung mit größerer Stromzufuhr geplant. Ein später folgender Güterwagen 4.0  kann dies aber eventuell fordern.\par
+In diesem Projekt wird weder die Energieversorgung des späteren 'vollständig' ausgebauten Güterwagen 4.0 noch die Energieversorgung nach der VDI-Richtlinie 5905 entwickelt. Dabei wird es wahrscheinlich Überschneidungen geben, auch werden Erfahrungen aus den Arbeitsrunden mitgenommen und einfließen, aber es wird keine exemplarische Realisierung dessen.\par
+Eine vollständige Stromversorgung nach der VDI-Richtlinie 5905 oder ein Prototyp der diese Richtlinie prägt, soll nicht entstehen. 
+
+\subsubsection{Bremse}
+Die Bremse stellt, neben dem Rechner, ein Herzstück des Güterwagen 4.0  dar.
+Hier ist eine Teilautomatisierung der Bremse im Bereich der Hauptluftleitung, Bremsumsteller, Lastwechsel und Feststellbremse geplant. Diese soll mit Aktoren automatisch oder auf Befehl umgestellt werden. Dadurch soll auch eine automatische Bremsprobe und eine automatische Bremsberechnung möglich sein. Ebenso eine Stillstandsüberwachung.\par
+Nicht geplant ist dagegen eine automatische Notbremsfunktion, die beispielsweise die Handbremse anlegt, wenn ein Hindernis auftaucht. Dies ist als Aufbau möglich, soll aber nicht zur Standardausrüstung gehören. Auch eine entsprechende wirtschaftliche Betrachtung findet nicht statt.\par
+Während dieses Projektes ist eine Ausstattung der Wagen mit einer ep-light-Bremse als Versuch geplant. Diese wird allerdings ohne Anrechnung auf die Bremsleistung im Testbetrieb stattfinden, sodass eine erste Einführung probehalber unkritisch ist. Eine angerechnete ep-Bremse im Güterverkehr wäre aus vielen Gründen sehr interessant, muss allerdings aus Sicherheitsgründen weitreichender geplant sein.\par
+
+\subsubsection{Intelligente Vernetzung}
+Der Güterwagen 4.0 ist als 'intelligenter' Wagen im Sinne der Industrie 4.0 im Schienenverkehr geplant. Dafür benötigt er, neben der Energieversorgung und der teil automatisierten Bremse, auch einen Rechner, der diese 'Intelligenz' liefert.\par
+Auf diesem Rechner soll als Betriebssystem das sogenannte 'WagonOS' installiert sein. Dieses bietet als Open Source-System ein offenes Betriebssystem mit vielen Ausbau- möglichkeiten. Das WagonOS bietet den Nutzern des Güterwagen 4.0  diesen auf genau die benötigten Anwendungsfälle zu Optimieren und sogar die Möglichkeit eigene Applikationen zu erstellen.\par
+Des Weiteren liegen auf dieser Speichereinheit dezentral alle für die Zugbildung und Instandhaltung wichtigen Informationen über den Wagen. Dazu gehören bauartspezifische Parameter wie Gewicht, Länge, Achszahl, maximal Zuladung und Höchstgeschwindigkeit genauso wie Wagenspezifische Informationen wie Besitzer, Laufleistung, Informationen aus den Sensoren, letzte Wartungen und nächste Instandhaltungszyklen.\par
+Diese Informationen liegen ebenso als 'Digitaler Zwilling' in einer Cloud. Bei Verbindung des Wagens zum Internet und Änderung der Informationen auf dem Wagen wird dieser Zwilling regelmäßig aktualisiert.\par
+Im Verband mit anderen Wagen verhält sich der Güterwagen 4.0 'sozial' und teilt alle notwendigen Informationen über sich mit den anderen Wagen und der Lok als gleichberechtigte Partner. Durch die Verbindung von Wagen zu Wagen ist keine durchgehende Internetverbindung notwendig. Die Informationen können lokal ausgetauscht und später synchronisiert werden.
+
+\subsubsection{Beladung und Ladungssicherung}
+Bei der Beladung und Ladungssicherung ist es möglich diverse Sensoren, auch unabhängig von der Beladung mit palettiertem Gut, zum Beispiel für Hafenverkehr einzubauen und zu überwachen. Beispiele dafür sind:
+\begin{itemize}
+    \item Königszapfen bei Taschenwagen
+    \item Ladeebenenverstellung bei der Automobilverladung
+    \item Tragzapfenverstellung bei Containertragwagen
+    \item Ladungssicherung von Coiltransportern
+    \item Verstellbare und verschließbare Trennwände bei Schiebewandwagen
+    \item Technische Überwachung von diversen Hebeln und Schaltern
+    \item Temperatursensoren an temperaturempfindlichem Gut
+    \item ...
+\end{itemize}
+Auch möglich ist es Spanngurte mit Sensoren in den Textilien zu entwickeln, die über Funkverbindung mit dem Wagen kommunizieren können.\par
+Diese Sensoren können mittels Funkkommunikation oder mittels Datenleitung ausgelesen werden. Hier ist auf eine sichere Übertragung zu achten (vgl. dazu ITSS Schnittstelle 2).\par
+Im Rahmen des Projektes sollen diese Punkte nicht umgesetzt werden.
+
+\subsection{Weitere Möglichkeiten}
+Die durch die Stromversorgung und das offene Betriebssystem ermöglichten Aussichten sind quasi grenzenlos. So sind Warnlichter oder Rundumlichter bei der Bewegung des Güterwagens möglich, der Einbau einer Alarmanlage oder auch 'nur' Akustikfunktionen bei Bewegung. Auch eine anbaubare Front- oder Rückfahrkamera für Fahrer eines Zwei-Wege-Fahrzeuges auf LKW-Basis oder das bereits vorgestellte Prinzip der technisch überwachten Spitze von Rangierabteilungen\cite{RTUS} ist möglich. Ebenso möglich sind auch für Unternehmen angepasste Applikationen für Kommunikation mit einzelnen Toren, Kränen oder Beladungsstationen. Diese Punkte werden im Rahmen des Projektes jedoch nicht umgesetzt.

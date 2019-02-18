@@ -2,7 +2,6 @@
 %\def\xcolorversion{2.00}
 %\def\xkeyvalversion{1.8}
 \usepackage[utf8x]{inputenc}
-%\usepackage{ucs}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -15,6 +14,7 @@
 %Tikz Beginn
     \usepackage{tikz} 
     \usepackage{pgfplots}
+    \pgfplotsset{compat=1.15}
 %Tikz Ende
 %Glossar, Abkürzungsverzeichnis Beginn
     \usepackage[acronym]{glossaries} %Glossar %\usepackage[acronym, toc]{glossaries} %Glossar mit Aufruf im Inhaltsverzeichnis
@@ -31,12 +31,13 @@
         %style=reading
     ]{biblatex}
     \addbibresource{Kapitel/Quellen.bib}
+    \usepackage{csquotes}
 %Quellen Ende
 %Anforderungsnummerierung nach Raphael Beginn
     %\theoremstyle{remark}
     \newtheorem{rem}{Notiz}
     %\theoremstyle{definition}
-    \newtheorem{feat}{Merkmal}
+    \newtheorem{feat}{Anforderung}
     %\newtheoremstyle{definition}% name of the style to be used
     %  {5pt}% measure of space to leave above the theorem. E.g.: 3pt
     %  {5pt}% measure of space to leave below the theorem. E.g.: 3pt
@@ -88,8 +89,8 @@
     \appendix
     %\input{Kapitel/Dokumente.tex}\newpage
     \input{Kapitel/Anhang_IDR.tex}\newpage
-    \input{Kapitel/Anhang_Bremsprobe.tex}\newpage
-    \input{Kapitel/Anhang_TWb.tex}
+%    \input{Kapitel/Anhang_Bremsprobe.tex}\newpage
+%    \input{Kapitel/Anhang_TWb.tex}
 %Anhang Ende
 
 \end{document}

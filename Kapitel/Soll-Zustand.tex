@@ -1,34 +1,19 @@
 \section{Soll-Zustand und Anforderungen}
-In diesem Kapitel sollen einzelne Themen aus dem Ist-Zustand herausgegriffen und für das Projekt Güterwagen 4.0 beschrieben werden. Es werden der Sollzustand und die Anforderungen des Demonstrators beschrieben, aber nicht die des späteren vollständig ausgebauten Güterwagen 4.0.\par
-Durch eine Energieversorung als Basis des Güterwagens 4.0 ist es möglich verschiedene Sensoren des Wagens zu speisen, sowie die Kommunikation zwischen einzelnen Güterwagen sowie einem Server und verschiedenen mobilen Endgeräten herstellen, aber ebenfalls ist es möglich eine sporadische Aktorik für die Bremse zu ermöglichen. Die Punkte werden einzeln anhand von Aufgaben aus der Beschreibung des Ist-Zustandes beschrieben. \par
+In diesem Kapitel wird der Soll-zustand des Labormusters und des Demonstrators beschrieben. Dafür werden einzelne Themen aus dem Ist-Zustand herausgegriffen und für das Projekt Güterwagen 4.0 beschrieben.\par
+Gleichzeitig findet die Beschreibung der Anforderungen statt. Diese bestehen immer aus einer Anforderungsnummer sowie einem Anforderungstext sowie eventuell weiteren Notizen.%\par
+%Durch eine Energieversorung als Basis des Güterwagens 4.0 ist es möglich verschiedene Sensoren des Wagens zu speisen, sowie die Kommunikation zwischen einzelnen Güterwagen sowie einem Server und verschiedenen mobilen Endgeräten herstellen, aber ebenfalls ist es möglich eine sporadische Aktorik für die Bremse zu ermöglichen. Die Punkte werden einzeln anhand von Aufgaben aus der Beschreibung des Ist-Zustandes beschrieben. \par
 
 \subsection{Allgemeines}
-%Die Aufbauten auf dem Demonstrator sollen vor Zugfahrten vollständig abschaltbar sein.\par
 \begin{feat}
 Die Aufbauten auf dem Demonstrator sollen vor Zugfahrten vollständig abschaltbar sein.
 \end{feat}
-Eine Ausstattung als Nachrüstung von konventionellen Güterwagen muss in der Konstruktion bedacht werden.\par
 \begin{feat}
-Die Aufbauten auf dem Demonstrator sollen vollständig Nachrüstbar sein.
+Die Aufbauten auf dem Demonstrator sollen vollständig nachrüstbar sein.
 \end{feat}
-%Sämtliche Anbauten sollen unter ATEX-gerechten Bedingungen angebracht werden, das bedeutet unter anderem, dass keine zur Explosion neigenden Materialien verwendet werden dürfen, kein Gasaustausch stattfindet und alles bahnrobust ausgelegt ist.
 \begin{feat}
-\textbf{Sämtliche Aufbauten sollen unter ATEX-gerechten Bedingungen angebracht werden.}
+Für Zulassungen ist die CSM-VO - Verordnung (EG) Nr. 402/2013 ist anzuwenden.
 \end{feat}
-\begin{rem}
-Dies bedeutet unter anderem, dass keine zur Explosion neigenden Materialien verwendet werden dürfen, kein Gasaustausch stattfindet und alles bahnrobust ausgelegt ist.
-\end{rem}
-Es ist auf mindestens gleichbleibende  Sicherheit des Systems, sowie einzelner Komponenten zu achten.
-\begin{feat}
-\textbf{Die CSM-VO - Verordung (EG) Nr. 402/2013 ist anzuwenden.}
-\end{feat}
-Es gelten die üblichen Normen für:
-\begin{itemize}
-    \item Umgebungsbedingenen
-    \item Rüttelfestigkeit
-    \item EMV
-    \item Brandschutz
-\end{itemize}
+
 \begin{feat}
 Die \acrshort{DIN} \acrshort{EN} 50155:2018 Bahnanwendungen - Elektronische Einrichtungen auf Schienenfahrzeugen ist anzuwenden
 \end{feat}
@@ -41,33 +26,40 @@ Die Technische Richtlinie zur EMV Verträglichkeit TR-EMV ist anzuwenden.
 \begin{feat}
 Die \acrshort{DIN} \acrshort{EN} 45545 Brandschutz in Schienenfahrzeugen ist anzuwenden
 \end{feat}
-Außerdem sollten alle mit Spannung zu versorgenden Komponenten möglichst nah beieinander sein, um möglichst wenig Kabelmaterial zu verbrauchen.
 \begin{feat}
-Alle Verstellkomponetenten sollen möglichst nah beieinander sein, um möglicht wenig Kabellänge zu benötigen
+Die ATEX-Richtlinie 2014/34/EU ist zu beachten.
 \end{feat}
+\begin{feat}
+Alle angebauten Komponenten sollen an für sie sinnvollen Stellen untergebracht werden.
+\end{feat}
+\begin{rem}[zu Anf. 09]
+Alle dazugehörenden Leitungen sind in definierten Strängen und Positionen anzubringen um eine Wartbarkeit des Wagens zu erhalten.
+\end{rem}
 
 \subsection{Energieversorgung}\label{sec:EV}
 \subsubsection{Spannungsversorgung}
-Aufgrund der Prototypenentwicklung in diesem Projekt erscheint eine 24 V-Spannungs- versorgung für dieses Projekt sinnvoll. Sowohl werden alle Grenzen der Berührspannungen im Kleinspannungsbereich eingehalten, als auch gibt es bereits sehr viele Produkte auf dieser Spannungsebene. Namentlich genannt die SPS, aber auch diverse Sensoren und Aktoren. Allerdings muss auf Bahnübliche Schwankungen geachtet werden.\par
 \begin{feat}
-\textbf{Es ist eine Spannungsversorgung von 24 V vorzusehen}
+Es ist eine Spannungsversorgung von 24 V vorzusehen
 \end{feat}
-\begin{rem}
-\textbf{Die bei der Bahn üblichen Schwankungen laut UIC 550 und DIN EN 50155 sind zu beachten.}
+\begin{rem}[zu Anf. 10]
+Aufgrund der Prototypenentwicklung in diesem Projekt erscheint eine 24 V-Spannungs- versorgung für dieses Projekt sinnvoll. Sowohl werden alle Grenzen der Berührspannungen im Kleinspannungsbereich eingehalten, als auch gibt es bereits sehr viele Produkte auf dieser Spannungsebene. Namentlich genannt die SPS, aber auch diverse Sensoren und Aktoren.
+%\textbf{Die bei der Bahn üblichen Schwankungen laut UIC 550 und DIN EN 50155 sind zu beachten.}
 \end{rem}
+
 \subsubsection{Batterie}
 Gepuffert werden soll das System durch eine Batterie. Diese Batterie soll genügend Leistung liefern um sämtliche Daten-, Kommunikations- und Aktorsteuerungesprozesse speisen zu können. Außerdem soll sie genügend Energie für den Erprobungsbetrieb bieten.\par
-Die Batterie soll mittels Ladegerät von 230 V nachladbar sein, aber auch eine Schnittstelle für einen Achsdeckelgenerator bieten. Zum Aufladen wird dieser wahrscheinlich nicht geeignet sein, da keine entsprechenden Umlaufzyklen während der Testphase möglich sind. Diese sollen aber während des Projektes simuliert werden. Die Batterie ist in einem Einschubkasten so anzubringen, dass sie von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist.\par
+Die Batterie soll mittels Ladegerät von 230 V nachladbar sein, aber auch eine Schnittstelle für einen Achsdeckelgenerator bieten. Zum Aufladen wird dieser wahrscheinlich nicht geeignet sein, da keine entsprechenden Umlaufzyklen während der Testphase möglich sind. %Diese sollen aber während des Projektes simuliert werden. 
+Die Batterie ist in einem Einschubkasten so anzubringen, dass sie von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist.\par
 \begin{feat}
 Es ist eine Pufferbatterie vorzusehen.
 \end{feat}
-\begin{rem}
+\begin{rem}[zu Anf. 11]
 Die Batterie soll genügend Leistung für sämtliche Daten-, Kommunikations- und Aktorsteuerungsprozesse liefern.
 \end{rem}
-\begin{rem}
+\begin{rem}[zu Anf. 11]
 Die Batterie soll genügend Leistung für den Erprobungsbetrieb haben.
 \end{rem}
-\begin{rem}
+\begin{rem}[zu Anf. 11]
 Es sind Ladeschnittstellen vorzusehen:
 \begin{itemize}
     \item 230 V - Netzspannungsgerät
@@ -75,18 +67,15 @@ Es sind Ladeschnittstellen vorzusehen:
     \item Weitere
 \end{itemize}
 \end{rem}
-\begin{feat}
-Es ist ein Zyklus für den Umlauf zur Aufladung der Batterie mittels Achsdeckelgenerator zu simulieren.
-\end{feat}
+%\begin{feat}Es ist ein Zyklus für den Umlauf zur Aufladung der Batterie mittels Achsdeckelgenerator zu simulieren. \end{feat}
 \begin{feat}
 Für die Batterie ist ein Einschubfach vorzusehen. 
 \end{feat}
-\begin{rem}
-Das Fach ist so anzubringen, dass es von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist.
+\begin{rem} [zu Anf. 12]
+Das Fach ist so anzubringen, dass es von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist und eine möglichst einfach Wartbarkeit ermöglicht.
 \end{rem}
-\subsubsection{Anschluskasten und Leitungen}
-Für die Versorgung von Sensoren und Aktoren ist für dieses Projekt ein Klemmkasten vorzusehen, der in zukünftigen Projekten professionalisiert werden kann. 
-Die Verrohrung für Daten- und Stromleitungen ist vorzusehen, sodass diese geschützt sind und klare Linien zur Verlegung von Leitungen zu sehen sind. \par
+\subsubsection{Anschlusskasten und Leitungen}
+%Für die Versorgung von Sensoren und Aktoren ist für dieses Projekt ein Klemmkasten vorzusehen, der in zukünftigen Projekten professionalisiert werden kann. Die Verrohrung für Daten- und Stromleitungen ist vorzusehen, sodass diese geschützt sind und klare Linien zur Verlegung von Leitungen zu sehen sind. \par
 \begin{feat}
 Es ist ein Anschluss- oder Klemmkasten für die Spannungsversorgung von Sensoren und Aktoren vorzusehen. 
 \end{feat}
@@ -95,8 +84,7 @@ Die Verrohrung für Daten- und Stromleitungen ist vorzusehen, sodass diese gesch
 \end{feat}
 
 \subsection{Wagenbewegungen}
-
-Wagenbewegungen finden in vielen Unterkapiteln des Ist-Zustandes statt. Dort ist von verschiedenen Bewegungen die Rede. Diese Bewegungen können sein:
+Es gibt verschiedene Wagenbewegungen. Diese Bewegungen können sein:
 \begin{itemize}
     \item Rangieren mittels Lok und mit Luftkupplung
     \item Rangieren mittels Lok und ohne Luftkupplung
@@ -109,7 +97,7 @@ Wagenbewegungen finden in vielen Unterkapiteln des Ist-Zustandes statt. Dort ist
 \begin{feat}
 Für jede Art von Wagenbewegungen sind Betriebsparameter notwendig.
 \end{feat}
-\begin{rem}
+\begin{rem} [zu Anf. 15]
 Wagenbewegungen können sein:
 \begin{itemize}
     \item Bedienfahrten
@@ -122,23 +110,23 @@ Wagenbewegungen können sein:
 
 \subsubsection{Bremse}
 \begin{feat}
-Elektrisches Lösen der Bremse möglich.
+Das elektrische Lösen der Bremse ist möglich.
 \end{feat}
 \begin{feat}
-Automatische Einstellung der Bremsstellung.
+Eine automatische Einstellung der Bremseinstellung ist möglich.
 \end{feat}
-\begin{rem}
-Bremsstellung G und P werden unterstützt.
+\begin{rem} [zu Anf. 17]
+Dafür werden die Bremsstellungen G und P werden unterstützt.
 \end{rem}
-\begin{rem}
+\begin{rem} [zu Anf. 17]
 Folgende Regelungen gelten für die Bremsstellung:
 \begin{itemize}
     \item Der Wagen soll nach Aufforderung seine Bremsstellung in den gewünschten Modus umstellen können.
     \item Der Wagen soll abgeschaltete Bremsen selbstständig melden.
 \end{itemize}
 \end{rem}
-\begin{rem}
-Es sollen auch unterschiedliche Bremsstellungen an den Wagen möglich sein.\\
+\begin{rem} [zu Anf. 17]
+Es sollen unterschiedliche Bremsstellungen an den Wagen möglich sein.\\
 Beispielsweise für LL-Stellungen.
 \end{rem}
 
@@ -146,14 +134,14 @@ Beispielsweise für LL-Stellungen.
 \begin{feat}
 Es ist eine automatische Feststellbremse vorzusehen.
 \end{feat}
-\begin{rem}
+\begin{rem} [zu Anf. 18]
 Folgende Regelung gilt für die Feststellbremse:
 \begin{itemize}
-    \item Die Feststellbremse ist lose, wenn der Wagen Luftgekuppelt ist.
-    \item Die Feststellbremse ist angezogen, wenn der wagen nicht Luftgekuppelt ist.
+    \item Die Feststellbremse ist gelöst, wenn der Wagen luftgekuppelt ist.
+    \item Die Feststellbremse ist angezogen, wenn der Wagen nicht luftgekuppelt ist.
 \end{itemize}
 \end{rem}
-\begin{rem}
+\begin{rem} [zu Anf. 18]
 Weitere manuelle Steuerungen sind mittels Endgerät oder Schalter am Wagen schnell und sicher zu ermöglichen.
 \end{rem}
 
@@ -166,34 +154,47 @@ Es ist für eine Stillstandsüberwachung zu sorgen
 \begin{feat}
 Es sind Aktoren in der HL vorzusehen, die die HL auf Kommunikationsbasis verschließen oder öffnen können.
 \end{feat}
-\begin{rem}
-Hier ist folgende Regelung für die Aktorsteuerung der Endabsperrhähne in der HL vozusehen:
+\begin{rem} [zu Anf. 20]
+Hier ist folgende Regelung für die Aktorsteuerung der Endabsperrhähne in der HL vorzusehen:
 \begin{itemize}
-    \item Ist der Güterwagen Luftgekuppelt, so ist das Ventil in der HL im Normalzustand an der Seite offen.
-    \item Ist der Güterwagen nicht Luftgekuppelt, so ist das Ventil in der HL im Normalzustand auf der Seite geschlossen.
+    \item Ist der Güterwagen luftgekuppelt, so ist das Ventil in der HL im Normalzustand an der Seite offen.
+    \item Ist der Güterwagen nicht luftgekuppelt, so ist das Ventil in der HL im Normalzustand auf der Seite geschlossen.
 \end{itemize}
 \end{rem}
-\begin{rem}
+\begin{rem} [zu Anf. 20]
 Weitere manuelle Steuerungen, beispielsweise für Ablaufberge oder manuelle Bremsproben sind vorzusehen.
 \end{rem}
 
-\subsubsection{Wagenzusammenstellungen}
-Wagenzusammenstellungen und -trennungen finden in vielen Unterkapiteln des Ist-Zustandes statt. Dazu gehören sowohl die mechansichen Zusammenstellungen als auch die, danach und vor der Wagenbewegung, zugehörigen Bremsproben und technischen Wagenbehandlungen.
+\subsubsection{Wagentrennungen}
 \begin{feat}
-Eine automatische Wagengruppenbildung soll möglich sein.
+Eine elektrische Vorbereitung von Trennstellen ist möglich.
+\end{feat}
+\begin{rem} [zu Anf. 21]
+Folgende Regelungen gelten für die Trennstellenanzeige:
+\begin{itemize}
+    \item Ist auf dem Endgerät eine Trennstelle angewählt, so müssen die HL-Absperrventile sich an diesen Punkte schließen um eine einfachere Luftkupplungstrennung zu ermöglichen.
+    \item Die Trennstellenanzeige muss deutlich von allen Seiten des Güterwagens sichtbar sein.
+    \item Die Trennstellenanzeige muss farblich erkennbar sein.
+\end{itemize}
+\end{rem}
+
+\subsubsection{Wagenzusammenstellungen}
+Zu Wagenzusammenstellungen gehören sowohl die mechanischen Zusammenstellungen als auch die, danach und vor der Wagenbewegung, zugehörigen Bremsproben und technischen Wagenbehandlungen.
+\begin{feat}
+Eine automatische Wagengruppenbildung ist möglich.
 \end{feat}
 \begin{feat}
-Die elektrische Vorbereitung von Kuppelstellen soll möglich sein.
+Die elektrische Vorbereitung von Kuppelstellen ist möglich.
 \end{feat}
 Die Vorprüfung der Wagen im automatisierten Rangierbahnhof sollen bei einem Wagenzug, der nur aus ausgerüsteten Güterwagen 4.0 besteht, nicht mehr notwendig sein, da dort die Reihenfolge der Wagen bekannt ist. Solange nicht alle Wagen Güterwagen 4.0 sind, muss dieser Prozess weiter ausgeführt werden.
 \begin{feat}
-Eine Überprüfung der Wagenreihung soll möglich sein.
+Eine Überprüfung der Wagenreihung ist möglich.
 \end{feat}
 \begin{feat}
-Überprüfung des technischen Zustands aus vorheriger Fahrt soll möglich sein.
+Eine Überprüfung des technischen Zustands aus vorheriger Fahrt ist wünschenswert.
 \end{feat}
 \begin{feat}
-Eine automatische Übermittlung von Transportunterlagen soll möglich sein.
+Eine automatische Übermittlung von Transportunterlagen ist möglich.
 \end{feat}
 
 \paragraph{Kuppeln}
@@ -201,10 +202,10 @@ Beim Demonstrator ist keine Automatisierung der mechanischen oder der Luftkupplu
 
 \paragraph{Lastwechsel}
 \begin{feat}
-Es soll ein automatischer Lastwechsel möglich sein
+Es ist ein automatischer Lastwechsel möglich.
 \end{feat}
-\begin{rem}
-Folgende Regelungen gelten für die Lastwechseleinstellung:
+\begin{rem} [zu Anf. 27]
+Folgende Regel gilt für die Lastwechseleinstellung:
 \begin{itemize}
     \item Der Wagen soll nach Aufforderung den Lastwechsel selbst vornehmen können
 \end{itemize}
@@ -212,20 +213,21 @@ Folgende Regelungen gelten für die Lastwechseleinstellung:
 
 \paragraph{Bremsprobe}
 \begin{feat}
-Folgende Anforderugnen werden an die Bremsprobe gestellt:
+Folgende Regelungen gelten für die Bremsprobe:
 \begin{itemize}
     \item Der Wagen soll selbstständig seine Bremsfähigkeit angeben
     \item Der Wagen soll selbstständig seine Bremsfähigkeit erproben
     \item Der Wagen soll selbstständig eine Rückmeldung an ein passendes Gerät geben
     \item Der Wagen soll den Druck im Reservebehälter angeben können
-    \item Der Wagen soll den Druck in der HL angeben können
-    \item Der Wagen soll den C-Druck angeben können
+    \item Der Wagen soll den Druck in der HL angeben
+    \item Der Wagen soll den C-Druck angeben
 \end{itemize}
 \end{feat}
 \begin{feat}
-Es soll eine Rechener gesteuerte automatische Bremsprobe möglich sein.
+Eine vom Rechner gesteuerte automatische Bremsprobe ist möglich.
 \end{feat}
-\begin{rem} Diese hat sich für folgende Fahrten zu unterscheiden:
+\begin{rem} [zu Anf. 29] 
+Diese hat sich für folgende Fahrten zu unterscheiden:
 \begin{itemize}
     \item für Bedienfahrt
     \item für Rangierfahrt
@@ -233,23 +235,12 @@ Es soll eine Rechener gesteuerte automatische Bremsprobe möglich sein.
     \item für Zugfahrt
 \end{itemize}
 \end{rem}
-\begin{rem}
-Folgende Regelungen gelten für die Bremsprobe:
-\begin{itemize}
-    \item Der Wagen soll selbstständig seine Bremsfähigkeit angeben
-    \item Der Wagen soll selbstständig seine Bremsfähigkeit erproben
-    \item Der Wagen soll selbstständig eine Rückmeldung an ein passendes Gerät geben
-    \item Der Wagen soll den Druck im Reservebehälter angeben können
-    \item Der Wagen soll den Druck in der HL angeben können
-    \item Der Wagen soll den C-Druck angeben können
-\end{itemize}
-\end{rem}
 
 \paragraph{Bremsberechnung}
 \begin{feat}
-Eine automatische Bremsberechnung anhand des Wagenzuges und der Lok soll möglich sein.
+Eine automatische Bremsberechnung anhand des Wagenzuges und der Lok ist möglich.
 \end{feat}
-\begin{rem}
+\begin{rem} [zu Anf. 30]
 Die Regelungen zur Bremsberechung sind:
 \begin{itemize}
     \item ...
@@ -258,7 +249,7 @@ Die Regelungen zur Bremsberechung sind:
 
 \paragraph{Technische Wagenbehandlung}
 \begin{feat}
-So weit eine technische Wagenbehandlung Aktor- und Sensorgeführt möglich ist, soll diese integriert werden.
+So weit eine technische Wagenbehandlung aktor- und sensorgeführt möglich ist, soll diese integriert werden.
 \end{feat}
 \begin{feat}
 Folgende Regelungen gelten für die technische Wagenbehandlung:
@@ -272,33 +263,30 @@ Folgende Regelungen gelten für die technische Wagenbehandlung:
 Auf dem Wagen soll ein elektronischer Frachtbrief digital vorhanden und abrufbar sein.
 \end{feat}
 
-\subsubsection{Wagentrennungen}
-\begin{feat}
-Eine elektrische Vorbereitung von Trennstellen ist möglich.
-\end{feat}
-\begin{rem}
-Folgende Regelungen gelten für die Trennstellenanzeige:
-\begin{itemize}
-    \item Ist auf dem Endgerät eine Trennstelle angewählt, so müssen die HL-Absperrventile sich an diesen Punkte schließen um eine einfachere Luftkupplungs-trennung zu ermöglichen.
-    \item Die Trennstellenanzeige muss deutlich von allen Seiten des Güterwagens sichtbar sein.
-    \item Die Trennstellenanzeige muss farblich erkennbar sein.
-\end{itemize}
-\end{rem}
-
 \subsection{Datenhaltung und -übertragung}
 \begin{feat}
-Alle Daten sollen im Wagen kabelgebunden transportiert werden. 
+Alle Daten werden im Wagen kabelgebunden transportiert. 
 \end{feat}
 \begin{feat}
-Für eine Übertragung zum nächsten Wagen sind kurze Funkstrecken vorzusehen
+Für eine Übertragung zum nächsten Wagen sind kurze Funkstrecken vorzusehen.
 \end{feat}
+\begin{rem}[zu Anf. 35]
+Kurze Funkstrecken können über
+\begin{itemize}
+    \item WLAN (60GHz),
+    \item NFC,
+    \item Bluetooth,
+    \item ...
+\end{itemize}
+realisiert werden.
+\end{rem}
 \begin{feat}
 Datentechnische Verbindungen werden zwischen 
 \begin{itemize}
     \item Sensoren und Rechner
     \item Rechner und Wagen
     \item Wagen und Wagen
-    \item Wagen und Device
+    \item Wagen und mobilem Endgerät
 \end{itemize}
 benötigt.
 \end{feat}
@@ -311,24 +299,23 @@ Die Bandbreite soll ausreichend sein.
 \begin{feat}
 Es sind verschiedene Authorisierungsstufen vorzusehen. Jede Gruppe braucht eine ausreichende Zugriffsmöglichkeit auf benötigte Daten.
 \end{feat}
-\begin{rem}
-Authorisierungsstufen könne sein:
+\begin{rem} [zu Anf. 39]
+Authorisierungsstufen können sein:
 \begin{itemize}
     \item Stufe 1:
     \item Stufe 2:
     \item Stufe 3:
 \end{itemize}
 \end{rem}
-\begin{rem}
-Verschiedene Daten sollen nur in einem gewissen Gefencing-Bereich abrufbar sein.
+\begin{rem} [zu Anf. 39]
+Verschiedene Daten sollen nur in einem gewissen Geofencing-Bereich abrufbar sein.
 \end{rem}
 
 \subsection{Diagnosefunktionen}
 \begin{feat}
-Alle für eine vorausschauende Wartung notwendigen Sensoren sollen eingebaut und überwacht werden.\\
-Diese Informationen soll der Wagen über sich speichern und abrufbar bereithalten.
+Alle für eine vorausschauende Wartung notwendigen Sensoren sollen eingebaut und überwacht werden.
 \end{feat}
-\begin{rem}
+\begin{rem} [zu Anf. 40]
 Beispiele dafür sind:
 \begin{itemize}
     \item Lagertemperaturüberwachung
@@ -342,13 +329,16 @@ Beispiele dafür sind:
 \end{itemize}
 \end{rem}
 \begin{feat}
+Diese Informationen soll der Wagen über sich speichern und abrufbar bereithalten.
+\end{feat}
+\begin{feat}
 Alle bereits über den Wagen vorhandenen Informationen, wie Wartungszyklen, Instandhaltungen und ähnliches sollen als Dokument lokal auf dem Wagen  verfügbar sein.
 \end{feat}
 
 \subsection{Beladung und Ladungssicherung}
 Hier ist für den Demonstrator keine Änderung geplant.
 
-\subsection{sonstiges}
+\subsection{Sonstiges}
 \begin{feat}
 Die Sensoren sollen bei Spannungsversorgung immer überwacht werden.
 \end{feat}

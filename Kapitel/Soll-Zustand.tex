@@ -1,6 +1,6 @@
 \section{Soll-Zustand und Anforderungen}
-In diesem Kapitel wird der Soll-zustand des Labormusters und des Demonstrators beschrieben. Dafür werden einzelne Themen aus dem Ist-Zustand herausgegriffen und für das Projekt Güterwagen 4.0 beschrieben.\par
-Gleichzeitig findet die Beschreibung der Anforderungen statt. Diese bestehen immer aus einer Anforderungsnummer sowie einem Anforderungstext sowie eventuell weiteren Notizen.%\par
+In diesem Kapitel wird der Soll-Zustand des Labormusters und des Demonstrators beschrieben. Dafür werden einzelne Themen aus dem Ist-Zustand herausgegriffen und für das Projekt Güterwagen 4.0 beschrieben.\par
+Gleichzeitig findet die Beschreibung der Anforderungen statt. Diese bestehen immer aus einer Anforderungsnummer sowie einem Anforderungstext sowie eventuell darunterstehenden Notizen.%\par
 %Durch eine Energieversorung als Basis des Güterwagens 4.0 ist es möglich verschiedene Sensoren des Wagens zu speisen, sowie die Kommunikation zwischen einzelnen Güterwagen sowie einem Server und verschiedenen mobilen Endgeräten herstellen, aber ebenfalls ist es möglich eine sporadische Aktorik für die Bremse zu ermöglichen. Die Punkte werden einzeln anhand von Aufgaben aus der Beschreibung des Ist-Zustandes beschrieben. \par
 
 \subsection{Allgemeines}
@@ -42,7 +42,7 @@ Alle dazugehörenden Leitungen sind in definierten Strängen und Positionen anzu
 Es ist eine Spannungsversorgung von 24 V vorzusehen
 \end{feat}
 \begin{rem}[zu Anf. 10]
-Aufgrund der Prototypenentwicklung in diesem Projekt erscheint eine 24 V-Spannungs- versorgung für dieses Projekt sinnvoll. Sowohl werden alle Grenzen der Berührspannungen im Kleinspannungsbereich eingehalten, als auch gibt es bereits sehr viele Produkte auf dieser Spannungsebene. Namentlich genannt die SPS, aber auch diverse Sensoren und Aktoren.
+Aufgrund der Prototypenentwicklung in diesem Projekt erscheint eine 24 V-Spannungsversorgung für dieses Projekt sinnvoll. Sowohl werden alle Grenzen der Berührspannungen im Kleinspannungsbereich eingehalten, als auch gibt es bereits sehr viele Produkte auf dieser Spannungsebene. Namentlich genannt die SPS, aber auch diverse Sensoren und Aktoren.
 %\textbf{Die bei der Bahn üblichen Schwankungen laut UIC 550 und DIN EN 50155 sind zu beachten.}
 \end{rem}
 
@@ -54,7 +54,7 @@ Die Batterie ist in einem Einschubkasten so anzubringen, dass sie von außen zug
 Es ist eine Pufferbatterie vorzusehen.
 \end{feat}
 \begin{rem}[zu Anf. 11]
-Die Batterie soll genügend Leistung für sämtliche Daten-, Kommunikations- und Aktorsteuerungsprozesse liefern.
+Die Batterie soll genügend Leistung für sämtliche Daten-, Kom- munikations- und Aktorsteuerungsprozesse liefern.
 \end{rem}
 \begin{rem}[zu Anf. 11]
 Die Batterie soll genügend Leistung für den Erprobungsbetrieb haben.
@@ -126,8 +126,7 @@ Folgende Regelungen gelten für die Bremsstellung:
 \end{itemize}
 \end{rem}
 \begin{rem} [zu Anf. 17]
-Es sollen unterschiedliche Bremsstellungen an den Wagen möglich sein.\\
-Beispielsweise für LL-Stellungen.
+Es ist sowohl für jeden Wagen einzeln zu unterscheiden, welche Bremsstellung eingstellt ist, als auch für Wagengruppen.% unterschiedliche Bremsstellungen an den Wagen möglich sein. %Beispielsweise für LL-Stellungen.
 \end{rem}
 
 \paragraph{Feststellbremse}
@@ -142,7 +141,7 @@ Folgende Regelung gilt für die Feststellbremse:
 \end{itemize}
 \end{rem}
 \begin{rem} [zu Anf. 18]
-Weitere manuelle Steuerungen sind mittels Endgerät oder Schalter am Wagen schnell und sicher zu ermöglichen.
+Weitere manuelle Steuerungen sind mittels Endgerät oder \newline Schalter am Wagen schnell und sicher zu ermöglichen.
 \end{rem}
 
 \paragraph{Stillstandsüberwachung}
@@ -152,13 +151,13 @@ Es ist für eine Stillstandsüberwachung zu sorgen
 
 \paragraph{Aktoren in der Hauptluftleitung}
 \begin{feat}
-Es sind Aktoren in der HL vorzusehen, die die HL auf Kommunikationsbasis verschließen oder öffnen können.
+Es sind Aktoren in der \acrshort{HL} vorzusehen, die die \acrshort{HL} auf Kommunikationsbasis verschließen oder öffnen können.
 \end{feat}
 \begin{rem} [zu Anf. 20]
-Hier ist folgende Regelung für die Aktorsteuerung der Endabsperrhähne in der HL vorzusehen:
+Hier ist folgende Regelung für die Aktorsteuerung der Endabsperrhähne in der \acrshort{HL} vorzusehen:
 \begin{itemize}
-    \item Ist der Güterwagen luftgekuppelt, so ist das Ventil in der HL im Normalzustand an der Seite offen.
-    \item Ist der Güterwagen nicht luftgekuppelt, so ist das Ventil in der HL im Normalzustand auf der Seite geschlossen.
+    \item Ist der Güterwagen luftgekuppelt, so ist das Ventil in der \acrshort{HL} im Normalzustand an der Seite offen.
+    \item Ist der Güterwagen nicht luftgekuppelt, so ist das Ventil in der \acrshort{HL} im Normalzustand auf der Seite geschlossen.
 \end{itemize}
 \end{rem}
 \begin{rem} [zu Anf. 20]
@@ -172,7 +171,7 @@ Eine elektrische Vorbereitung von Trennstellen ist möglich.
 \begin{rem} [zu Anf. 21]
 Folgende Regelungen gelten für die Trennstellenanzeige:
 \begin{itemize}
-    \item Ist auf dem Endgerät eine Trennstelle angewählt, so müssen die HL-Absperrventile sich an diesen Punkte schließen um eine einfachere Luftkupplungstrennung zu ermöglichen.
+    \item Ist auf dem Endgerät eine Trennstelle angewählt, so müssen die \acrshort{HL}-Absperrventile sich an diesen Punkte schließen um eine einfachere Luftkupplungstrennung zu ermöglichen.
     \item Die Trennstellenanzeige muss deutlich von allen Seiten des Güterwagens sichtbar sein.
     \item Die Trennstellenanzeige muss farblich erkennbar sein.
 \end{itemize}
@@ -194,7 +193,7 @@ Eine Überprüfung der Wagenreihung ist möglich.
 Eine Überprüfung des technischen Zustands aus vorheriger Fahrt ist wünschenswert.
 \end{feat}
 \begin{feat}
-Eine automatische Übermittlung von Transportunterlagen ist möglich.
+Eine automatische Übermittlung von Transportunterlagen ist\newline möglich.
 \end{feat}
 
 \paragraph{Kuppeln}
@@ -219,7 +218,7 @@ Folgende Regelungen gelten für die Bremsprobe:
     \item Der Wagen soll selbstständig seine Bremsfähigkeit erproben
     \item Der Wagen soll selbstständig eine Rückmeldung an ein passendes Gerät geben
     \item Der Wagen soll den Druck im Reservebehälter angeben können
-    \item Der Wagen soll den Druck in der HL angeben
+    \item Der Wagen soll den Druck in der \acrshort{HL} angeben
     \item Der Wagen soll den C-Druck angeben
 \end{itemize}
 \end{feat}

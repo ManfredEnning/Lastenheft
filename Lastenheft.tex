@@ -48,12 +48,12 @@
     %  {\newline}% space after theorem head; " " = normal interword space
     %  {}% Manually specify head
 %Anforderungsnummerierung nach Raphael Ende
-
-%zugehörige Dokumente
-    \newtheorem{dok}{Dokument}
+%Linenumbers
+\usepackage{lineno}
 
 \begin{document} 
 \setlength{\parskip}{5mm}% plus5mm minus5mm} %Absatzlänge
+\linenumbers
 
 %Deckblatt Beginn
     \input{Title.tex}
@@ -75,12 +75,12 @@
 
 %Hauptteil Beginn
 \pagenumbering{arabic}
-    \input{Kapitel/Einleitung} \newpage
+%    \input{Kapitel/Einleitung} \newpage
     \input{Kapitel/Ist-Zustand} \newpage
     \input{Kapitel/Abgrenzung.tex} \newpage
     \input{Kapitel/Soll-Zustand.tex} \newpage
 %    \input{Kapitel/Anforderungen.tex}%\newpage
-    \input{Kapitel/Fazit.tex} \newpage
+%    \input{Kapitel/Fazit.tex} \newpage
 %Hauptteil Ende
 
 %Anhang Beginn

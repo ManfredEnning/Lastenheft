@@ -1,16 +1,19 @@
 \section{Soll-Zustand und Anforderungen}
 %In diesem Kapitel wird der Soll-Zustand des Labormusters und des Demonstrators beschrieben. Dafür werden einzelne Themen aus dem Ist-Zustand herausgegriffen und für das Projekt Güterwagen 4.0 beschrieben.\par
-In diesem Kapitel findet die Beschreibung des sollzustandes gleichzeitig %Gleichzeitig findet die 
-mit der Beschreibung der Anforderungen statt. Diese bestehen immer aus einer Anforderungsnummer und einem Anforderungstext sowie eventuell darunterstehenden Notizen.\par
+In diesem Kapitel findet die Beschreibung des Soll-Zustandes gleichzeitig %Gleichzeitig findet die 
+mit der Beschreibung der Anforderungen statt. Diese bestehen immer aus einer Anforderungsnummer und einem Anforderungstext sowie eventuell dazugehörige Notizen.\par
 %Die Anforderungen ergeben den Sollzustand.
 
 \subsection{Allgemeines}
 Für alle Aspekte ist eine spätere Zulassung des System zu berücksichtigen. Dem entsprechend ist auf eine Beachtung der folgenden Normen zu achten. Labormuster und Demonstrator sind aber als Prototyp zu sehen, sodass bei einzelnen Prototypenentwicklungen auch davon abgewichen werden kann.
 \begin{feat}
-Die Aufbauten auf dem Demonstrator sollen vor Zugfahrten vollständig abschaltbar sein.
+Der Güterwagen muss alle Anforderungen an einen konventionellen Güterwagen ebenfalls erfüllen.
 \end{feat}
 \begin{feat}
-Die Aufbauten auf dem Demonstrator sollen vollständig nachrüstbar sein.
+Die 4.0-Komponenten auf dem Demonstrator sollen vor Zugfahrten vollständig abschaltbar sein.
+\end{feat}
+\begin{feat}
+Die 4.0-Komponenten auf dem Demonstrator sollen vollständig nachrüstbar sein.
 \end{feat}
 \begin{feat}
 Für Zulassungen ist die CSM-VO - Verordnung (EG) Nr. 402/2013 anzuwenden.
@@ -27,41 +30,61 @@ Die Technische Richtlinie zur EMV Verträglichkeit TR-EMV ist anzuwenden.
 \begin{feat}
 Die \acrshort{DIN} \acrshort{EN} 45545 Brandschutz in Schienenfahrzeugen ist anzuwenden
 \end{feat}
+\begin{rem}[zu Anf. 6-8]
+Möglich wäre beispielsweise eine schwingungsarme Metallbox, die sowohl die EMV- als auch die Brandschutzrichtlinien erfüllt.
+\end{rem}
 
-\subsection{Energieversorgung}\label{sec:EV}
+\subsection{Energieversorgung}\label{sec:EV}\begin{figure}[htp]
+    \centering
+    \input{Bilder/EV.tex}
+    \caption{Beispielhafte Energieversorgung des Güterwagen 4.0}
+    \label{fig:Soll-EV}
+\end{figure}
+Die Energieversorgung des Bordnetzes erfolgt mittels Systembatterie. Diese wird durch externe Versorgung gespeist. Im Stand ist eine Lösung mittels Netzspannung möglich, während einer Zugfahrt auch eine Aufladung durch einen Achsdeckelgenerator. Mittels Anpassungselektronik ist dies für unterschiedliche Einspeisespannungen möglich.Siehe dazu auch Abbildung \ref{fig:Soll-EV}. 
+
 \subsubsection{Spannungsversorgung}
 \begin{feat}
-Es ist eine Spannungsversorgung von 24 V vorzusehen
+Die Nennspannung des Systems ist mit 24 V vorzusehen
 \end{feat}
-\begin{rem}[zu Anf. 08]
+\begin{rem}[zu Anf. 9]
 Aufgrund der Prototypenentwicklung in diesem Projekt erscheint eine 24 V-Spannungsversorgung für dieses Projekt sinnvoll. Sowohl werden alle Grenzen der Berührspannungen im Kleinspannungsbereich eingehalten, als auch gibt es bereits sehr viele Produkte auf dieser Spannungsebene. Namentlich genannt die SPS, aber auch diverse Sensoren und Aktoren.
 \end{rem}
 \subsubsection{Batterie}
 %Gepuffert werden soll das System durch eine Batterie. Diese Batterie soll genügend Leistung liefern um sämtliche Daten-, Kommunikations- und Aktorsteuerungsprozesse speisen zu können. Außerdem soll sie genügend Energie für den Erprobungsbetrieb bieten.\par
 %Die Batterie soll mittels Ladegerät von 230 V nachladbar sein, aber auch eine Schnittstelle für einen Achsdeckelgenerator bieten. Zum Aufladen wird dieser wahrscheinlich nicht geeignet sein, da keine entsprechenden Umlaufzyklen während der Testphase möglich sind. Die Batterie ist in einem Einschubkasten so anzubringen, dass sie von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist.\par
 \begin{feat}
-Es ist eine Pufferbatterie vorzusehen.
+Es ist eine Systembatterie vorzusehen.
 \end{feat}
-\begin{rem}[zu Anf. 09]
-Die Batterie soll genügend Leistung für sämtliche Daten-, Kom- munikations- und Aktorsteuerungsprozesse liefern.
+\begin{rem}[zu Anf. 10]
+Die Batterie soll genügend Leistung, Spannung und Energie für sämtliche Daten-, Kommunikations- und Aktorsteuerungsprozesse liefern.
 \end{rem}
-\begin{rem}[zu Anf. 09]
+\begin{rem}[zu Anf. 10]
 Die Batterie soll genügend Leistung, Spannung und Energie für den Erprobungsbetrieb haben.
 \end{rem}
-\begin{rem}[zu Anf. 09]
-Es sind folgende Ladeschnittstellen vorzusehen:
+\begin{feat}
+Für die Batterie ist ein Batteriekasten vorzusehen. 
+\end{feat}
+\begin{rem} [zu Anf. 11]
+Das Fach ist so anzubringen, dass es von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist und eine möglichst einfache Wartbarkeit ermöglicht.
+\end{rem}
+\begin{rem}
+Zusätzlich muss die Befestigung des Kastens sicher und stoßgeschützt sein.
+\end{rem}
+
+
+
+\subsubsection{Externe Versorgung}
+\begin{feat}
+Es sind folgende externe Versorgungsmöglichkeiten vorzusehen:
 \begin{itemize}
-    \item 230 V - Netzspannungsgerät
-    \item Achsdeckelgenerator
+    \item 100 - 240 V - Netzspannung
+    \item Achsdeckelgenerator mit Anpassungselektronik
     \item Weitere
 \end{itemize}
-\end{rem}
-\begin{feat}
-Für die Batterie ist ein Einschubfach vorzusehen. 
 \end{feat}
-\begin{rem} [zu Anf. 10]
-Das Fach ist so anzubringen, dass es von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist und eine möglichst einfach Wartbarkeit ermöglicht.
-\end{rem}
+
+
+
 \subsubsection{Anschlusskasten und Leitungen}
 \begin{feat}
 Es ist ein Anschluss- oder Klemmenkasten für die Spannungsversorgung von Sensoren und Aktoren vorzusehen. 

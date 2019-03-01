@@ -71,8 +71,6 @@ Das Fach ist so anzubringen, dass es von außen zugänglich, aber auch vor Stein
 Zusätzlich muss die Befestigung des Kastens sicher und stoßgeschützt sein.
 \end{rem}
 
-
-
 \subsubsection{Externe Versorgung}
 \begin{feat}
 Es sind folgende externe Versorgungsmöglichkeiten vorzusehen:
@@ -83,53 +81,60 @@ Es sind folgende externe Versorgungsmöglichkeiten vorzusehen:
 \end{itemize}
 \end{feat}
 
-
-
 \subsubsection{Anschlusskasten und Leitungen}
 \begin{feat}
-Es ist ein Anschluss- oder Klemmenkasten für die Spannungsversorgung von Sensoren und Aktoren vorzusehen. 
+Es ist mindestens ein Anschluss- oder Klemmenkasten für die Spannungsversorgung von Sensoren und Aktoren vorzusehen. 
 \end{feat}
 \begin{feat}
-Die Verrohrung für Daten- und Stromleitungen ist vorzusehen.%, sodass diese geschützt sind und klare Linien zur Verlegung von Leitungen zu sehen sind.
+An beiden Wagenenden ist ein Zugang zu den Daten- und Stromleitungen ist vorzusehen.
+\end{feat}
+\begin{feat}
+Die Daten- und Stromleitungen sind geschützt in Stahlrohren zu verlegen.
 \end{feat}
 
 \subsection{Sensoren und Aktoren}
 \begin{feat}
-Der Zustand der Sensoren und Aktoren wird auf einem von dem Befehlskanal unabhängigen Kanal überwacht.
+Zustand und Verstellbefehl für Sensoren und Aktoren sind auf unabhängigen Kanälen zu übertragen.
 \end{feat}
 \subsubsection{Pneumatische Bremse}
 \paragraph{GP-Umstellung}
 \begin{feat}
-Eine elektrisch gesteuerte Einstellung der Bremsstellung ist möglich.
+Eine elektrisch gesteuerte Einstellung der Bremsstellung jedes Wagens ist möglich.
 \end{feat}
-\begin{rem} [zu Anf. 14]
+\begin{rem} [zu Anf. 17]
 Dafür werden die Bremsstellungen G und P unterstützt.
 \end{rem}
-\begin{rem} [zu Anf. 14]
-Es ist sowohl für jeden Wagen einzeln zu unterscheiden, welche Bremsstellung eingestellt ist, als auch für Wagengruppen.% unterschiedliche Bremsstellungen an den Wagen möglich sein. %Beispielsweise für LL-Stellungen.
+\begin{rem} [zu Anf. 17]
+Die Bremsstellung ist sowohl für jeden einzelnen Wagen, als auch für Wagengruppen zugleich, einzustellen.
 \end{rem}
 
 \paragraph{Lösen der Bremse}
 \begin{feat}
-Das elektrisch gesteuerte Lösen der Bremse ist möglich.
+Das elektrisch gesteuerte Lösen des Lösezuges ist möglich.
 \end{feat}
-\begin{rem}[zu Anf. 15]
+\begin{rem}[zu Anf. 18]
 Das bedeutet, die A-Kammer ist elektrisch gesteuert zu entlüften.
+\end{rem}
+\begin{rem}[zu Anf. 18]
+Die Funktion darf nur außerhalb des Zugverbandes bei entlüfteter Hauptluftleitung möglich sein.
 \end{rem}
 
 \paragraph{Lastwechsel}
 \begin{feat}
 Es ist ein automatischer Lastwechsel möglich.
 \end{feat}
+\begin{rem}[zu Anf. 19]
+Dieser darf nur im Stand möglich sein.
+\end{rem}
 
 \paragraph{Abschalten der Bremse}
 \begin{feat}
-Ein Abschalten der Bremse ist möglich
+Ein Abschalten der kompletten Bremse bleibt möglich
 \end{feat}
 
 \paragraph{Aktoren in der Hauptluftleitung}
 \begin{feat}
-Es sind Aktoren in der \acrshort{HL} vorzusehen, die entsprechende bistabile Ventile auf elektrische Betätigung hin verschließen oder öffnen können.
+Es sind Aktoren in der \acrshort{HL} vorzusehen, die entsprechende bistabile Endabsperrhähne auf elektrische Betätigung hin verschließen oder öffnen können.
 \end{feat}
 
 \subsubsection{Feststellbremse}
@@ -139,22 +144,21 @@ Es ist eine automatische Feststellbremse vorzusehen.
 \begin{feat}
 Wechselwirkungen zwischen Feststellbremse und pneumatischer Bremse sind beim Anlegen und Lösen zu berücksichtigen.
 \end{feat}
-\begin{rem}[zu Anf. 20]
+\begin{rem}[zu Anf. 23]
 Die Feststellbremse darf nur im Stillstand und wenn die HL leer ist angesteuert werden.
 \end{rem}
 \begin{feat}
 Es ist für eine Stillstandsüberwachung zu sorgen
 \end{feat}
-\begin{rem}[zu Anf. 20]
-Die Stillstandsüberwachung wird für die Nutzung der Feststellbremse benötigt.
-\end{rem}
+%\begin{rem}[zu Anf. 20]
+%Die Stillstandsüberwachung wird für die Nutzung der Feststellbremse benötigt.
+%\end{rem}
 
-\subsubsection{Sonstige Aktoren}
-\paragraph{Trennstellenanzeige}
+\paragraph{Außenanzeige}
 \begin{feat}
-Es ist für eine geeignete Trennstellenanzeige zu sorgen
+Es ist für eine geeignete Anzeige der Endabsperrhähne, Bremsstellung, Lastwechsel und der Feststellbremse zu sorgen.
 \end{feat}
-\begin{rem}[zu Anf. 22]
+\begin{rem}[zu Anf. 25]
 Diese ist zweikanalig auszuführen.
 \begin{itemize}
     \item passiver Kanal: pneumatisch - Anzeige farblich
@@ -162,21 +166,25 @@ Diese ist zweikanalig auszuführen.
 \end{itemize}
 \end{rem}
 \begin{feat}
-Die digitale Anzeige muss auch im ausgeschalteten Zustand eine sichere Anzeige bieten
-\end{feat}
-\paragraph{Außenanzeige}
-\begin{feat}
-Auch im ausgeschalteten Zustand muss eine Anzeige über die Bremsstellung, den Lastwechsel und die Feststellbremse zu sehen und zu erkennen sein.
+Die digitale Anzeige muss auch im stromlosen Zustand eine Zustandsanzeige bieten
 \end{feat}
 
 \subsubsection{Condition Monitoring}
 \begin{feat}
 Für das Condition Monitoring werden folgende Sensoren benötigt:
 \begin{itemize}
-    \item ...
+    \item Lagertemperatur
+    \item Beschleunigung in x-, y- und z-Richtung
+    \begin{itemize}
+        \item Zur Überwachung von: Stößen, Lagerzuständen und Flachstellen
+    \end{itemize}
+    \item Laufleistung / Radumdrehung
+    \item .
 \end{itemize}
 \end{feat}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 \subsubsection{Sonstige Sensoren}
 \begin{feat}
 Weitere Benötigte Sensoren:
@@ -184,7 +192,8 @@ Weitere Benötigte Sensoren:
     \item 
 \end{itemize}
 \end{feat}
-
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  \subsection{Fahrzeugsteuerung und -kommunikation}
 Die Wagen kommunizieren untereinander. Eine gebildete Wagengruppe ist nach außen wie ein Wagen zu behandeln. Jeder Wagen in dieser Wagengruppe kann Informationen über jeden Wagen der Wagengruppe herausgeben.\par
@@ -196,6 +205,20 @@ Grundsätzlich gibt es vier Möglichkeiten der Datenübertragung:
     \item Kommunikation im Nahbereich
     \item Kommunikation im Fernbereich
 \end{itemize}
+Damit eine sichere Datenhaltung und -übertragung möglich ist, wird die in Abbildung \ref{fig:Rechnerarchitektur} gezeigte Rechnerarchitektur vorgeschlagen.\par
+\begin{figure}[ht]
+    \centering
+    \input{Bilder/Rechnerarchitektur.tex}
+    \caption{Vorgeschlagene Rechnerarchitektur für sichere und nicht sichere Funktionen und Daten des Güterwagen 4.0}
+    \label{fig:Rechnerarchitektur}
+\end{figure}
+Im oberen Teil der Rechnerarchitektur ist der sicherheitskritische Bereich zu sehen. %Dieser ist (auf Dauer, wahrscheinlich) zulassungspflichtig. 
+Dieser besteht aus zwei Rechnern, die für eine Zweikanaligkeit sorgen, einem Speicher,  für alle notwendigen Daten und einem Zwischenspeicher für die Bedienung.\par
+Im unteren Teil ist der nicht sicherheitskritische Bereich. Dieser ist einkanalig ausgeführt. Dieser besteht aus dem Nahbereichsfunk und dem GSM-Modul als Fernbereichsfunk.\par
+Angedeutet sind der Bediener, dessen Schnittstelle der Nahbereichsfunk darstellt, das GSM-Modul, die Schnittstelle zur Cloud und die Sensoren, Aktoren und Kommunikationseinheiten im Wagen.\par
+Die beiden Rechner tauschen sich gegenseitig rückkopplungsfrei aus (gestrichelte graue Linie) und geben ihre Befehle (rote Pfeile nach außen) zweikanalig an Sensoren, Aktoren und die Kommunikationseinheiten im Wagen weiter. Die zurückkommenden Informationen (rote Pfeile zu Rechner 1 und Rechner 2) werden von den Rechnern verarbeitet und im Speicher (rote Pfeile zum Speicher) gesichert.\par
+Befehle aus der Nahbereichsschnittstelle werden vom Bediener gegeben (gepunktete Linie zum Nahbereichsfunk) und im Zwischenspeicher (nur im Stillstand) an die Rechner weiter gegeben (dünne rote Linien) und dort verarbeitet. Wird der Befehl zur Unzeit oder während der Bewegung gegeben, verfällt er. Er wird nicht weiter zwischen gespeichert und später verarbeitet.\par
+Alle notwendigen verarbeiteten Daten und Informationen werden im Speicher gespeichert (rote Pfeile zum Speicher) und dort entweder an den Nahbereichsfunk weitergegeben oder mit etwas Zeitverzug (und nur im Stillstand) über das GSM-Modul in der Cloud aktualisiert. Von dort aus sind sie für Cloud und Bediener einzusehen.\par
 
 \subsubsection{Datenhaltung und -übertragung}
 \begin{feat}
@@ -210,7 +233,7 @@ Die Bandbreite soll für jede Kommunikationsart ausreichend sein.
 
 \paragraph{Kommunikation innerhalb des Wagens}
 \begin{feat}
-Innerhalb des Wagens werden alle Daten vorzugsweise kabelgebunden transportiert. 
+Innerhalb des Wagenkastens werden alle Daten vorzugsweise kabelgebunden transportiert. 
 \end{feat}
 \begin{feat}
 Die Kommunikation findet über einen \textbf{Zugbus o.ä.} statt.
@@ -221,12 +244,12 @@ Die Informationen laufen alle im Bordrechner zusammen
 
 \paragraph{Kommunikation zwischen den Wagen}
 \begin{feat}
-Die Kommunikation zwischen den Wagen findet vorzugsweise über die Puffer statt.
+Die Kommunikation zwischen den Wagen findet vorzugsweise über in der Nähe der Puffer statt.
 \end{feat}
 \begin{feat}
-Für eine Übertragung zum nächsten Wagen sind kurze Funkstrecken vorzusehen.
+Für eine Übertragung zum nächsten Wagen sind kurze Funkstrecken oder Kabel (nach UIC 568) vorzusehen.
 \end{feat}
-\begin{rem}[zu Anf. 34]
+\begin{rem}[zu Anf. 35]
 Kurze Funkstrecken können über
 \begin{itemize}
     \item WLAN (60GHz),
@@ -241,17 +264,24 @@ realisiert werden.
 \begin{feat}
 Eine Kommunikation des Wagens / der Wagengruppe zum Bediener ist innerhalb vom Nahbereichsfunk möglich.
 \end{feat}
+\begin{feat}
+Eine Kommunikation des Wagens / der Wagengruppe zum Bediener ist nur im Stillstand möglich.
+\end{feat}
 
 \paragraph{Kommunikation im Fernbereich}
 \begin{feat}
-Eine Kommunikation mit der Cloud ist über den Mobilfunk möglich
+Eine Kommunikation mit der Cloud ist zum Beispiel über den Mobilfunk möglich
+\end{feat}
+\begin{feat}
+Die Kommunikation muss Rückstandsfrei sein. Es darf nur eine Leseberechtigung seitens der Cloud gewährt werden.
 \end{feat}
 
 \subsubsection{Autorisierung}
 \begin{feat}
-Es sind verschiedene Autorisierungsstufen vorzusehen. Jede Gruppe braucht eine ausreichende Zugriffsmöglichkeit auf benötigte Daten.
+Es ist Sicherzustellen, dass Bediener berechntigt sind.
 \end{feat}
-\begin{rem} [zu Anf. 37]
+\begin{rem} [zu Anf. 40]
+Es sind verschiedene Autorisierungsstufen vorzusehen. Jede Gruppe braucht eine ausreichende Zugriffsmöglichkeit auf benötigte Daten.
 Autorisierungsstufen können sein:
 \begin{itemize}
     \item Stufe 1: Rangierpersonal in den Einfahrgruppen der Rangierbahnhöfe
@@ -259,7 +289,7 @@ Autorisierungsstufen können sein:
     \item Stufe 3: Notfallmanager auf freier Stecke
 \end{itemize}
 \end{rem}
-\begin{rem} [zu Anf. 37]
+\begin{rem} [zu Anf. 40]
 Verschiedene Daten sollen nur in gewissen Geofencing-Bereichen abrufbar und veränderbar sein.
 \end{rem}
 
@@ -268,10 +298,13 @@ Verschiedene Daten sollen nur in gewissen Geofencing-Bereichen abrufbar und ver�
 Es ist ein Bordrechner vorzusehen
 \end{feat}
 \begin{feat}
-Der Bordrechner verfügt über genug Rechenleistung für die Verarbeitung sämtlicher auf dem Wagen vorhandener Daten sowie die Kommunikation mit weiteren Wagen, Anwendern und der Cloud.
+Der Bordrechner verfügt über genug Rechenleistung für die Verarbeitung sämtlicher auf dem Wagen vorhandener Daten sowie die Kommunikation mit weiteren Wagen, Anwendern und der ggf. Cloud.
 \end{feat}
 \begin{feat}
 Der Bordrechner verfügt über genug Speicher für die Speicherung aller notwendigen Daten.
+\end{feat}
+\begin{feat}
+Sichere und nicht sichere Funktionen und ihre Daten sind physikalisch getrennt zu verarbeiten und zu speichern.
 \end{feat}
 
 \subsubsection{Pneumatische Bremse}
@@ -301,10 +334,9 @@ Hier ist folgende Regelung für die Aktorsteuerung der Endabsperrhähne in der \
     \item Ist der Güterwagen nicht luftgekuppelt, so ist das Ventil in der \acrshort{HL} im Normalzustand auf der Seite geschlossen.
 \end{itemize}
 \end{feat}
-\begin{rem} [zu Anf. 43]
+\begin{rem} [zu Anf. 47]
 Weitere manuelle Steuerungen, beispielsweise für Ablaufberge oder manuelle Bremsproben sind vorzusehen.
 \end{rem}
-
 
 \subsubsection{Feststellbremse}
 \begin{feat}
@@ -314,7 +346,7 @@ Folgende Regelung gilt für die Feststellbremse:
     \item Die Feststellbremse ist angezogen, wenn der Wagen nicht luftgekuppelt ist.
 \end{itemize}
 \end{feat}
-\begin{rem} [zu Anf. 44]
+\begin{rem} [zu Anf. 48]
 Weitere manuelle Steuerungen sind mittels Endgerät oder \newline Schalter am Wagen schnell und sicher zu ermöglichen.
 \end{rem}
 
@@ -323,18 +355,22 @@ Weitere manuelle Steuerungen sind mittels Endgerät oder \newline Schalter am Wa
 \begin{feat}
 Folgende Regelungen gelten für die Bremsprobe:
 \begin{itemize}
-    \item Der Wagen soll selbstständig seine Bremsfähigkeit angeben
-    \item Der Wagen soll selbstständig seine Bremsfähigkeit erproben
+    \item Der Wagen soll selbstständig seine Bremsfähigkeit (in t und in \%) angeben
+    \item Der Wagen soll selbstständig seine Bremsfähigkeit (in t und in \%) erproben
     %\item Der Wagen soll selbstständig eine Rückmeldung an ein passendes Gerät geben
-    \item Der Wagen soll den Druck im Reservebehälter angeben können
-    \item Der Wagen soll den Druck in der \acrshort{HL} angeben
-    \item Der Wagen soll den C-Druck angeben
+    \item Der Wagen soll den Druckverlauf im Reservebehälter angeben können
+    \item Der Wagen soll den Druckverlauf in der \acrshort{HL} angeben
+    \item Der Wagen soll den C-Druckverlauf angeben
+    \item DEr wagen soll den A-Druckverlauf angeben
 \end{itemize}
 \end{feat}
 \begin{feat}
 Eine vom Rechner gesteuerte automatische Bremsprobe ist möglich.
 \end{feat}
-\begin{rem} [zu Anf. 46] 
+\begin{rem} [zu Anf. 50] 
+Der Rechner gibt die Bremshunderstel für die gegebene Konfiguration des Zugverbandes an.
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 Diese hat sich für folgende Fahrten zu unterscheiden:
 \begin{itemize}
     \item für Bedienfahrt
@@ -342,9 +378,13 @@ Diese hat sich für folgende Fahrten zu unterscheiden:
     \item für Sperrfahrt
     \item für Zugfahrt
 \end{itemize}
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%
 \end{rem}
 
 \paragraph{Technische Wagenbehandlung}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 \begin{feat}
 So weit eine technische Wagenbehandlung aktor- und sensorgeführt möglich ist, soll diese integriert werden.
 \end{feat}
@@ -354,6 +394,8 @@ Folgende Regelungen gelten für die technische Wagenbehandlung:
     \item Hier muss was hin
 \end{itemize}
 \end{feat}
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \paragraph{Bremsberechnung}
 %\begin{feat}Eine automatische Bremsberechnung anhand des Wagenzuges und der Lok ist möglich. \end{feat}
@@ -363,16 +405,18 @@ Folgende Regelungen gelten für die technische Wagenbehandlung:
  %   \item ...
 %\end{itemize}
 %\end{rem}
-Hier muss was hin.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Hier muss was hin.
 
 \subsubsection{Wagentrennung und -zusammenstellung}
 \begin{feat}
 Eine elektrische Vorbereitung von Trennstellen ist möglich.
 \end{feat}
-\begin{rem} [zu Anf. 49]
+\begin{rem} [zu Anf. 51]
 Folgende Regelungen gelten für die Trennstellenanzeige:
 \begin{itemize}
-    \item Ist auf dem Endgerät eine Trennstelle angewählt, so müssen die \acrshort{HL}-Absperrventile sich an diesen Punkte schließen um eine einfachere Luftkupplungstrennung zu ermöglichen.
+    \item Ist auf dem Endgerät eine Trennstelle angewählt, so müssen die \acrshort{HL}-Absperrventile sich an diesen Punkte schließen um eine Luftkupplungstrennung zu ermöglichen.
     \item Die Trennstellenanzeige muss deutlich von allen Seiten des Güterwagens sichtbar sein.
     \item Die Trennstellenanzeige muss farblich erkennbar sein.
 \end{itemize}
@@ -388,7 +432,7 @@ Die Vorprüfung der Wagen im automatisierten Rangierbahnhof sollen bei einem Wag
 Eine Überprüfung der Wagenreihung ist möglich.
 \end{feat}
 \begin{feat}
-Eine Überprüfung des technischen Zustands aus vorheriger Fahrt ist wünschenswert.
+Eine Speicherung des technischen Zustands aus vorheriger Fahrt ist wünschenswert.
 \end{feat}
 \begin{feat}
 Eine automatische Übermittlung von Transportunterlagen ist\newline möglich.
@@ -402,6 +446,8 @@ Noch was zu Prognose und Bezug auf KI - wissensbasierte Systeme, neuronale Netze
 \begin{feat}
 Alle für eine vorausschauende Wartung notwendigen Sensoren sollen eingebaut und überwacht werden.
 \end{feat}
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 \begin{rem} [zu Anf. 56]
 Beispiele dafür sind:
 \begin{itemize}
@@ -415,6 +461,8 @@ Beispiele dafür sind:
     \item Entgleisungssicherheit aufgrund von Beladung
 \end{itemize}
 \end{rem}
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{feat}
 Diese Informationen soll der Wagen über sich speichern und abrufbar bereithalten.
 \end{feat}

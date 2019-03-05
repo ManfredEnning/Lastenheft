@@ -1,19 +1,20 @@
 \section{Soll-Zustand und Anforderungen}
 %In diesem Kapitel wird der Soll-Zustand des Labormusters und des Demonstrators beschrieben. Dafür werden einzelne Themen aus dem Ist-Zustand herausgegriffen und für das Projekt Güterwagen 4.0 beschrieben.\par
 In diesem Kapitel findet die Beschreibung des Soll-Zustandes gleichzeitig %Gleichzeitig findet die 
-mit der Beschreibung der Anforderungen statt. Diese bestehen immer aus einer Anforderungsnummer und einem Anforderungstext sowie eventuell dazugehörige Notizen.\par
+mit der Beschreibung der Anforderungen statt. Diese bestehen immer aus einer Anforderungsnummer und einem Anforderungstext sowie eventuell dazugehörigen Notizen.\par
 %Die Anforderungen ergeben den Sollzustand.
 
 \subsection{Allgemeines}
-Für alle Aspekte ist eine spätere Zulassung des System zu berücksichtigen. Dem entsprechend ist auf eine Beachtung der folgenden Normen zu achten. Labormuster und Demonstrator sind aber als Prototyp zu sehen, sodass bei einzelnen Prototypenentwicklungen auch davon abgewichen werden kann.
+Für alle Aspekte ist eine spätere Zulassung des System zu berücksichtigen. Dem entsprechend ist auf eine Beachtung der folgenden Normen zu achten. Labormuster und \gls{Demonstrator} sind aber als Prototyp zu sehen, sodass bei einzelnen Prototypenentwicklungen auch davon abgewichen werden kann. \par
+Alle Komponenten sind schwingungsarm unterzubringen. Dies soll, für den Demonstrator, die Möglichkeit geben auch Komponenten, die nicht aus dem Bahnbereich stammen, verwenden zu können.
 \begin{feat}
-Der Güterwagen muss alle Anforderungen an einen konventionellen Güterwagen ebenfalls erfüllen.
+Der Güterwagen muss alle Anforderungen an einen konventionellen Gü- terwagen ebenfalls erfüllen.
 \end{feat}
 \begin{feat}
-Die 4.0-Komponenten auf dem Demonstrator sollen vor Zugfahrten vollständig abschaltbar sein.
+Die \gls{40-Komponenten} auf dem \gls{Demonstrator} müssen vor Zugfahrten voll- ständig abschaltbar sein.
 \end{feat}
 \begin{feat}
-Die 4.0-Komponenten auf dem Demonstrator sollen vollständig nachrüstbar sein.
+Die \gls{40-Komponenten} auf dem \gls{Demonstrator} müssen vollständig nachrüst- bar sein.
 \end{feat}
 \begin{feat}
 Für Zulassungen ist die CSM-VO - Verordnung (EG) Nr. 402/2013 anzuwenden.
@@ -34,13 +35,14 @@ Die \acrshort{DIN} \acrshort{EN} 45545 Brandschutz in Schienenfahrzeugen ist anz
 Möglich wäre beispielsweise eine schwingungsarme Metallbox, die sowohl die EMV- als auch die Brandschutzrichtlinien erfüllt.
 \end{rem}
 
-\subsection{Energieversorgung}\label{sec:EV}\begin{figure}[htp]
+\subsection{Energieversorgung}\label{sec:EV}
+Die Energieversorgung des Bordnetzes erfolgt mittels Systembatterie. Diese wird durch externe Versorgung gespeist. Im Stand ist eine Lösung mittels Netzspannung möglich, während einer Zugfahrt auch eine Aufladung durch einen Achsdeckelgenerator. Mittels Anpassungselektronik ist dies für unterschiedliche Einspeisespannungen möglich.Siehe dazu auch Abbildung \ref{fig:Soll-EV}. 
+\begin{figure}[htp]
     \centering
     \input{Bilder/EV.tex}
     \caption{Beispielhafte Energieversorgung des Güterwagen 4.0}
     \label{fig:Soll-EV}
 \end{figure}
-Die Energieversorgung des Bordnetzes erfolgt mittels Systembatterie. Diese wird durch externe Versorgung gespeist. Im Stand ist eine Lösung mittels Netzspannung möglich, während einer Zugfahrt auch eine Aufladung durch einen Achsdeckelgenerator. Mittels Anpassungselektronik ist dies für unterschiedliche Einspeisespannungen möglich.Siehe dazu auch Abbildung \ref{fig:Soll-EV}. 
 
 \subsubsection{Spannungsversorgung}
 \begin{feat}
@@ -56,7 +58,7 @@ Aufgrund der Prototypenentwicklung in diesem Projekt erscheint eine 24 V-Spannun
 Es ist eine Systembatterie vorzusehen.
 \end{feat}
 \begin{rem}[zu Anf. 10]
-Die Batterie soll genügend Leistung, Spannung und Energie für sämtliche Daten-, Kommunikations- und Aktorsteuerungsprozesse liefern.
+Die Batterie soll genügend Leistung, Spannung und Energie für sämtliche Daten-, Kommunikations- und Aktorprozesse liefern.
 \end{rem}
 \begin{rem}[zu Anf. 10]
 Die Batterie soll genügend Leistung, Spannung und Energie für den Erprobungsbetrieb haben.
@@ -67,7 +69,7 @@ Für die Batterie ist ein Batteriekasten vorzusehen.
 \begin{rem} [zu Anf. 11]
 Das Fach ist so anzubringen, dass es von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist und eine möglichst einfache Wartbarkeit ermöglicht.
 \end{rem}
-\begin{rem}
+\begin{rem} [zu Anf. 11]
 Zusätzlich muss die Befestigung des Kastens sicher und stoßgeschützt sein.
 \end{rem}
 
@@ -75,7 +77,7 @@ Zusätzlich muss die Befestigung des Kastens sicher und stoßgeschützt sein.
 \begin{feat}
 Es sind folgende externe Versorgungsmöglichkeiten vorzusehen:
 \begin{itemize}
-    \item 100 - 240 V - Netzspannung
+    \item 100 - 240 V -- Netzspannung mit Anpassungselektronik / Gleichsetzsteller
     \item Achsdeckelgenerator mit Anpassungselektronik
     \item Weitere
 \end{itemize}
@@ -94,7 +96,7 @@ Die Daten- und Stromleitungen sind geschützt in Stahlrohren zu verlegen.
 
 \subsection{Sensoren und Aktoren}
 \begin{feat}
-Zustand und Verstellbefehl für Sensoren und Aktoren sind auf unabhängigen Kanälen zu übertragen.
+Zustand und Verstellbefehl für Sensoren und Aktoren sind auf unab- hängigen Kanälen zu übertragen.
 \end{feat}
 \subsubsection{Pneumatische Bremse}
 \paragraph{GP-Umstellung}
@@ -116,12 +118,12 @@ Das elektrisch gesteuerte Lösen des Lösezuges ist möglich.
 Das bedeutet, die A-Kammer ist elektrisch gesteuert zu entlüften.
 \end{rem}
 \begin{rem}[zu Anf. 18]
-Die Funktion darf nur außerhalb des Zugverbandes bei entlüfteter Hauptluftleitung möglich sein.
+Die Funktion darf nur außerhalb des \gls{Zugverband}es bei entlüfteter Hauptluftleitung möglich sein.
 \end{rem}
 
 \paragraph{Lastwechsel}
 \begin{feat}
-Es ist ein automatischer Lastwechsel möglich.
+Es ist ein automatischer \gls{Lastwechsel} möglich.
 \end{feat}
 \begin{rem}[zu Anf. 19]
 Dieser darf nur im Stand möglich sein.
@@ -156,7 +158,7 @@ Es ist für eine Stillstandsüberwachung zu sorgen
 
 \paragraph{Außenanzeige}
 \begin{feat}
-Es ist für eine geeignete Anzeige der Endabsperrhähne, Bremsstellung, Lastwechsel und der Feststellbremse zu sorgen.
+Es ist für eine geeignete Anzeige der Endabsperrhähne, Bremsstellung, \gls{Lastwechsel} und der Feststellbremse zu sorgen.
 \end{feat}
 \begin{rem}[zu Anf. 25]
 Diese ist zweikanalig auszuführen.
@@ -319,10 +321,10 @@ Folgende Regelungen gelten für die Bremsstellung:
 
 \paragraph{Lastwechsel}
 \begin{feat}
-Folgende Regel gilt für die Lastwechseleinstellung:
+Folgende Regel gilt für die \gls{Lastwechsel}einstellung:
 \begin{itemize}
-    \item Der Wagen soll nach Aufforderung den Lastwechsel selbst vornehmen können, oder
-    \item über eine automatische LAstwechseleinstellung verfügen
+    \item Der Wagen soll nach Aufforderung den \gls{Lastwechsel} selbst vornehmen können, oder
+    \item über eine automatische \gls{Lastwechsel}einstellung verfügen
 \end{itemize}
 \end{feat}
 
@@ -368,7 +370,7 @@ Folgende Regelungen gelten für die Bremsprobe:
 Eine vom Rechner gesteuerte automatische Bremsprobe ist möglich.
 \end{feat}
 \begin{rem} [zu Anf. 50] 
-Der Rechner gibt die Bremshunderstel für die gegebene Konfiguration des Zugverbandes an.
+Der Rechner gibt die Bremshunderstel für die gegebene Konfiguration des \gls{Zugverband}es an.
 %%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 Diese hat sich für folgende Fahrten zu unterscheiden:
@@ -432,7 +434,7 @@ Die Vorprüfung der Wagen im automatisierten Rangierbahnhof sollen bei einem Wag
 Eine Überprüfung der Wagenreihung ist möglich.
 \end{feat}
 \begin{feat}
-Eine Speicherung des technischen Zustands aus vorheriger Fahrt ist wünschenswert.
+Eine Speicherung des technischen Zustands aus vorheriger Fahrt ist \newline wünschenswert.
 \end{feat}
 \begin{feat}
 Eine automatische Übermittlung von Transportunterlagen ist\newline möglich.
@@ -476,6 +478,6 @@ Alle bereits über den Wagen vorhandenen Informationen, wie Wartungszyklen, Inst
 Eine Migrationsstrategie ist zu planen.
 \end{feat}
 \paragraph{Beladung und Ladungssicherung}
-Hier sind für den Demonstrator keine Änderungen geplant.
+Hier sind für den \gls{Demonstrator} keine Änderungen geplant.
 \paragraph{Mechanische und Luftkupplung}
-Beim Demonstrator ist keine Automatisierung der mechanischen oder der Luftkupplung geplant.
+Beim \gls{Demonstrator} ist keine Automatisierung der mechanischen oder der Luftkupplung geplant.

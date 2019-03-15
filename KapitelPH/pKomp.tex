@@ -1,0 +1,37 @@
+\subsection{Realisierung pneumatischer Komponenten}
+In diesem Kapitel werden die pneumatischen Komponenten einzeln beschrieben. Dieses Kapitel ist zugehörig zum Arbeitspaket 3 - Entwicklung Aktorik; genauer AP 3a: Konzeptentwicklung Aktorik und Aktorsteuerung und behandelt die (pneumatischen) Aktoren.\par
+Die pneumatischen Komponenten sind in Abbildung \ref{fig:pKomp} in grün farblich hervorgehoben.\par
+Für den Demonstrator ist eine teilautomatisierte Bremssteuerung geplant. Diese beinhaltet die Aktorik des Güterwagens 4.0; siehe dazu auch Abbildung \ref{fig:UIC-Bremse} auf \pageref{fig:UIC-Bremse}. Diese Bremse besteht neben dem unangetasteten UIC-Steuerventil und den unangetasteten A- und R-Kammern auch aus einigen Aktoren.\par
+\begin{figure}[hbt]
+    \centering
+    \input{Bilder/SchemaPKomp.tex}
+    \caption{Pneumatische Komponenten des Gesamtsystems}
+    \label{fig:pKomp}
+\end{figure}
+Alle Aktoren sollen, für eine vereinfachte Zulassung, vor Fahrtantritt abschaltbar sein. Damit sie in der geforderten Position bleiben werden bistabile Magnetventile benötigt. Diese halten sicher ihre Stellung auch ohne Stromversorgung. So ist nur darüber ein Nachweis zu führen.
+\begin{figure}
+    \centering%[hbt]
+    \includegraphics[width=10cm%\textwidth
+    ]{Bilder/Abb3_Druckluftbremse.png}
+    \caption{UIC-kompatible Druckluftbremse des Güterwagen 4.0 \cite{ETR_2}}
+    \label{fig:UIC-Bremse}
+\end{figure}
+
+\paragraph{Steuerventil}\label{sec:Bremsart}
+Aus Zulassungsgründen wird ein UIC/TSI-kompatibles Steuerventil eingesetzt oder beibehalten. Dieses unterstützt die folgenden Funktionen: Bremsstellung zwischen G und P wechseln und automatisches Schnelllösen
+
+\paragraph{Relaisventil} Es gibt ein Relaisventil zur automatischen Lastabbremsung.
+
+\paragraph{Endabsperrhahn} \label{sec:Endabsperrhahn}
+An beiden Enden des Wagens werden die Endabsperrhähne mit zu- sätzliche Ventilen ausgestattet. Diese sorgen für eine sichere Trennung und Kupplung von Wagen durch automatisches öffnen und schließen. Zusätzlich bieten sie eine wichtige Unterstützung zur automatischen Bremsprobe, da sie direkt ansteuerbar sind.
+
+%\paragraph{Bremsartumsteller} 
+%Der Bremsartumsteller bietet eine einfache Umstellung zwischen den Bremsarten. So ist das Umstellen der Bremsart G in P auf Befehl möglich.
+
+\paragraph{Feststellbremse}
+Durch die Einführung der automatischen Feststellbremse fällt das legen von Hemmschuhen vor dem Wagen weg. \\?
+
+\paragraph{ep-''light''-Bremse}
+Ein ep-Bremsventil wird mit der Hauptluftleitung verbunden.
+
+

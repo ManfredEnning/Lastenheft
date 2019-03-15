@@ -1,0 +1,49 @@
+\subsection{Realisierung elektrischer Komponenten}\label{sec:eKomp}
+In diesem Kapitel werden die elektrischen Komponenten einzeln beschrieben. Dieses Kapitel ist zugehörig zum Arbeitspaket 3 - Entwicklung Aktorik; genauer AP 3a: Konzeptentwicklung Aktorik und Aktorsteuerung und behandelt den elektronischen Teil; die pneumatischen Aktoren werden im folgenden Kapitel beschrieben.\par
+Die elektrischen Komponenten sind in Abbildung \ref{fig:eKomp} farblich hervorgehoben.\par
+Für den Demonstrator sind drei große, elektrische Module geplant: Batterie, Bordelektronik und die Ladeelektronik, bestehend aus dem Radsatzgenerator und einer Ladeschnittstelle zur externen Aufladung (alle in blau dargestellt). Zusätzlich müssen auch alle weiteren Aktoren und Sensoren sowie Datenschnittstellen außerhalb dieser Elektronik mit Spannung versorgt werden (hier in schwarz gestrichelt dargestellt).\par
+\begin{figure}[hbt]
+    \centering
+    \input{Bilder/SchemaEKomp.tex}
+    \caption{elektrische Komponenten des Gesamtsystems}
+    \label{fig:eKomp}
+\end{figure}
+Für den serienreifen Güterwagen 4.0 ist auch eine Aufladung der Batterie durch eine Automatische Kupplung oder fest verlegte Kabel denkbar, diese sollen hier aber noch nicht betrachtet werden.
+
+\paragraph{Radsatzgenerator} \label{sec:RSG}
+Das elektrische Konzept sieht vor, dass ein Radsatzgenerator im Umlauf des Wagens genug Energie produziert um alle notwendigen Komponenten zu speisen sowie zusätzlich eine Pufferbatterie für den geplanten und ungeplanten Fall des Stillstandes lädt.
+\paragraph{Externe Ladeelektronik}
+Da die Demonstratoren keinen üblichen Umlauf fahren werden, da dies wegen der Zulassung und der benötigten Zeit nicht im Projekt umgesetzt werden kann, wird eine weitere externe Ladestelle benötigt, die die Batterie im Stand ebenfalls aufladen kann.
+\paragraph{Batterie}\label{sec:Batterie}
+Die Batterie benötigt genügend Leistung für eine übliche Speisung der Bord- elektronik, der Aktoren und Sensoren sowie einen Puffer bei ungeplanten Zeitverzöger- ungen.
+\paragraph{Bordelektronik}
+Die Bordelektronik steuert alle für den Güterwagen notwendigen Prozesse. Dazu gehören sichere und nicht sichere Prozesse.\par
+Bei sicheren Prozessen wird von außen reiner Lesezugriff gewährt. Zu diesen gehören:
+\begin{itemize}
+    \item Steuerung der (pneumatischen) Aktoren,
+    \item Kommunikation mit den Sensoren,
+    \item Speicherung der Daten der Sensoren,
+    \item Kommunikation mit anderen Güterwagen 4.0, Lokomotiven und mobilen Endgeräten,
+\end{itemize}
+Nicht sichere Prozesse dagegen xxx, diese sind:
+\begin{itemize}
+    \item Steuerung und Regelung des Lademanagments,
+    \item Speicherung weiterer Informationen über den Güterwagen,
+    \item Kommunikation mit der Cloud zur Aktualisierung des 'Digitalen Zwillings'.
+\end{itemize}
+Sie ist ebenfalls zuständig für die Umsetzung des Autorisierungskonzeptes.
+\paragraph{Zustandsanzeige pneumatische Kupplung}\label{sec:ZustandKupplung}
+Aktor der zweikanalig den Zustand der pneumatischen Hähne (drucklos, druckbeaufschlagt) anzeigt.
+
+
+
+
+
+
+
+
+
+
+
+
+

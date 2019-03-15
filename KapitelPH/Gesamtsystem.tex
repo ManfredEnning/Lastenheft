@@ -1,0 +1,88 @@
+\section{Beschreibung des Gesamtsystems}
+%In diesem Kapitel wird das Gesamtsystem beispielhaft an einem Wagen erläutert. \par
+Der neue intelligente Güterwagen soll in Zukunft selbst wissen, was wann mit ihm gemacht wurde, wo er war und welche Wartungszyklen wie eingehalten wurden. Ebenso soll auch eine Überwachung des aktuellen Zustandes und Rückschlüsse auf die Zukunft mittels Sensoren zur vorausschauenden Instandhaltung möglich sein.\par
+Des Weiteren  soll er physisch bei der Zugvorbereitung helfen. Erst nur durch aktive Unterstützung bei der Feststellbremse, sodass keine Hemmschuhe benötigt werden, verstellen der Bremsart, automatisches Durchführen einer Bremsprobe oder Hilfe bei Zugtrennungen. Später aber auch durch ein gewisses Maß an selbstständigem Rangiervermögen.\par
+Ebenfalls geplant ist eine digitale Unterstützung bei der Zugvorbereitung geplant. Hier sind vor allem Unterstützungen im Bereich automatische Bremsberechung und Bremsprobe, aber auch bei der Zugzusammenstellung geplant.\par
+Dafür werden einerseits Sensoren und Aktoren am Wagen angebracht, andererseits auch eine Stromversorgung und ein Bordrechner mit Betriebssystem.\par
+Diese Punkte sorgen ebenso für mehr Effizienz in der Zugvorbereitung, nicht nur im Einzelwagenverkehr, auch im Bereich der Ganzzüge und dem Kombinierten Verkehr, die in den Betriebsstätten ebenfalls alleine oder in kleinen Wagengruppen vorbereitet werden, als auch bieten sie angenehmere Arbeitsplätze, bessere Überwachung der Wagen und kosteneffizientere Instandhaltung durch genauere Wartungsintervalle.\par
+%Begonnen wird mit der physischen Beschreibung des Güterwagens 4.0. Danach folgt eine Beschreibung des virtuellen Güterwagens im Betriebssystem und der Cloud.\par
+
+\subsection{Der Güterwagen 4.0}
+Die einzelnen Komponenten bestehen aus Kombinationen der hier vorgestellten Subsysteme. Darum sollen diese auch hier noch einmal kurz behandelt werden.
+
+\subsubsection{Energieversorgung}
+Die dauerhafte Versorgung des Güterwagens mit Energie stellt ein Novum im Güterver- kehr dar. Vor allem die Nachspeisung der Pufferbatterie durch verschiedene Quellen soll die Akzeptanz erhöhen. In Abbildung \ref{fig:GesSys} ist der Güterwagen 4.0 mit Radsatzgenerator und externer Ladeschnittstelle gezeigt (Kapitel \ref{sec:RSG}). Zusätzlich denkbar sind auch eine Aufladung über die Automatische Kupplung, fest verlegte Kabelstränge von einem Wagen zum nächsten bei fest verbundenen Wagengruppen, Solarpanels oder sogar Brennstoffzellen. %Diese haben je nach Anwendungsfall alle ihre Zielgruppe.
+\par
+Die Batterie (Kapitel \ref{sec:Batterie}) speist wiederum sämtliche Aktoren, Sensoren und die Bordelektronik. Diese Speisung erfolgt sowohl bei der Fahrt zur Aufnahme von Daten der Sensoren sowie der Aktorik der ep-Bremse, als auch bei Stillstand. Hier müssen Lademanagement und Betriebssystem (Kapitel \ref{sec:Lademanagment}) dafür sorgen, dass alle notwendigen Prozesse weiterlaufen, die Anderen aber heruntergefahren werden, oder die Aktualisierung von Daten seltener erfolgt.
+
+
+\subsubsection{Bremse 4.0}
+Die Bremse des Güterwagen 4.0 bietet folgende Funktionen:
+\begin{itemize}
+    \item TSI-konformes Steuerventil mit automatischer Lastabbremsung und den Bremsarten G und P (Kapitel \ref{sec:Bremsart}
+    \item Fernbetätigte Endabsperrhähne (Kapitel \ref{sec:Endabsperrhahn})
+    \item Fernbetätigung verschiedener Bremsfunktionen  (Kapitel \ref{sec:Bremsart})
+    \begin{itemize}
+        \item Schnelllösen
+        \item Bremse aus
+        \item Bremsstellung ändern
+        \item Feststellbremse
+        \item ep-Bremse
+    \end{itemize}
+    \item Anzeige des Zustands (drucklos, druckbeaufschlagt) der pneumatischen Kupplung (Kapitel \ref{sec:ZustandKupplung})
+    \item Messung des C-Drucks (Kapitel \ref{sec:CDruck})
+\end{itemize}
+
+\subsubsection{Intelligente Vernetzung}
+Der Güterwagen 4.0 ist als 'intelligenter' Wagen im Sinne der Industrie 4.0 im Schienenverkehr geplant. Dafür benötigt er, neben der Energieversorgung und der teilautomatisierten Bremse, auch einen Bordrechner, der diese 'Intelligenz' liefert.\par
+Auf diesem Rechner soll als Betriebssystem das sogenannte 'WagonOS' installiert sein. Dieses bietet als Open Source-System ein offenes Betriebssystem mit vielen Ausbau- möglichkeiten. Das WagonOS bietet den Nutzern des Güterwagen 4.0  diesen auf genau die benötigten Anwendungsfälle zu Optimieren und sogar die Möglichkeit eigene Applikationen zu erstellen.\par
+Des Weiteren liegen auf dieser Speichereinheit dezentral alle für die Zugbildung und Instandhaltung wichtigen Informationen über den Wagen. Dazu gehören bauartspezifische Parameter wie Gewicht, Länge, Achszahl, maximal Zuladung und Höchstgeschwindigkeit genauso wie wagenspezifische Informationen wie Besitzer, Laufleistung, Informationen aus den Sensoren, letzte Wartungen und nächste Instandhaltungszyklen.\par
+Diese Informationen liegen ebenso als 'Digitaler Zwilling' in einer Cloud. Bei Verbindung des Wagens zum Internet und Änderung der Informationen auf dem Wagen wird dieser Zwilling regelmäßig aktualisiert.\par
+Im Verband mit anderen Wagen verhält sich der Güterwagen 4.0 'sozial' und teilt alle notwendigen Informationen über sich mit den anderen Wagen und der Lok als gleichberechtigte Partner. Durch die Verbindung von Wagen zu Wagen ist keine durchgehende Internetverbindung notwendig. Die Informationen können lokal ausgetauscht und später synchronisiert werden.\par
+Im Projekt umgesetzt werden soll davon eine reduzierte Form des WagonOS. Eine Entwicklung des vollständigen Betriebssystems findet nicht im Rahmen dieses Projektes statt.\par
+Diese reduzierte Form des Betriebssystems soll eine Speicherung und Auswertung aller relevanter Daten auf dem Bordrechner ermöglichen. Eine weitere Datenspeicherung als 'Digitaler Zwilling' findet in der Cloud statt.
+
+
+
+\subsection{Physischer Güterwagen 4.0}
+Das Gesamtsystem, bestehend aus elektrischer, pneumatischer, sensorischer und Datenkomponenten ist in der Abbildung \ref{fig:GesSys} zu sehen.\par
+    \begin{figure}[hbt]
+        \centering
+    \input{Bilder/SchemaGesSys.tex}
+        \caption{Zusätzliche Komponenten des Gesamtsystems}
+        \label{fig:GesSys}
+    \end{figure}
+Abgebildet ist im Hintergrund in grau ein gebremster, vier-achsiger (in zwei Drehgestellen) Güterwagen, mit Puffern und Schraubenkupplung. Eine genaue Bauart ist und soll nicht erkennbar sein. Die elektrischen Komponenten sind in blau, die pneumatischen Komponenten in grün, die sensorischen Komponenten in rot und die Datenkomponenten in violett eingefärbt. Zusätzlich sind die Elemente, die mit Strom versorgt werden auch mit einer schwarzen, gestrichelten Linie verbunden.\par
+Das Konzept des Güterwagens besteht aus vier großen Unterpunkten, die hier beschrieben werden.
+\begin{itemize}
+    \item Stromversorgung des Güterwagens,
+    \item Teilautomatisierung des Güterwagens durch Aktoren,
+    \item Zustandsüberwachung des Güterwagens durch Sensoren und
+    \item Intelligenter Vernetzung zwischen Güterwagen und weiteren Bahnanlagen.
+\end{itemize}
+Diese Punkte werden in folgenden Unterkapiteln einzeln beleuchtet. Nach einer Beschreibung des virtuellen Güterwagens folgt die Stromversorgung mit ihren Komponenten, anschließend erfolgt eine Ausführung über pneumatische Komponenten, die der Teilautomatisierung durch Aktoren entspricht. Im Anschluss folgt ein Kapitel über die Zustandsüberwachung mittels Sensorik und später eine Ausführung über die Systeme, die dem Wagen 'Intelligenz' bieten sollen.
+
+\subsection{Virtueller Güterwagen 4.0}
+Für eine, wie die bereits beschriebene, intelligente Vernetzung der Güterwagen wird nicht nur ein physischer Güterwagen mit Sensoren und Aktoren sowie deren Auswertung benötigt, sondern auch eine Kommunikationsmöglichkeit. Für diese wird eine virtuelle Entsprechung des Güterwagens benötigt: der virtuelle Güterwagen 4.0.\par
+Jeder Güterwagen 4.0 besitzt einen 'Digitalen Zwilling'. In ihm werden alle Zustände und Aktorstellungen gespeichert. Siehe dazu auch \ref{sec:dKomp}. Für die Speicherung der Daten und Kommunikation mit anderen Wagen wird das bereits angesprochene Betriebssystem 'WagonOS' benötigt.\par
+Die Architektur dieser offenen Güterwagen-Software stützt sich auf folgende Punkte:
+\begin{itemize}
+    \item Internettechnologien
+    \item IPv6-basiert
+    \item Dezentral
+    \item Zukunftssicher
+\end{itemize}
+Durch die Wahl von Internettechnologien sind beliebige Übertragungsmöglichkeiten wählbar und kombinierbar.\par
+Durch eine Basierung auf IPv6 ist eine eindeutige Identifizierung jedes Wagens möglich. Zur eindeutigen Zuordnung soll die UIC-Wagennummer auch der Netzwerkadresse entsprechen. Siehe dazu auch Abbildung \ref{fig:IPv6}.\par
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Bilder/ipv6_concept.png}
+    \caption{Mögliche Darstellung des virtuellen Güterwagens mit IPv6-Netzwerkadresse\cite{GAK}}
+    \label{fig:IPv6}
+\end{figure}
+Alle Wagen sollen hierarchisch gleich gestellt sein. außerdem darf keine Abhängigkeit zu Netzwerkverbindungen oder Servern bestehen. Darum soll durch Dezentralität und lokalen Netzwerken immer eine lokale Verbindung bestehen. In dieser wird eine lokale Hierarchie gebildet.\par
+Im Verband mit anderen Wagen verhält sich der Güterwagen 4.0 sozial und teilt alle notwendigen Informationen über sicht mit den anderen Wagen und der lok als gleichberechtigte Partner. Dazu gehören bauartspezifische Parameter wie Gewicht, Länge, Achszahl, maximal Zuladung und Höchstgeschwindigkeit genauso wie wagen spezifische Informationen wie Besitzer, Laufleistung, Informationen aus den Sensoren, letzte Wartungen und nächste Instandhaltungszyklen.\par
+Aufgrund der vielen unterschiedlich konfigurierten Güterwagen und Zugängen zu Daten und Akten wird eine NoSQL-Technologie als Datenbankformat gewählt. Diese sorgt auch bei unterschiedlichen Versionen und Daten für eine zukunftssichere Datenbank.\par
+Eine weitere Beschreibung des Bordrechners ist in Kapitel \ref{sec:eKomp} zu finden, die Beschreibung der Kommunikation in Kapitel \ref{sec:dKomp} zu finden.
+
+

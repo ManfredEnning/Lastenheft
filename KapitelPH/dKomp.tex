@@ -1,0 +1,47 @@
+\subsection{Realisierung Datenkommunikation}\label{sec:dKomp}
+In diesem Kapitel geht es um die Ausführung der Datenkommunikation. Es teilt sich auf in die Teile Hardware und Software und ist zugehörig zum Arbeitspaket 5 - Datenkommunikation; genauer AP 5a: Entwicklung eines Hardware- und Software-Konzepts für die Kommunikation und behandelt die Ausführung der notwendigen Daten und deren Kommunikationsmöglichkeiten in Hard- und Software.\par
+Die entsprechenden Hardwarekomponenten sind in Abbildung \ref{fig:dKomp} in violett farblich markiert.
+\begin{figure}[hbt]
+    \centering
+    \input{Bilder/SchemaDKomp.tex}
+    \caption{Hardwarekomponenten zur Datenkommunikation des Gesamtsystems}
+    \label{fig:dKomp}
+\end{figure}
+Damit die Wagen untereinander sozial interagieren können, ist eine Kommunikation untereinander ebenso notwendig wie Informationen über sich selbst. Zur Verarbeitung und Sicherung eigener Daten werden Sensoren und Aktoren ausgelsen und im Digitalen Zwilling gespeichert.\par
+Dieser Digitale Zwlling wird bei der Kommunikation mit anderen WAgen, der Lok oder mobilen Device je nach Autorisierung mit Lese- oder Lese- und Schreibzugriff ausgetauscht.\par
+\begin{figure}[hbt]
+    \centering
+    \includesvg[width=\textwidth]{Bilder/wagen_draufsicht_2-achs_comm}
+    \caption{Kommunikationsmöglichkeiten eines einzelnen Güterwagen 4.0\cite{autonBetrieb}}
+    \label{fig:Wagenkomm}
+\end{figure}
+Die Kommunikation findet entweder über ein WLAN-Mesh-Grid (siehe Abbildung \ref{fig:Wagenkomm}, blau) in mittlerer Distanz oder direkt über eine Kurzdistanz-Verbindung (lila) statt. Bei beiden ist wichtig, dass die Kommunikation sicher und unempfindlich gegenüber Störungen und Manipulation ist. Diese soll, wie in Abbildung \ref{fig:dKomp} zu sehen, Redundand ausgeführt werden. Dies soll für eine höhere Sicherheit und Zuverlässigkeit führen. \par
+Zusätzlich soll auch noch eine Verbindungzu einer Cloud im Fernbereichsfunk zur Verfügung stehen. Diese erhält allerdings nur einen Lesezugriff um eine Manipulation über die Cloud so schwierig wie Möglich zu gestalten.\par
+\begin{figure}[hbt]
+    \centering
+    \includesvg[width=\textwidth]{Bilder/zug_draufsicht_bogen}
+    \caption{Kommunikation im Zugverband\cite{autonBetrieb}}
+    \label{fig:Zugkomm}
+\end{figure}
+Der Funk über die mittlere Distanz soll vorallem für eine Migration zur Verfügung stehen. Siehe dazu auch Abbildung \ref{fig:Zugkomm}.\par
+Bei einer Vollausrüstung von Wagen mit Kommunikation von Wagen zu Wagen über Funk und innerhalb der Wagen über Ethernet ist diese Kommunikation kaum störbar. Hier bietet der Güterwagen auch volles Potential für Zugautomatisierungen inklusive Zugtaufe, Bremsprobe und ep-Bremsen. Sogar ETCS Level 3 kann möglich sein.\par
+Aber auch bei nur einer Teilausrüstung der Wagen kann eine Nutzentfaltung durch Digitalisierung von Prozessen an der Ladestelle stattfinden. Eine Automatisierung ist dann in Verbindung mit stationärer Technik im Betrieb möglich.\par
+Die Vernetzung zur Lok kann mittels eines Dongles an der UIC 556-Schnittstelle über das Wire-Train-Bus-Gateway stattfinden.\par
+\subsubsection{Hardware}
+An Hardwarekomponenten sind Funkstellen für die Wagenkommunikation geplant.
+\begin{itemize}
+    \item Komponenten für Kurzstreckenfunk -- WLAN 60GHz/2,4GHz -- Wagen-Wagen, Wagen-Lok -- 1b
+    \item Komponenten für mittlere Distanzen -- Wagen...Wagen, Wagen-Device
+    \item Komponenten für Fernbereichsfunk -- Wagen-Cloud
+\end{itemize}
+\subsubsection{Software}
+\begin{itemize}
+    \item Lademanagement \label{sec:Lademanagment} -- 3d
+    \item Anforderungen an sicheres funkgestütztes Bedienen und beobachten bei der Zugbildung -- 1d
+    \item DI -- 1c
+    \item WagonOS
+    \item Kommunikationsprotokolle - Datenkommunikation -- 1c
+    \item automatische Zugbildung -- 1c
+    \item automatische Bremsprobe -- 1c
+    \item automatische Bremseinstellung
+\end{itemize}

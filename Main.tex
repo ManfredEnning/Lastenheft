@@ -1,0 +1,91 @@
+\documentclass[DIV=11,11pt,a4paper,parskip]{scrartcl}
+%%%%%%%%%%%%% Packages
+\input{Packages/Ueblich.tex}
+\input{Packages/Tikz.tex}
+\input{Packages/GlosQuel.tex}
+\input{Packages/Anf.tex}
+%%%%%%%%%%%%% Packages
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Trennungen
+\hyphenchar\font=\string"7F
+\hyphenation{Bord-elek-tro-nik}
+\begin{document} 
+%%%%%%%%%%%%%%%%%%%%%%% Absatzlänge
+\setlength{\parskip}{5mm}% plus5mm minus5mm} %Absatzlänge
+%%%%%%%%%%%%%%%%%%%%%% Zeilennummern
+\linenumbers
+
+%\begin{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lastenheft
+%Deckblatt Beginn
+\pagenumbering{roman}
+    \input{Hintergrund/TitleLH.tex}
+%Deckblattt Ende
+\pagenumbering{roman}
+    \input{Hintergrund/ZweckLH.tex}
+%Verzeichnisse Beginn
+    \input{Hintergrund/RevisionshistorieLH.tex}\newpage
+    \tableofcontents \newpage
+    \listoffigures %\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+    %\listoftables %Tabellenverzeichnis 
+    \printglossary[title= Abkürzungen, 
+        %toctitle=Abkürzungen, 
+        type=\acronymtype]
+    \printglossary\newpage
+%Verzeichnisse Ende
+%Hauptteil Beginn
+\pagenumbering{arabic}
+    %\section{Einleitung} folgt \newpage
+    \input{KapitelLH/Einleitung} \newpage
+    \input{KapitelLH/Ist-Zustand} \newpage
+    \input{KapitelLH/Abgrenzung.tex} \newpage
+    \input{KapitelLH/Soll-Zustand.tex} \newpage
+%    \input{Kapitel/Fazit.tex} \newpage
+%Hauptteil Ende
+%Anhang Beginn
+\pagenumbering{Roman}
+    \printbibliography[heading=bibintoc, title={Quellenverzeichnis}] \newpage
+    \appendix
+    \input{KapitelLH/Anhang_IDR.tex}\newpage
+%Anhang Ende
+%\end{comment}
+
+\begin{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pflichtenheft 
+%Deckblatt Beginn
+\pagenumbering{roman}
+    \input{Hintergrund/TitlePH.tex}
+%Deckblattt Ende
+\pagenumbering{roman}
+    \input{Hintergrund/ZweckPH.tex}
+%Verzeichnisse Beginn
+    \input{Hintergrund/RevisionshistoriePH.tex}\newpage
+    \tableofcontents \newpage
+    \listoffigures %\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+    %\listoftables %Tabellenverzeichnis 
+    \printglossary[title= Abkürzungen, 
+        %toctitle=Abkürzungen, 
+        type=\acronymtype]
+    \printglossary\newpage
+%Verzeichnisse Ende
+%Hauptteil Beginn
+\pagenumbering{arabic}
+    %Einleitung
+    \input{KapitelPH/Gesamtsystem.tex}
+    \input{KapitelPH/eKomp.tex}
+    \input{KapitelPH/pKomp.tex}
+    \input{KapitelPH/sKomp.tex}
+    \input{KapitelPH/dKomp.tex}
+    \input{KapitelPH/Zeitplan.tex}
+    \input{KapitelPH/SicherheitundZulassung.tex}
+    \input{KapitelPH/AnfundKomp.tex}
+    %Fazit
+%Hauptteil Ende
+%Anhang Beginn
+\pagenumbering{Roman}
+    \printbibliography[heading=bibintoc, title={Quellenverzeichnis}] \newpage
+    \appendix
+    \input{KapitelPH/Anhang_Bremse40.tex}
+%Anhang Ende
+\end{comment}
+\end{document}

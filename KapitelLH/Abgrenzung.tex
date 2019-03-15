@@ -2,7 +2,7 @@
 In diesem Kapitel soll eine Konzeptabgrenzung des Projektes gegenüber einem konventionellen Güterwagen, anderen bereits vorhandenen Lösungen und dem späteren vollständig ausgebildeten \gls{Gueterwagen 40} stattfinden. Dafür ist dieses Kapitel in die folgenden drei Unterkapitel geteilt.
 
 \subsection{Railmap}
-Bereits in Vorträgen, zum Beispiel auf der 1. BME-VDV-Gleisanschlusskonferenz \cite{GAK}, kam es zur Vorstellung der sogenannten Railmap, siehe Abbildung \ref{fig:Railmap}, diese zeigt einen Plan für zukünftige Entwicklungen im Schienengüterverkehr. Auf ihr ist der Weg abgebildet, den unter anderem auch der \gls{Gueterwagen 40}  gehen soll, aber auch weitere Punkte, die danach für die Automatisierung des Schienengüterverkehrs folgen sollen.\par
+Bereits in Vorträgen, zum Beispiel auf der 1. BME-VDV-Gleisanschlusskonferenz \cite{GAK}, kam es zur Vorstellung der sogenannten Railmap, siehe Abbildung \ref{fig:Railmap}, diese zeigt einen Vorschlag für zukünftige Entwicklungen im Schienengüterverkehr. Auf ihr ist der Weg abgebildet, den unter anderem auch der \gls{Gueterwagen 40}  gehen soll, aber auch weitere Punkte, die danach für die Automatisierung des Schienengüterverkehrs folgen sollen.\par
 \begin{figure}[hbp]
     \centering
     \input{Bilder/Railmap.tex}
@@ -12,11 +12,11 @@ Bereits in Vorträgen, zum Beispiel auf der 1. BME-VDV-Gleisanschlusskonferenz \
 Die Railmap beginnt mit dem Hauptpunkt, der auch ein Schwerpunkt dieses Projektes sein soll, der autarken Stromversorgung des Wagens. Dieser wird unter anderem mit der Erstellung der Richtlinie VDI 5905\footnote{www.vdi.de/5905 VDI 5905 Blatt 1 Schnittstellen aktiver, kooperierender Güterwagen - Stromversorgung} gefestigt.\par
 Der zweite Punkt der Railmap besteht aus zwei Unterpunkten. Beide Punkte zusammen bilden den voll ausgestatteten \gls{Gueterwagen 40} wie er in Kapitel \ref{sec:Ausbaustufen} gezeigt wird. %\\
 Der Unterpunkt 2a beschreibt den \gls{Gueterwagen 40} nach diesem Projekt. Darin enthalten ist die Ausstattung mit den Ausbaustufen 1 - Stromversorgung, 2 - Automatisierung der Bremse und 3 - die ep-''light''-Bremse. %\\
-Der Unterpunkt 2b beschreibt die Ausbaustufen 4 und 5 des \gls{Gueterwagen 40} und damit die Einführung der Zugintigrität bei Güterwagen und des Rangierantriebs. Siehe dazu auch die einzelnen Punkte des Kapitels \ref{sec:Ausbaustufen}.\par
-Als Drittes ist dann bereits eine dezentrale, unabhängige Intelligenz von Güterwagen geplant. Diese soll dem Internet of Things entsprechen; dem Internet of Rail Assets. In diesem Punkt soll es für den Güterwagen möglich sein mit anderen 'Dingen' der Eisenbahn zu kommunizieren.\par
-Im vierten Punkt geht es bereits um halbautomatiserten Gleisanschlussverkehr und den sogenannten Gleisanschluss 4.0. auch hierzu gibt es bereits vorgestellte Ideen; wie zum Beispiel auf der 1. BME-VDV-Gleisanschlusskonferenz \cite{GAK}. \par
+Der Unterpunkt 2b beschreibt die Ausbaustufen 4 und 5 des \gls{Gueterwagen 40} und damit die Einführung einer technischen Sicherung der Zugintegrität bei Güterwagen sowie des Rangierantriebs. Siehe dazu auch die einzelnen Punkte des Kapitels \ref{sec:Ausbaustufen}.\par
+Als Drittes ist eine dezentrale, unabhängige Intelligenz von Güterwagen geplant. Diese soll dem Internet of Things entsprechen; dem Internet of Rail Assets. In diesem Punkt soll es für den Güterwagen möglich sein mit anderen 'Dingen' der Eisenbahn zu kommunizieren.\par
+Im vierten Punkt geht es um halbautomatisierten Gleisanschlussverkehr und den sogenannten Gleisanschluss 4.0. auch hierzu gibt es bereits vorgestellte Ideen; wie zum Beispiel auf der 1. BME-VDV-Gleisanschlusskonferenz \cite{GAK}. \par
 Im fünften und letzten Punkt dieser Railmap soll die automatische Kupplung flächendeckend eingeführt und ein automatischer Gleisanschlussverkehr möglich sein.\par
-In diesem Projekt soll ein \gls{konventioneller Gueterwagen} mit konventionellen Fahrwerken und Luftbremse zu einem \gls{Demonstrator} umgebaut werden. Ein zusätzlicher Aufbau von Leistungs- und sicherheitsgerichteten Komponenten ist geplant, ebenso eine erste Realisierung der Bremse 4.0\cite{Stephenson, ETR_2}.\par
+In diesem Projekt sollen \gls{konventionelle Gueterwagen} mit konventionellen Fahrwerken und Luftbremse zu \gls{Demonstrator}en umgebaut werden. Ein zusätzlicher Aufbau von Leistungs- und sicherheitsgerichteten Komponenten ist geplant, ebenso eine erste Realisierung der Bremse 4.0\cite{Stephenson, ETR_2}.\par
 
 \subsection{Beschreibung der Ausbaustufen}\label{sec:Ausbaustufen}
 Anhand des Ist- und Soll-Zustandes (siehe voriges und folgendes Kapitel) sind fünf Ausbaustufen für den \gls{Gueterwagen 40} geplant, die diese Zeiteinsparung bringen sollen. In den folgenden Abschnitten werden die geplanten Ausbaustufen kurz beschrieben.\par
@@ -27,8 +27,8 @@ Anhand des Ist- und Soll-Zustandes (siehe voriges und folgendes Kapitel) sind f�
     \caption{Klasse 1 mit Stromversorgung, Telematik und Datenvernetzung - angelehnt an \cite{ETR_3} }
     \label{fig:Klasse1}
 \end{figure} 
-In der ersten Ausbaustufe, siehe Abbildung \ref{fig:Klasse1}, ist die Anbringung einer Bordelektronik mit  entsprechender Spannungsversorgung geplant. Die Spannungsversorgung kann als Batterie mit Speisung durch einen Radsatzgenerator, Solarpanels oder ähnlichem realisiert werden. Auch eine Pufferbatterie mit Speisung durch die AK ist denkbar. Dazu kommen verschiedene Antennen und Kurzstreckenfunk zur Kommunikation mit anderen Wagen. Auch Sensoren zur Erfassung verschiedener Telematikfunktionen sind geplant.\par
-In diesem Stadium ist der Wagen an sich noch nicht 'schlauer' als ein nicht ausgerüsteter Wagen, aber er kann sich mitteilen. Mitteilungen können sein: 
+In der ersten Ausbaustufe, siehe Abbildung \ref{fig:Klasse1}, ist die Anbringung einer Bordelektronik mit  entsprechender Spannungsversorgung geplant. Die Spannungsversorgung kann als Batterie mit Speisung durch einen Achsdeckelgenerator, Solarpanels oder ähnlichem realisiert werden. Auch eine Pufferbatterie mit Speisung durch die Automatische Kupplung ist denkbar. Dazu kommen verschiedene Antennen und Kurzstreckenfunk zur Kommunikation mit anderen Wagen. Auch Sensoren zur Erfassung verschiedener Telematikfunktionen sind geplant.\par
+In diesem Stadium ist der Wagen noch nicht 'aktiver' als ein nicht ausgerüsteter Wagen, aber er kann sich mitteilen. Mitteilungen können sein: 
 \begin{itemize}
     \item Standort / GPS
     \item (Be-)Ladung
@@ -47,7 +47,7 @@ Diese Stufe soll im Demonstrator realisiert werden.
     \caption{Klasse 2 bestehend aus Klasse 1 und der Automatisierung der Bremsbedienung - angelehnt an \cite{ETR_3}}
     \label{fig:Klasse2}
 \end{figure} 
-In der zweiten Ausbaustufe, siehe Abbildung \ref{fig:Klasse2}, ist eine zusätzliche Aktorik für Endabsperrhähne und Handbremse geplant. Dadurch kann ein Teil der Bremsbedienung so weit automatisiert werden, dass ein Einstellen der Bremsart anhand von anderen Wagen im \gls{Wagenzug}, Gewicht und Bremsfähigkeit möglich ist. Außerdem ist die automatische Parkbremse realisiert.\par
+In der zweiten Ausbaustufe, siehe Abbildung \ref{fig:Klasse2}, ist eine Aktorik für Endabsperrhähne, Handbremse und Bremsart geplant. Dadurch kann ein Teil der Bremsbedienung so weit automatisiert werden, dass ein Einstellen der Bremsart anhand von anderen Wagen im \gls{Wagenzug}, Gewicht und Bremsfähigkeit möglich ist. Außerdem ist die automatische Parkbremse realisiert.\par
 Nach einer vollständigen Zugzusammenstellung kann das System vollständig abgeschaltet und durch einen Wagenmeister abgenommen werden. Sicherheitsfunktionen des Wagens und der Bremse bleiben für Zugfahrten unangetastet. Wichtig dafür ist eine Nutzung von bistabilen Ventilen im System. Diese sorgen für einen sicheren Zustand auch bei abgeschaltetem System und es ist nur ein Nachweis über die Bistabilität dieser zu führen.\par
 Ein Ausbau dieser Stufe im Demonstrator ist geplant.
 
@@ -57,9 +57,9 @@ Ein Ausbau dieser Stufe im Demonstrator ist geplant.
     \caption{Klasse 3 bestehend aus Klasse 2 und der eingeführten ep-''light''-Bremse - angelehnt an \cite{ETR_3}}
     \label{fig:Klasse3}
 \end{figure} 
-In der dritten Ausbaustufe, siehe Abbildung \ref{fig:Klasse3}, kommt zusätzlich zur Bremsbedienung auch eine Vorform der \gls{ep-Bremse} hinzu: die ep-''light''-Bremse. Diese sorgt für eine für kürzere Bremswege und/oder höhere Geschwindigkeiten.\par
-Dafür muss dieses System richtig eingestellt werden. Die ep-Bremse ist die erste Komponente, die auch bei Zugfahrten eingeschaltet bleibt. Es ist zu verhindern, dass ein oder mehrere Wagen zur Unzeit bremsen.\par
-Diese Stufe wird im Demonstrator realisiert.
+In der dritten Ausbaustufe, siehe Abbildung \ref{fig:Klasse3}, kommt zusätzlich zur Bremsbedienung auch eine Vorform der \gls{ep-Bremse} hinzu: die ep-''light''-Bremse. Diese sorgt für kürzere Bremswege und weniger Verschleiß, weil der Bremseinsatz über die gesamte Zuglänge synchron erfolgt. Weil sie aber nicht auf die Bremshunderstel angerechnet wird, sind die sicherheitstechnsichen Anforderungen noch überschaubar. Im Gegensatz zur "`vollwertigen"' aus dem Personenverkehr bekannten ep-Bremse muss auf die Hauptbehälterleitung HBL verzichtet werden. Daher hat ep-light auf das Lösen der Bremse keinen Einfluss.\par
+%Dafür muss dieses System richtig eingestellt werden. 
+Die ep-Bremse ist die erste Güterwagen 4.0-Komponente, die auch bei Zugfahrten eingeschaltet bleibt. Diese Stufe wird im Demonstrator realisiert.
 
 \subsubsection{Ausbaustufe 4: Ausbaustufe 3 + automatisierter Zugschluss}
 \begin{figure}[htbp] 
@@ -67,10 +67,10 @@ Diese Stufe wird im Demonstrator realisiert.
     \caption{Klasse 4 bestehend aus Klasse 3 und der Automatisierung des Zugschlusses - angelehnt an \cite{ETR_3}}
     \label{fig:Klasse4}
 \end{figure} 
-In der vierten Ausbaustufe, siehe Abbildung \ref{fig:Klasse4}, ist unter anderem ein automatisierter Zugschluss geplant. Dieser soll das Anbringen des Zugschlusssignals am letzten Wagen ablösen.\par
-Dies wird vom Personal noch manuell erledigt. Dazu muss die Person den gesamten Zug von bis zu 700 m ablaufen um die die entsprechenden Signale am letzten Wagen anzubringen.\par
-Vor allem aber soll diese Funktion aber den Mehrwert der technischen Sicherheit bei der Zugintigrität bieten. Durch eine Integration eines echtzeitfähigem Zugschlusses bietet diese Funktion eine durchgängige Möglichkeit der Zugintigrität.\par
-Damit ist in Zukunft auch eine Fahrt von Güterzügen in ETCS Level 3 möglich.\par
+In der vierten Ausbaustufe, siehe Abbildung \ref{fig:Klasse4}, ist unter anderem ein technisch gesicherter Zugschluss geplant. Damit können auch für Güterzüge Zugsicherungsverfahren, die eine technische Überwachung der Zugintegrität voraussetzen (ETCS Level 3, PTC), realisiert werden. Gleichzeitig wird das für die Rückfallebene notwendige Zugschlusssignals am letzten Wagen durch eine elektrische Leuchte ersetzt.\par
+%Heute muss die Zugschlusstafel noch manuell gesteckt werden. Dazu muss eine Person den gesamten Zug von bis zu 700 m ablaufen um die die entsprechenden Signale am letzten Wagen anzubringen.\par
+%Vor allem aber soll diese Funktion aber den Mehrwert der technischen Sicherheit bei der Zugintigrität bieten. Durch eine Integration eines echtzeitfähigem Zugschlusses bietet diese Funktion eine durchgängige Möglichkeit der Zugintigrität.\par
+%Damit ist in Zukunft auch eine Fahrt von Güterzügen in ETCS Level 3 möglich.\par
 Diese Stufe soll nicht im Projekt angegangen werden.
 
 \subsubsection{Ausbaustufe 5: Ausbaustufe 4 + Rangierantrieb} \label{sec:A5}
@@ -79,9 +79,10 @@ Diese Stufe soll nicht im Projekt angegangen werden.
     \caption{Klasse 5 bestehend aus Klasse 4 und einem Rangierantrieb - angelehnt an \cite{ETR_3}}
     \label{fig:Klasse5}
 \end{figure}
-In der fünften Ausbaustufe, siehe Abbildung \ref{fig:Klasse5}, kommt der Rangierantrieb hinzu. dieser kann allerdings auch bereits auf einen Wagen der nur mit Stufe 1 und 2 ausgestattet ist aufgesetzt werden. Damit dieser ohne Probleme funktioniert braucht er neben einem Antrieb zusätzlich eine weitere Batterie und Umrichter. Zur Speisung der zweiten Batterie wird auch ein zweiter Radsatzgenerator benötigt.\par
-In diesem Stadium kann von einem automatisierten Güterwagen gesprochen werden. Er kann selbstständig bei der ''Briefkastenbedienung'' (siehe \cite{GAK}) assistieren und auf dem Werksgelände ohne Rangierlok oder andere Verschiebeeinheiten verfahren.\par
-Die Umsetzung deiser Stufe ist nicht im Projekt geplant.
+In der fünften Ausbaustufe, siehe Abbildung \ref{fig:Klasse5}, kommt der Rangierantrieb mit einer Vielzahl weiterer technischer Komponenten und einer zusätzlichen Stromversorgung hinzu. %dieser kann allerdings auch bereits auf einen Wagen der nur mit Stufe 1 und 2 ausgestattet ist aufgesetzt werden. Damit dieser ohne Probleme funktioniert braucht er neben einem Antrieb zusätzlich eine weitere Batterie und Umrichter. Zur Speisung der zweiten Batterie wird auch ein zweiter Radsatzgenerator benötigt.\par
+%In diesem Stadium kann von einem automatisierten Güterwagen gesprochen werden. 
+Ein so ausgestatteter Wagen kann selbstständig bei der ''Briefkastenbedienung'' (siehe \cite{GAK}) assistieren und auf dem Werksgelände ohne Rangierlok oder andere Verschiebeeinheiten verfahren.\par
+Die Umsetzung dieser Stufe ist nicht im Projekt geplant.
 
 \subsection{Abgrenzung des Güterwagen 4.0 vom konventionellen Güterwagen}
 \subsubsection{Leistungsniveau und Energieversorgung}
@@ -93,7 +94,7 @@ Eine vollständige Stromversorgung nach der VDI-Richtlinie 5905 oder ein Prototy
 Die Bremse stellt, neben dem Bordrechner, ein Herzstück des \gls{Gueterwagen 40}  dar.
 Hier ist eine Teilautomatisierung der Bremse im Bereich der Hauptluftleitung, Bremsumsteller, \gls{Lastwechsel} und Feststellbremse geplant. Diese soll mit Aktoren automatisch oder auf Befehl umgestellt werden. Dadurch soll auch eine automatische Bremsprobe und eine automatische Bremsberechnung möglich sein. Ebenso eine Stillstandsüberwachung.\par
 Nicht geplant ist dagegen eine automatische Notbremsfunktion, die beispielsweise die Handbremse anlegt, wenn ein Hindernis auftaucht. Dies ist als Aufbau möglich, soll aber nicht zur Standardausrüstung gehören. Auch eine entsprechende wirtschaftliche Betrachtung findet nicht statt.\par
-Während dieses Projektes ist eine Ausstattung der Wagen mit einer ep-''light''-Bremse als Versuch geplant. Diese wird allerdings ohne Anrechnung auf die Bremsleistung im Testbetrieb stattfinden, sodass eine erste Einführung probehalber unkritisch ist. Eine angerechnete ep-Bremse im Güterverkehr wäre aus vielen Gründen sehr interessant, muss allerdings aus Sicherheitsgründen weitreichender geplant sein.\par
+%Während dieses Projektes ist eine Ausstattung der Wagen mit einer ep-''light''-Bremse als Versuch geplant. Diese wird allerdings ohne Anrechnung auf die Bremsleistung im Testbetrieb stattfinden, sodass eine erste Einführung probehalber unkritisch ist. Eine angerechnete ep-Bremse im Güterverkehr wäre aus vielen Gründen sehr interessant, muss allerdings aus Sicherheitsgründen weitreichender geplant sein.\par
 
 \subsubsection{Intelligente Vernetzung}
 Der \gls{Gueterwagen 40} ist als 'intelligenter' Wagen im Sinne der Industrie 4.0 im Schienenverkehr geplant. Dafür benötigt er, neben der Energieversorgung und der teilautomatisierten Bremse, auch einen Bordrechner, der diese 'Intelligenz' liefert.\par

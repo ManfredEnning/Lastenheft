@@ -1,5 +1,5 @@
 \section{Ist-Zustand}\label{sec:Istzustand} %Beschreibung wo Produktivität vergeudet wird um daraus ableiten zu können, was benötigt wird. % Kochsiek, Knoll nach Meinung zu diesem Kapitel fragen!
-Im Folgenden wir der Umlauf eines \gls{Schiebewandwagen} (Habinns) beschrieben. Der Wagen wird in einem \gls{Gleisanschluss}/RailPort mit palettiertem Gut beladen, läuft dann durch das deutsche/europäische Einzelwagensystem und wird in einer Ladestelle an einem \gls{Gleisanschluss} oder RailPort entladen. Fokus dieser Beschreibung sind die durchzuführenden manuellen Tätigkeiten.\par
+Im Folgenden wir der Umlauf eines \gls{Schiebewandwagen} (Habinns) beschrieben. Der Wagen wird in einem \gls{Gleisanschluss}/\gls{RailPort} mit palettiertem Gut beladen, läuft dann durch das deutsche/europäische Einzelwagensystem und wird in einer Ladestelle an einem \gls{Gleisanschluss} oder \gls{RailPort} entladen. Fokus dieser Beschreibung sind die durchzuführenden manuellen Tätigkeiten.\par
 Davon leitet sich im Folgenden ein Anforderungskatalog an einen aktiven, kommunikativen \gls{Gueterwagen 40} ab, der viele oder alle der manuellen Tätigkeiten durch Technikfunktionen ersetzt.\par
 Die hier beschriebenen Prozesse sind leicht idealisiert. So werden Störfälle zunächt ausgenommen. Auch kann davon ausgegangen werden, dass jeder Prozess leicht anders aussieht. Trotzdem zeigt er viele wichtige Punkte, die verbessert werden können und sollten. Bei anderen Wagen- und Ladungsarten unterscheidet sich der Umlauf natürlich noch weiter.\par
 Weitere Informationen zu anderen Prozessen und vor allem auch zu Prozessen in der Disposition sind im Anhang \ref{sec:realeIst} zu finden. \par
@@ -15,7 +15,7 @@ Je nach Wagenaufkommen kommen folgende Methoden der Wagenbewegung in Betracht:
 	\item Eigenes Rangierhilfsmittel
 	\begin{itemize}
 	    \item Gleisfahrbar (Rangierroboter)
-	    \item Zweiwegefahrzeug
+	    \item \gls{Zweiwegefahrzeug}
 	\end{itemize}
 	\item Stationäre Verschubeinrichtung (Seilzuganlage)
 	\item Verschub mittels Muskelkraft von Tieren oder Menschen (z.B. Knippstange, Wagenrücker)
@@ -36,7 +36,7 @@ Eine Ladekante ist meist für Einzelwagen oder kleine Gruppen (bis zu 4 Wagen) g
 Beim Beladen von Wagen mit Gefahrgut ist es üblich, die Weichen vor und hinter der Beladestelle, in der dem Beladegleis abgewandten Position, abzuschließen. Dies soll ein ungewolltes Bewegen der Wagen verhindern. Diese Weichen werden vom Verlader erst nach Beenden der Verladearbeiten wieder geöffnet.\par
 Wagen können grundsätzlich rangiert oder verschoben werden. Findet die Wagenbewegung mit \gls{Lokrangierfuehrer} (\acrshort{LRF}) und Lok statt, wird rangiert. Verschoben werden die Wagen wenn die Wagenbewegung ohne Lok und Lokrangierführer stattfindet.\par
 Rangiert wird wenn möglich ohne Luftkupplung und entsprechend auch ohne \gls{Bremsprobe}. Ob Rangieren ohne Luftkupplung möglich ist, hängt von der Lokomotive, der Last, der Achsanzahl der zu rangierenden Wagen und der Neigung des Ladegleises ab. Muss aufgrund dieser Eigenschaften mit Luft gefahren werden, ist auch eine vereinfachte \gls{Bremsprobe} notwendig. Häufig findet diese Rangierfahrt in der Bremsstellung G statt.\par
-Im Allgemeinen werden einzelne Wagen oder kleinere Wagengruppen für nur wenige Meter verschoben. Dies kann zum Beispiel mit einem Zweiwegefahrzeug auf LKW-Basis stattfinden. Hier verschiebt ein angelernter und unterwiesener Verlademitarbeiter mit einem zusätzlichen Sicherheitsposten die Wagen\footnote{Der Verlademitarbeiter wird vom \gls{Eisenbahnbetriebsleiter} (\acrshort{EBL}) angelernt und unterwiesen.}.
+Im Allgemeinen werden einzelne Wagen oder kleinere Wagengruppen für nur wenige Meter verschoben. Dies kann zum Beispiel mit einem \gls{Zweiwegefahrzeug} auf LKW-Basis stattfinden. Hier verschiebt ein angelernter und unterwiesener Verlademitarbeiter mit einem zusätzlichen Sicherheitsposten die Wagen\footnote{Der Verlademitarbeiter wird vom \gls{Eisenbahnbetriebsleiter} (\acrshort{EBL}) angelernt und unterwiesen.}.
 \subsubsection{Transportdokumente}\label{sec:Transdoc}
 Im LKW-Bereich entstehen bereits Lösungen zur papierlosen Transportabwicklung einschließlich der Behandlung von Gefahrgutdokumenten. Bei Bahntransporten herrscht die klassische Methode der Übergabe von Frachtdokumenten an das \acrshort{EVU} vor. Oft werden diese aber auch direkt elektronisch übergeben. Dann sind sie später digital verfügbar. Ausgenommen sind Gefahrgutscheine, diese werden immer in Papierform mitgeführt.\par
 Auch die Wagen werden -- vor allem im Einzelwagenverkehr -- noch "`bezettelt"'\footnote{Siehe dazu auch VDV-Schrift 758 - Prüfen von Güterwagen im Eisenbahnbetrieb}. Diese Zettel sind Vereinfachungen des Frachtbriefes, die direkt auf dem Wagen mitgeführt werden. Auf diesen steht im Allgemeinen, aus was die Ladung besteht, woher diese kommt und wohin sie geht. Weitere Besonderheiten werden hier ebenfalls vermerkt.
@@ -45,12 +45,12 @@ Auch die Wagen werden -- vor allem im Einzelwagenverkehr -- noch "`bezettelt"'\f
 \subsection{Abholen im Gleisanschluss}
 Die Abholung von Wagen erfolgt entweder durch das \acrshort{EVU} unmittelbar an der Ladestelle oder, wenn lokale Rangierhilfsmittel zur Verfügung stehen,von einem Übergabegleis im Werksgelände. Die Bedienung des Anschlusses ist in der Regel Teil eines Umlaufs, in dem mehrere Anschlüsse nacheinander bedient werden.
 \subsubsection{Luft- und mechanische Kupplung}\label{sec:LuftumechKup}
-Der oder die Wagen stehen im festgelegten Zustand zur Abholung bereit. Die Luftbremse ist gewöhnlich außer Funktion, der Reserveluftbehälter ist leer. Nach dem Ansetzen der Lok bzw. des aktuell letzten Wagens der Rangierabteilung ist manuell zu kuppeln. Der Lokführer oder Rangierbegleiter "`taucht"' dazu unter den Puffern durch und verbindet zunächst manuell die Schraubenkupplung. Danach wird die Hauptluftleitung gekuppelt und die Absperrhähne der \acrshort{HL} geöffnet. %prüfen
+Der oder die Wagen stehen im festgelegten Zustand zur Abholung bereit. Die Luftbremse ist gewöhnlich außer Funktion, der Reserveluftbehälter ist leer. Nach dem Ansetzen der Lok bzw. des aktuell letzten Wagens der Rangierabteilung ist manuell zu kuppeln. Der Lokführer oder Rangierbegleiter betritt den Berner Raum und verbindet zunächst manuell die Schraubenkupplung. Danach wird die Hauptluftleitung gekuppelt und die Absperrhähne der \acrshort{HL} geöffnet. %prüfen
 \subsubsection{(Vereinfachte) Bremsprobe}\label{sec:vBremsprobe}
 Im Anschluss erfolgt eine (vereinfachte) \gls{Bremsprobe}. Dazu wird zunächst am letzten Wagen der gelöst-Zustand überprüft, dann der \acrshort{HL}-Druck abgesenkt und das Führerbremsventil abgesperrt. Die Bremsen müssen anlegen.\par
 Im Anschluss wird zur Durchgängigkeitsprüfung wieder die Fahrstellung eingenommen und das \acrshort{HL}-Absperrventil des letzten Wagen für mindestens 15 Sekunden geöffnet. Die Bremsen müssen anlegen und wieder lösen\footnote{Siehe dazu auch RIL 915 - Bremsen im Betrieb bedienen und prüfen}.
 \subsubsection{Technische Wagenbehandlung}\label{sec:tWb}
-Vor Beginn der Rangier-/\gls{Sperrfahrt} ist eine technische Wagenbehandlung (\acrshort{twb}) der Stufe 1 %(siehe dazu auch Anhang \ref{sec:ATWb}) 
+Vor Beginn der Rangier-/\gls{Sperrfahrt} ist eine \gls{technische Wagenbehandlung} (\acrshort{twb}) der Stufe 1 %(siehe dazu auch Anhang \ref{sec:ATWb}) 
 durchzuführen\footnote{Siehe dazu auch RIL 936 - Technische Wagenbehandlung im Betrieb (Güterwagen)}. 
 \subsubsection{Zustellfahrt}\label{sec:Zustellfahrt}
 %Erfolgt die Zustellfahrt über die freie Strecke, ist das Streckengleis durch das Stellwerk für \gls{Zugfahrt}en zu sperren.\par
@@ -64,13 +64,13 @@ Satellitenbahnhöfe sind Bahnhöfe, in denen im Einzelwagenverkehr \gls{Zugfahrt
 \subsubsection{Rangiervorgänge im Umsetzbetrieb}\label{sec:Rangierfahrt}
 Knotenbahnhöfe können über \gls{Ablaufberg}e verfügen. In der Regel ist dies aber nicht der Fall und die Rangiervorgänge finden im so genannten Umsetzbetrieb statt. Dabei werden jeweils Wagengruppen angekuppelt (je nach Lok ist die Kupplung der Luft meist nicht notwendig) und durch eine Sägefahrt in ein anderes Gleis versetzt und dort gekuppelt. Das Stellen der Weichen für diese Vorgänge erfolgt meist vom Stellwerk des Bahnhofs aus oder durch eine \gls{EOW}\footnote{Elektrisch ortsgestellte Weichen}-Anlage.
 \subsubsection{Übergabe der Wagen}\label{sec:UEdWagen}
-Wie bei der Abholung aus dem Gleis muss auch vor der Abfahrt des aus Übergaben zusammengestellten Zuges eine \gls{Bremsprobe} und eine technische Wagenbehandlung durchgeführt werden. Außerdem sind erneut Bremsgewicht und Bremshunderstel zu berechnen. Bei jeder Zugzusammenstellung sind Papiere zu prüfen und zu übergeben.
+Wie bei der Abholung aus dem Gleis muss auch vor der Abfahrt des aus Übergaben zusammengestellten Zuges eine \gls{Bremsprobe} und eine \gls{technische Wagenbehandlung} durchgeführt werden. Außerdem sind erneut Bremsgewicht und Bremshunderstel zu berechnen. Bei jeder Zugzusammenstellung sind Papiere zu prüfen und zu übergeben.
 
 \subsection{Fahrt zum Knotenbahnhof des Zielbereichs über einen oder mehrere Rangierbahnhöfe}
 \subsubsection{Rangiervorgänge im Knotenbahnhof}\label{sec:RangKnoten}
 Ab dem \gls{Knotenbahnhof} sind die weiteren Fahrten/Umstellvorgänge wie folgt charakterisiert:
 \begin{itemize}
-    \item Züge haben idealerweise die volle Länge von 700 m
+    \item Züge haben idealerweise die volle Länge von 740 m
     \item Zugumstellungen erfolgen in den großen Rangierbahnhöfen
 \end{itemize}
 Wie bei einem Postverteilsystem haben die Rangierbahnhöfe die Aufgabe, hereinkommende Züge aufzulösen und die Wagen auf neue Züge umzustellen, die sie ihrem Ziel näher bringen. Dieser Abschnitt des Einzelwagenverkehrs ist hochautomatisiert und \mbox{-produktiv}. Dennoch verbleiben auch hier große Automatisierungslücken. 
@@ -98,9 +98,9 @@ Nach dem Schließen des Richtungsgleises für weitere Abläufe werden die Wagen 
     \item Luftleitungen kuppeln, \acrshort{HL}-Absperrhähne öffnen
     \item \acrshort{HL}-Absperrhahn am (neuen) \gls{Zugschluss} schließen, Zugschlusstafel stecken
     \item Bremsberechnung (Zuggewicht, Bremsgewicht, Bremseigenschaften der Lok)
-    \item Bremsstellungswechsel je nach Bremsart der folgenden \gls{Zugfahrt}
+    \item Bremsstellungswechsel je nach \gls{Bremsart} der folgenden \gls{Zugfahrt}
     \item Volle \gls{Bremsprobe}, in der Regel mittels stationärer \gls{Bremsprobeanlage}
-    \item Technische Wagenbehandlung, Stufe 3
+    \item \gls{technische Wagenbehandlung}, Stufe 3
 \end{enumerate}
 \subsubsection{Nachordnung}\label{sec:Nachordnung}
 Falls die örtlichen Verhältnisse in den Zielgleisanschlüssen und die Reihenfolge von deren Bedienung bekannt sind, erfolgt noch eine Nachordnung der Wagen nach Empfängern durch einen erneuten Berglauf oder in einer Nachordnungsgruppe. Dieses ist effizienter als manuelle Umstellvorgänge mittels Sägefahrten in Knoten oder Satellitenbahnhöfen.

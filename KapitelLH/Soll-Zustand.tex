@@ -3,15 +3,18 @@
 In diesem Kapitel findet die Beschreibung des Soll-Zustandes gleichzeitig %Gleichzeitig findet die 
 mit der Beschreibung der Anforderungen statt. Diese bestehen immer aus einer Anforderungsnummer und einem Anforderungstext sowie eventuell dazugehörigen Notizen.\par
 %Die Anforderungen ergeben den Sollzustand.
-
+Das Erkennen von Anforderungen ist auch Teil des Forschungsinhaltes des Projektes, so dass diese Auflistung keinen Anspruch auf Vollständigkeit hat.
 \subsection{Allgemeines}
 Für alle Aspekte ist eine spätere Zulassung des System zu berücksichtigen. Dem entsprechend ist auf eine Beachtung der folgenden Normen zu achten. Labormuster und \gls{Demonstrator} sind aber als Prototyp zu sehen, sodass bei einzelnen Prototypenentwicklungen auch davon abgewichen werden kann. \par
 Alle Komponenten sind schwingungsarm unterzubringen. Dies soll, für den Demonstrator, die Möglichkeit geben auch Komponenten, die nicht aus dem Bahnbereich stammen, verwenden zu können.
 \begin{feat}
-Der Güterwagen muss alle Anforderungen an einen konventionellen Gü- terwagen ebenfalls erfüllen.
+Der \gls{Gueterwagen} muss alle Anforderungen an einen konventionellen Gü- terwagen ebenfalls erfüllen.
 \end{feat}
 \begin{feat}
-Die \gls{40-Komponenten} auf dem \gls{Demonstrator} müssen vor Zugfahrten voll- ständig abschaltbar sein.
+Die \gls{40-Komponenten} auf dem \gls{Demonstrator} müssen vollständig abschaltbar sein.
+\end{feat}
+\begin{feat}
+Die \gls{40-Komponenten} im \gls{Demonstrator} sind entweder selbst nach Schutzklasse IP 68 ausgerüstet oder danach zu schützen.
 \end{feat}
 \begin{feat}
 Die \gls{40-Komponenten} auf dem \gls{Demonstrator} müssen vollständig nachrüst- bar sein.
@@ -20,7 +23,7 @@ Die \gls{40-Komponenten} auf dem \gls{Demonstrator} müssen vollständig nachrü
 Für Zulassungen ist die CSM-VO - Verordnung (EG) Nr. 402/2013 anzuwenden.
 \end{feat}
 \begin{feat}
-Die \acrshort{DIN} \acrshort{EN} 50155:2018 Bahnanwendungen - Elektronische Einrichtungen auf Schienenfahrzeugen ist anzuwenden
+Die \acrshort{DIN} \acrshort{EN} 50155:2018 Bahnanwendungen - Elektronische Einrichtungen auf Schienenfahrzeugen ist - soweit anwendbar - anzuwenden.
 \end{feat}
 \begin{feat}
 Die \acrshort{DIN} \acrshort{EN} 61373:2011-04 Bahnanwendungen - Betriebsmittel von Bahnfahrzeugen - Prüfungen für Schwingen und Schocken ist anzuwenden.
@@ -29,7 +32,7 @@ Die \acrshort{DIN} \acrshort{EN} 61373:2011-04 Bahnanwendungen - Betriebsmittel 
 Die Technische Richtlinie zur EMV Verträglichkeit TR-EMV ist anzuwenden.
 \end{feat}
 \begin{feat}
-Die \acrshort{DIN} \acrshort{EN} 45545 Brandschutz in Schienenfahrzeugen ist anzuwenden
+Die TSI ist für Brandschutz in Schienenfahrzeugen ist anzuwenden.
 \end{feat}
 \begin{rem}[zu Anf. 6-8]
 Möglich wäre beispielsweise eine schwingungsarme Metallbox, die sowohl die EMV- als auch die Brandschutzrichtlinien erfüllt.
@@ -46,38 +49,38 @@ Die Energieversorgung des Bordnetzes erfolgt mittels Systembatterie. Diese wird 
 
 \subsubsection{Spannungsversorgung}
 \begin{feat}
-Die Nennspannung des Systems ist mit 24 V vorzusehen
+Die Nennspannung des Systems ist mit 24 VDC vorzusehen
 \end{feat}
-\begin{rem}[zu Anf. 9]
+\begin{rem}[zu Anf. 10]
 Aufgrund der Prototypenentwicklung in diesem Projekt erscheint eine 24 V-Spannungsversorgung für dieses Projekt sinnvoll. Sowohl werden alle Grenzen der Berührspannungen im Kleinspannungsbereich eingehalten, als auch gibt es bereits sehr viele Produkte auf dieser Spannungsebene. Namentlich genannt die SPS, aber auch diverse Sensoren und Aktoren.
 \end{rem}
 \subsubsection{Batterie}
 %Gepuffert werden soll das System durch eine Batterie. Diese Batterie soll genügend Leistung liefern um sämtliche Daten-, Kommunikations- und Aktorsteuerungsprozesse speisen zu können. Außerdem soll sie genügend Energie für den Erprobungsbetrieb bieten.\par
 %Die Batterie soll mittels Ladegerät von 230 V nachladbar sein, aber auch eine Schnittstelle für einen Achsdeckelgenerator bieten. Zum Aufladen wird dieser wahrscheinlich nicht geeignet sein, da keine entsprechenden Umlaufzyklen während der Testphase möglich sind. Die Batterie ist in einem Einschubkasten so anzubringen, dass sie von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist.\par
 \begin{feat}
-Es ist eine Systembatterie vorzusehen.
+Es ist eine \gls{Systembatterie} vorzusehen.
 \end{feat}
-\begin{rem}[zu Anf. 10]
+\begin{rem}[zu Anf. 10]1
 Die Batterie soll genügend Leistung, Spannung und Energie für sämtliche Daten-, Kommunikations- und Aktorprozesse liefern.
 \end{rem}
-\begin{rem}[zu Anf. 10]
+\begin{rem}[zu Anf. 11]
 Die Batterie soll genügend Leistung, Spannung und Energie für den Erprobungsbetrieb haben.
 \end{rem}
 \begin{feat}
 Für die Batterie ist ein Batteriekasten vorzusehen. 
 \end{feat}
-\begin{rem} [zu Anf. 11]
-Das Fach ist so anzubringen, dass es von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist und eine möglichst einfache Wartbarkeit ermöglicht.
+\begin{rem} [zu Anf. 12]
+Das Fach ist so anzubringen, dass es von außen zugänglich, aber auch vor Schotterflug und ähnlichem während einer Fahrt geschützt ist und eine möglichst einfache Wartbarkeit ermöglicht.
 \end{rem}
-\begin{rem} [zu Anf. 11]
+\begin{rem} [zu Anf. 12]
 Zusätzlich muss die Befestigung des Kastens sicher und stoßgeschützt sein.
 \end{rem}
 
 \subsubsection{Externe Versorgung}
 \begin{feat}
-Es sind folgende externe Versorgungsmöglichkeiten vorzusehen:
+Es sind folgende externe Versorgungsmöglichkeiten für die \gls{Systembatterie} vorzusehen:
 \begin{itemize}
-    \item 100 - 240 V - Netzspannung mit Anpassungselektronik / Gleichsetzsteller
+    \item 100 - 240 VAC - Netzspannung mit Anpassungselektronik / Gleichsetzsteller
     \item Achsdeckelgenerator mit Anpassungselektronik
     \item Weitere
 \end{itemize}
@@ -96,79 +99,63 @@ Die Daten- und Stromleitungen sind geschützt in Stahlrohren zu verlegen.
 
 \subsection{Sensoren und Aktoren}
 \begin{feat}
-Zustand und Verstellbefehl für Sensoren und Aktoren sind auf unab- hängigen Kanälen zu übertragen.
+Sämtliche sicherheitskritische Informationen sind zweikanalig zu übertragen.
 \end{feat}
+\begin{feat}
+Die Zustände aller Notbedienelemente sind zurückzumelden.
+\end{feat}
+
 \subsubsection{Pneumatische Bremse}
 \paragraph{G/P-Umstellung}
 \begin{feat}
-Eine elektrisch gesteuerte Einstellung der Bremsstellung jedes Wagens ist möglich.
+Eine elektrisch gesteuerte Einstellung der Bremsstellung jedes Wagens ist vorzusehen.
 \end{feat}
-\begin{rem} [zu Anf. 17]
+\begin{rem} [zu Anf. 19]
 Dafür werden die Bremsstellungen G und P unterstützt.
-\end{rem}
-\begin{rem} [zu Anf. 17]
-Die Bremsstellung ist sowohl für jeden einzelnen Wagen, als auch für Wagengruppen zugleich, einzustellen.
 \end{rem}
 
 \paragraph{Lösen der Bremse}
 \begin{feat}
-Das elektrisch gesteuerte Lösen des Lösezuges ist möglich.
+Eine elektronische Betätigung des Lösezuges ist vorzusehen.
 \end{feat}
-\begin{rem}[zu Anf. 18]
+\begin{rem}[zu Anf. 20]
 Das bedeutet, die A-Kammer ist elektrisch gesteuert zu entlüften.
-\end{rem}
-\begin{rem}[zu Anf. 18]
-Die Funktion darf nur außerhalb des \gls{Zugverband}es bei entlüfteter Hauptluftleitung möglich sein.
 \end{rem}
 
 \paragraph{Lastwechsel}
 \begin{feat}
-Es ist ein automatischer \gls{Lastwechsel} möglich.
+Falls erforderlich ist eine elektrische Einstellung des Beladungszustandes vorzusehen.
 \end{feat}
-\begin{rem}[zu Anf. 19]
-Dieser darf nur im Stand möglich sein.
-\end{rem}
 
 \paragraph{Abschalten der Bremse}
 \begin{feat}
-Ein Abschalten der kompletten Bremse bleibt möglich
+Ein elektrisches Abschalten der kompletten Bremse ist vorgesehen.
 \end{feat}
 
 \paragraph{Aktoren in der Hauptluftleitung}
 \begin{feat}
-Es sind Aktoren in der \acrshort{HL} vorzusehen, die entsprechende bistabile Endabsperrhähne auf elektrische Betätigung hin verschließen oder öffnen können.
+Die \acrshort{HL}-Endabsperrhähne sind durch elektrische Endabsperrhähne auszuführen. Diese sind bistabil und mit elektrisch betätigbarer Aktorik versehen. Zusätzlich verfügen sie über eine Notfbetätigungsmöglichkeit.
+\end{feat}
+
+\paragraph{C-Druck}
+\begin{feat}
+Der C-Druck ist in geeigneter Weise zu messen.
 \end{feat}
 
 \subsubsection{Feststellbremse}
 \begin{feat}
-Es ist eine automatische Feststellbremse vorzusehen.
+Es ist eine elektronische Feststellbremse vorzusehen.
 \end{feat}
-\begin{feat}
+\begin{rem}[zu Anf. 25]
 Wechselwirkungen zwischen Feststellbremse und pneumatischer Bremse sind beim Anlegen und Lösen zu berücksichtigen.
-\end{feat}
-\begin{rem}[zu Anf. 23]
-Die Feststellbremse darf nur im Stillstand und wenn die HL leer ist angesteuert werden.
 \end{rem}
-\begin{feat}
-Es ist für eine Stillstandsüberwachung zu sorgen
-\end{feat}
-%\begin{rem}[zu Anf. 20]
-%Die Stillstandsüberwachung wird für die Nutzung der Feststellbremse benötigt.
-%\end{rem}
 
 \paragraph{Außenanzeige}
 \begin{feat}
-Es ist für eine geeignete Anzeige der Endabsperrhähne, Bremsstellung, \gls{Lastwechsel} und der Feststellbremse zu sorgen.
+Es sind geeignete Anzeigen für Endabsperrhähne, Bremsstellung, \gls{Lastwechsel} und der Feststellbremse zu sorgen vorzusehen. Diese sind als sichere Anzeigen auszuführen.
 \end{feat}
-\begin{rem}[zu Anf. 25]
-Diese ist zweikanalig auszuführen.
-\begin{itemize}
-    \item passiver Kanal: pneumatisch - Anzeige farblich
-    \item aktiver Kanal: digital - Anzeige bspw. e-Paper
-\end{itemize}
-\end{rem}
 \begin{feat}
-Die digitale Anzeige muss auch im stromlosen Zustand eine Zustandsanzeige bieten
+Es ist für geeignete passive, mechanische Anzeigen zu sorgen.
 \end{feat}
 
 \subsubsection{Condition Monitoring}
@@ -181,53 +168,46 @@ Für das Condition Monitoring werden folgende Sensoren benötigt:
         \item Zur Überwachung von: Stößen, Lagerzuständen und Flachstellen
     \end{itemize}
     \item Laufleistung / Radumdrehung
-    \item .
+    %\item 
 \end{itemize}
 \end{feat}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\subsubsection{Sonstige Sensoren}
+\subsubsection{Weitere Sensoren}
 \begin{feat}
-Weitere Benötigte Sensoren:
+Weitere Benötigte Sensoren für den Forschungsbetrieb sind:
 \begin{itemize}
-    \item 
+    \item Drucksensoren in der \acrshort{HL} an strategischen Stellen
+    \item Drucksensor R-Behälter
+    \item Ladezustandsmessung der Batterie
+    \item Lade- und Entladestrom
 \end{itemize}
+Diese sind vorzusehen.
 \end{feat}
-\end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \subsection{Fahrzeugsteuerung und -kommunikation}
+\subsection{Fahrzeugsteuerung und -kommunikation}
 Die Wagen kommunizieren untereinander. Eine gebildete Wagengruppe ist nach außen wie ein Wagen zu behandeln. Jeder Wagen in dieser Wagengruppe kann Informationen über jeden Wagen der Wagengruppe herausgeben.\par
 Jede Funktion des Wagens wird durch ein Befehl der Steuerung veranlasst. Es gibt verschiedene Möglichkeiten der Initialisierung von Befehlen.\par
-Grundsätzlich gibt es vier Möglichkeiten der Datenübertragung:
+Grundsätzlich gibt es vier Kommunikationskanäle:
 \begin{itemize}
     \item Kommunikation innerhalb des Wagens
     \item Kommunikation zwischen den Wagen
     \item Kommunikation im Nahbereich
     \item Kommunikation im Fernbereich
 \end{itemize}
-Damit eine sichere Datenhaltung und -übertragung möglich ist, wird die in Abbildung \ref{fig:Rechnerarchitektur} gezeigte Rechnerarchitektur vorgeschlagen.\par
-\begin{figure}[ht]
-    \centering
-    \input{Bilder/Rechnerarchitektur.tex}
-    \caption{Vorgeschlagene Rechnerarchitektur für sichere und nicht sichere Funktionen und Daten des Güterwagen 4.0}
-    \label{fig:Rechnerarchitektur}
-\end{figure}
-Im oberen Teil der Rechnerarchitektur ist der sicherheitskritische Bereich zu sehen. %Dieser ist (auf Dauer, wahrscheinlich) zulassungspflichtig. 
-Dieser besteht aus zwei Rechnern, die für eine Zweikanaligkeit sorgen, einem Speicher,  für alle notwendigen Daten und einem Zwischenspeicher für die Bedienung.\par
-Im unteren Teil ist der nicht sicherheitskritische Bereich. Dieser ist einkanalig ausgeführt. Dieser besteht aus dem Nahbereichsfunk und dem GSM-Modul als Fernbereichsfunk.\par
-Angedeutet sind der Bediener, dessen Schnittstelle der Nahbereichsfunk darstellt, das GSM-Modul, die Schnittstelle zur Cloud und die Sensoren, Aktoren und Kommunikationseinheiten im Wagen.\par
-Die beiden Rechner tauschen sich gegenseitig rückkopplungsfrei aus (gestrichelte graue Linie) und geben ihre Befehle (rote Pfeile nach außen) zweikanalig an Sensoren, Aktoren und die Kommunikationseinheiten im Wagen weiter. Die zurückkommenden Informationen (rote Pfeile zu Rechner 1 und Rechner 2) werden von den Rechnern verarbeitet und im Speicher (rote Pfeile zum Speicher) gesichert.\par
-Befehle aus der Nahbereichsschnittstelle werden vom Bediener gegeben (gepunktete Linie zum Nahbereichsfunk) und im Zwischenspeicher (nur im Stillstand) an die Rechner weiter gegeben (dünne rote Linien) und dort verarbeitet. Wird der Befehl zur Unzeit oder während der Bewegung gegeben, verfällt er. Er wird nicht weiter zwischen gespeichert und später verarbeitet.\par
-Alle notwendigen verarbeiteten Daten und Informationen werden im Speicher gespeichert (rote Pfeile zum Speicher) und dort entweder an den Nahbereichsfunk weitergegeben oder mit etwas Zeitverzug (und nur im Stillstand) über das GSM-Modul in der Cloud aktualisiert. Von dort aus sind sie für Cloud und Bediener einzusehen.\par
 
 \subsubsection{Datenhaltung und -übertragung}
 \begin{feat}
 Alle Steuerbefehle müssen sicher und zuverlässig übertragen werden
 \end{feat}
 \begin{feat}
-Die Reichweite soll für jeden Zweck ausreichend sein, aber von außen nicht stör- oder abhörbar.
+Sicherheitskritische und sicherheitsunkritische Funktionen und Anwendungen sind zu trennen.
+\end{feat}
+\begin{feat}
+Die Reichweite soll für jeden Zweck ausreichend sein.%, aber von außen nicht stör- oder abhörbar.
+\end{feat}
+\begin{feat}
+Die Daten sollen auf geeignete Weise verschlüsselt und vor Missbrauch nach aktuellem Stand der Technik geschützt sein.
+Das IT-System ist für die entsprechenden Anwendungszwecke ausreichend sicher auszulegen.
 \end{feat}
 \begin{feat}
 Die Bandbreite soll für jede Kommunikationsart ausreichend sein.
@@ -237,21 +217,15 @@ Die Bandbreite soll für jede Kommunikationsart ausreichend sein.
 \begin{feat}
 Innerhalb des Wagenkastens werden alle Daten vorzugsweise kabelgebunden transportiert. 
 \end{feat}
-\begin{feat}
-Die Kommunikation findet über einen \textbf{Zugbus o.ä.} statt.
-\end{feat}
-\begin{feat}
-Die Informationen laufen alle im Bordrechner zusammen
-\end{feat}
 
 \paragraph{Kommunikation zwischen den Wagen}
 \begin{feat}
-Die Kommunikation zwischen den Wagen findet vorzugsweise über in der Nähe der Puffer statt.
+Die Kommunikation zwischen den Wagen findet vorzugsweise in der Nähe der Puffer statt.
 \end{feat}
 \begin{feat}
 Für eine Übertragung zum nächsten Wagen sind kurze Funkstrecken oder Kabel (nach UIC 568) vorzusehen.
 \end{feat}
-\begin{rem}[zu Anf. 35]
+\begin{rem}[zu Anf. 37]
 Kurze Funkstrecken können über
 \begin{itemize}
     \item WLAN (60GHz),
@@ -264,10 +238,7 @@ realisiert werden.
 
 \paragraph{Kommunikation im Nahbereich}
 \begin{feat}
-Eine Kommunikation des Wagens / der Wagengruppe zum Bediener ist innerhalb vom Nahbereichsfunk möglich.
-\end{feat}
-\begin{feat}
-Eine Kommunikation des Wagens / der Wagengruppe zum Bediener ist nur im Stillstand möglich.
+Eine Kommunikation zwischen Wagen / Wagengruppe und Bediener ist innerhalb vom drahtlosen Netzwerk möglich.
 \end{feat}
 
 \paragraph{Kommunikation im Fernbereich}
@@ -275,23 +246,23 @@ Eine Kommunikation des Wagens / der Wagengruppe zum Bediener ist nur im Stillsta
 Eine Kommunikation mit der Cloud ist zum Beispiel über den Mobilfunk möglich
 \end{feat}
 \begin{feat}
-Die Kommunikation muss Rückstandsfrei sein. Es darf nur eine Leseberechtigung seitens der Cloud gewährt werden.
+Die Kommunikation muss rückwirkungsfrei sein. Es darf nur eine Leseberechtigung seitens der Cloud gewährt werden.
 \end{feat}
 
 \subsubsection{Autorisierung}
 \begin{feat}
-Es ist Sicherzustellen, dass Bediener berechntigt sind.
+Es ist sicherzustellen, dass Bediener berechtigt sind.
 \end{feat}
-\begin{rem} [zu Anf. 40]
-Es sind verschiedene Autorisierungsstufen vorzusehen. Jede Gruppe braucht eine ausreichende Zugriffsmöglichkeit auf benötigte Daten.
-Autorisierungsstufen können sein:
+\begin{rem} [zu Anf. 41]
+Es sind verschiedene Autorisierungsstufen vorzusehen. Jede Gruppe braucht eine ausreichende Zugriffsmöglichkeit auf benötigte Daten.\\
+Autorisierungsstufen können zum Beispiel sein:
 \begin{itemize}
     \item Stufe 1: Rangierpersonal in den Einfahrgruppen der Rangierbahnhöfe
     \item Stufe 2: Wagenmeister in Ausfahrgruppen
     \item Stufe 3: Notfallmanager auf freier Stecke
 \end{itemize}
 \end{rem}
-\begin{rem} [zu Anf. 40]
+\begin{rem} [zu Anf. 41]
 Verschiedene Daten sollen nur in gewissen Geofencing-Bereichen abrufbar und veränderbar sein.
 \end{rem}
 
@@ -306,7 +277,7 @@ Der Bordrechner verfügt über genug Rechenleistung für die Verarbeitung sämtl
 Der Bordrechner verfügt über genug Speicher für die Speicherung aller notwendigen Daten.
 \end{feat}
 \begin{feat}
-Sichere und nicht sichere Funktionen und ihre Daten sind physikalisch getrennt zu verarbeiten und zu speichern.
+Sichere und nicht sichere Funktionen und ihre Daten sind - sofern technisch möglich - physikalisch getrennt zu verarbeiten und zu speichern.
 \end{feat}
 
 \subsubsection{Pneumatische Bremse}
@@ -318,6 +289,14 @@ Folgende Regelungen gelten für die Bremsstellung:
     \item Der Wagen soll abgeschaltete Bremsen selbstständig melden.
 \end{itemize}
 \end{feat}
+\begin{rem} [zu Anf. 46]
+Die Bremsstellung ist sowohl für jeden einzelnen Wagen, als auch für Wagengruppen zugleich, einzustellen.
+\end{rem}
+
+\paragraph{Lösen der Bremse}
+\begin{feat}
+Das Lösen der Bremse darf nur außerhalb des \gls{Zugverband}es bei entlüfteter Hauptluftleitung möglich sein.
+\end{feat}
 
 \paragraph{Lastwechsel}
 \begin{feat}
@@ -327,8 +306,17 @@ Folgende Regel gilt für die \gls{Lastwechsel}einstellung:
     \item über eine automatische \gls{Lastwechsel}einstellung verfügen
 \end{itemize}
 \end{feat}
+\begin{feat}
+Die Einstellung des Lastwechsels darf nur im Stand möglich sein.
+\end{feat}
 
 \paragraph{Aktorsteuerung in der Hauptluftleitung}
+\begin{feat}
+Die Position der Hähne ist sicherzustellen.
+\end{feat}
+\begin{feat}
+Die Hähne müssen je nach Betriebsart in der richtigen Stellung stehen.
+\end{feat}
 \begin{feat}
 Hier ist folgende Regelung für die Aktorsteuerung der Endabsperrhähne in der \acrshort{HL} vorzusehen:
 \begin{itemize}
@@ -336,11 +324,20 @@ Hier ist folgende Regelung für die Aktorsteuerung der Endabsperrhähne in der \
     \item Ist der Güterwagen nicht luftgekuppelt, so ist das Ventil in der \acrshort{HL} im Normalzustand auf der Seite geschlossen.
 \end{itemize}
 \end{feat}
-\begin{rem} [zu Anf. 47]
+\begin{rem}[zu Anf. 52]
+Wie die dazugehörigen Informationen bereit gestellt werden, ist noch unklar und soll erforscht werden.
+\end{rem}
+\begin{rem}[zu Anf. 52]
 Weitere manuelle Steuerungen, beispielsweise für Ablaufberge oder manuelle Bremsproben sind vorzusehen.
 \end{rem}
 
 \subsubsection{Feststellbremse}
+\begin{feat}
+Die Feststellbremse ist vom Bordrechner zu steuern.
+\end{feat}
+\begin{feat}
+Die Feststellbremse muss die Betriebszustände berücksichtigen und sicherfe Zustände gewährleisten.
+\end{feat}
 \begin{feat}
 Folgende Regelung gilt für die Feststellbremse:
 \begin{itemize}
@@ -348,9 +345,13 @@ Folgende Regelung gilt für die Feststellbremse:
     \item Die Feststellbremse ist angezogen, wenn der Wagen nicht luftgekuppelt ist.
 \end{itemize}
 \end{feat}
-\begin{rem} [zu Anf. 48]
+\begin{rem} [zu Anf. 55]
 Weitere manuelle Steuerungen sind mittels Endgerät oder \newline Schalter am Wagen schnell und sicher zu ermöglichen.
 \end{rem}
+\begin{feat}
+Die Feststellbremse darf nur im Stillstand und wenn die HL leer ist, ansteuerbar sein.
+\end{feat}
+
 
 \subsubsection{Bremsprobe und Bremsberechnung}
 \paragraph{Bremsprobe}
@@ -363,13 +364,13 @@ Folgende Regelungen gelten für die Bremsprobe:
     \item Der Wagen soll den Druckverlauf im Reservebehälter angeben können
     \item Der Wagen soll den Druckverlauf in der \acrshort{HL} angeben
     \item Der Wagen soll den C-Druckverlauf angeben
-    \item DEr wagen soll den A-Druckverlauf angeben
+    \item Der Wagen soll den A-Druckverlauf angeben
 \end{itemize}
 \end{feat}
 \begin{feat}
 Eine vom Rechner gesteuerte automatische Bremsprobe ist möglich.
 \end{feat}
-\begin{rem} [zu Anf. 50] 
+\begin{rem} [zu Anf. 58] 
 Der Rechner gibt die Bremshunderstel für die gegebene Konfiguration des \gls{Zugverband}es an.
 %%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
@@ -385,13 +386,17 @@ Diese hat sich für folgende Fahrten zu unterscheiden:
 \end{rem}
 
 \paragraph{Technische Wagenbehandlung}
-%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
 \begin{feat}
-So weit eine technische Wagenbehandlung aktor- und sensorgeführt möglich ist, soll diese integriert werden.
+So weit eine \gls{technische Wagenbehandlung} aktor- und sensorgeführt möglich ist, soll diese integriert werden.
 \end{feat}
 \begin{feat}
-Folgende Regelungen gelten für die technische Wagenbehandlung:
+Es soll geprüft werden welche Schritte der Zugborbereitung durch die automatisierte \gls{technische Wagenbehandlung}  unterstützt werden können.
+\end{feat}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
+\begin{feat}
+Folgende Regelungen gelten für die \gls{technische Wagenbehandlung}:
 \begin{itemize}
     \item Hier muss was hin
 \end{itemize}
@@ -400,6 +405,9 @@ Folgende Regelungen gelten für die technische Wagenbehandlung:
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \paragraph{Bremsberechnung}
+\begin{feat}
+So weit eine Bremsberechnung aktor- und sensorgeführt möglich ist, soll diese integriert werden. Wie weit dies möglich ist, soll im Rahmen des Projektes geprüft werden
+\end{feat}
 %\begin{feat}Eine automatische Bremsberechnung anhand des Wagenzuges und der Lok ist möglich. \end{feat}
 %\begin{rem} [zu Anf. 30]
 %Die Regelungen zur Bremsberechung sind:
@@ -444,27 +452,16 @@ Auf dem Wagen soll ein elektronischer Frachtbrief digital vorhanden und abrufbar
 \end{feat}
 
 \subsection{Diagnosefunktion}
-Noch was zu Prognose und Bezug auf KI - wissensbasierte Systeme, neuronale Netze, Verknüpfung von Systemen
+Die Diagnosefunktionen sind Teil der Forschung. Der Wagen soll mit Hilfe von wissensbasierten Diagnosen die Zugvorbereitung unterstützen. In wie weit das möglich ist, soll im Projekt untersucht werden. 
 \begin{feat}
 Alle für eine vorausschauende Wartung notwendigen Sensoren sollen eingebaut und überwacht werden.
 \end{feat}
-%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\begin{rem} [zu Anf. 56]
-Beispiele dafür sind:
-\begin{itemize}
-    \item Lagertemperaturüberwachung
-    \item Stoßüberwachung
-    \item Laufleistung
-    \item Drehkugelpfanne am Drehgestell
-    \item Bremsbelagüberwachung
-    \item Lagerzustände
-    \item Flachstellen
-    \item Entgleisungssicherheit aufgrund von Beladung
-\end{itemize}
+\begin{feat}
+Für eine Prognose der Sicherheit der Lastzyklen sind Lade- und Entladestrom zu messen und auszuwerten
+\end{feat}
+\begin{rem}
+Sollten die gesammelten Daten der \gls{Demonstrator}en nicht ausreichend sein, so sind Daten zu simulieren.
 \end{rem}
-\end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{feat}
 Diese Informationen soll der Wagen über sich speichern und abrufbar bereithalten.
 \end{feat}

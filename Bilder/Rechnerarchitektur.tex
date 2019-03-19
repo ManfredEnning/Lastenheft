@@ -42,6 +42,8 @@
 \draw[wagon, dash dot] (-5, 7) -- ( -5, -3.7) -- (5, -3.7) -- (5, 7) -- (-5, 7);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% sicherheitskritischer Bereich
+%Beschriftung
+\node[gray] (Beschriftung) at (5.5, 3.5) {Schicht 1};
 %Rechner 
 \path[class1, fill=class1!50] (-1,5) rectangle +(2.5,1.5) node[pos = 0.5] (R1) {Rechner 1};
 \path[class1, fill=class1!50] (-1,1) rectangle +(2.5,1.5) node[pos = 0.5] (R2) {Rechner 2};
@@ -58,9 +60,10 @@
 \path[class1, thin] (-2., 1.5) -- (-1, 1.5) {}; %Zwischenspeicher - R2
 
 %Wagen
-\node[gray] (SAK1) at (-7, 3.7) {Sensoren};
-\node[gray] (SAK2) at (-7, 3.2) {Aktoren};
-\node[gray] (SAK3) at (-7, 4.2) {Kommunikation};
+\node[gray] (SAK1) at (-7, 3.5) {Sensoren};
+\node[gray] (SAK2) at (-7, 3.0) {Aktoren};
+\node[gray] (SAK3) at (-7, 4.0) {Kommunikation};
+\node[gray] (SAK4) at (-7, 4.5) {NAchbarwagen};
 
 %Speicher
 \path[class1, fill=class1!50] (3, 1.15) ellipse (1.1 and 0.6);
@@ -74,6 +77,8 @@
 \path[wagon] (-5,0) -- (5,0) {};
 \path[wagon] (-5,0.05) -- (5,0.05) {};
 %%%%%%%%%%%%%%%%%%%%%%%%% nicht sicherheitskrischer Bereich
+%Beschriftung
+\node[gray] (Beschriftung) at (5.5, -1.5) {Schicht 2};
 %GSM-Modul
 \path[class4, fill=class4!50] (0.8, -3) rectangle +(3,1.5) node[pos = 0.5] (GSM) {GSM-Modul};
 \draw[->, class4, dotted] (2., -3) to (2., -5);

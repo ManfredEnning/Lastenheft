@@ -1,7 +1,7 @@
 \section{Beschreibung des Gesamtsystems}
 %In diesem Kapitel wird das Gesamtsystem beispielhaft an einem Wagen erläutert. \par
 Der neue intelligente Güterwagen soll in Zukunft selbst wissen, was wann mit ihm gemacht wurde, wo er war und welche Wartungszyklen wie eingehalten wurden. Ebenso soll auch eine Überwachung des aktuellen Zustandes und Rückschlüsse auf die Zukunft mittels Sensoren zur vorausschauenden Instandhaltung möglich sein.\par
-Des Weiteren  soll er physisch bei der Zugvorbereitung helfen. Erst nur durch aktive Unterstützung bei der Feststellbremse, sodass keine Hemmschuhe benötigt werden, verstellen der Bremsart, automatisches Durchführen einer Bremsprobe oder Hilfe bei Zugtrennungen. Später aber auch durch ein gewisses Maß an selbstständigem Rangiervermögen.\par
+Des Weiteren  soll er physisch bei der Zugvorbereitung helfen. Erst nur durch aktive Unterstützung bei der Feststellbremse, sodass keine Hemmschuhe benötigt werden, verstellen der \gls{Bremsart}, automatisches Durchführen einer Bremsprobe oder Hilfe bei Zugtrennungen. Später aber auch durch ein gewisses Maß an selbstständigem Rangiervermögen.\par
 Ebenfalls geplant ist eine digitale Unterstützung bei der Zugvorbereitung geplant. Hier sind vor allem Unterstützungen im Bereich automatische Bremsberechung und Bremsprobe, aber auch bei der Zugzusammenstellung geplant.\par
 Dafür werden einerseits Sensoren und Aktoren am Wagen angebracht, andererseits auch eine Stromversorgung und ein Bordrechner mit Betriebssystem.\par
 Diese Punkte sorgen ebenso für mehr Effizienz in der Zugvorbereitung, nicht nur im Einzelwagenverkehr, auch im Bereich der Ganzzüge und dem Kombinierten Verkehr, die in den Betriebsstätten ebenfalls alleine oder in kleinen Wagengruppen vorbereitet werden, als auch bieten sie angenehmere Arbeitsplätze, bessere Überwachung der Wagen und kosteneffizientere Instandhaltung durch genauere Wartungsintervalle.\par
@@ -19,7 +19,7 @@ Die Batterie (Kapitel \ref{sec:Batterie}) speist wiederum sämtliche Aktoren, Se
 \subsubsection{Bremse 4.0}
 Die Bremse des Güterwagen 4.0 bietet folgende Funktionen:
 \begin{itemize}
-    \item TSI-konformes Steuerventil mit automatischer Lastabbremsung und den Bremsarten G und P (Kapitel \ref{sec:Bremsart}
+    \item TSI-konformes Steuerventil mit automatischer Lastabbremsung und den \gls{Bremsart}en G und P (Kapitel \ref{sec:Bremsart}
     \item Fernbetätigte Endabsperrhähne (Kapitel \ref{sec:Endabsperrhahn})
     \item Fernbetätigung verschiedener Bremsfunktionen  (Kapitel \ref{sec:Bremsart})
     \begin{itemize}
@@ -35,11 +35,11 @@ Die Bremse des Güterwagen 4.0 bietet folgende Funktionen:
 
 \subsubsection{Intelligente Vernetzung}
 Der Güterwagen 4.0 ist als 'intelligenter' Wagen im Sinne der Industrie 4.0 im Schienenverkehr geplant. Dafür benötigt er, neben der Energieversorgung und der teilautomatisierten Bremse, auch einen Bordrechner, der diese 'Intelligenz' liefert.\par
-Auf diesem Rechner soll als Betriebssystem das sogenannte 'WagonOS' installiert sein. Dieses bietet als Open Source-System ein offenes Betriebssystem mit vielen Ausbau- möglichkeiten. Das WagonOS bietet den Nutzern des Güterwagen 4.0  diesen auf genau die benötigten Anwendungsfälle zu Optimieren und sogar die Möglichkeit eigene Applikationen zu erstellen.\par
+Auf diesem Rechner soll als Betriebssystem das sogenannte '\gls{WagonOS}' installiert sein. Dieses bietet als Open Source-System ein offenes Betriebssystem mit vielen Ausbau- möglichkeiten. Das \gls{WagonOS} bietet den Nutzern des Güterwagen 4.0  diesen auf genau die benötigten Anwendungsfälle zu Optimieren und sogar die Möglichkeit eigene Applikationen zu erstellen.\par
 Des Weiteren liegen auf dieser Speichereinheit dezentral alle für die Zugbildung und Instandhaltung wichtigen Informationen über den Wagen. Dazu gehören bauartspezifische Parameter wie Gewicht, Länge, Achszahl, maximal Zuladung und Höchstgeschwindigkeit genauso wie wagenspezifische Informationen wie Besitzer, Laufleistung, Informationen aus den Sensoren, letzte Wartungen und nächste Instandhaltungszyklen.\par
 Diese Informationen liegen ebenso als 'Digitaler Zwilling' in einer Cloud. Bei Verbindung des Wagens zum Internet und Änderung der Informationen auf dem Wagen wird dieser Zwilling regelmäßig aktualisiert.\par
 Im Verband mit anderen Wagen verhält sich der Güterwagen 4.0 'sozial' und teilt alle notwendigen Informationen über sich mit den anderen Wagen und der Lok als gleichberechtigte Partner. Durch die Verbindung von Wagen zu Wagen ist keine durchgehende Internetverbindung notwendig. Die Informationen können lokal ausgetauscht und später synchronisiert werden.\par
-Im Projekt umgesetzt werden soll davon eine reduzierte Form des WagonOS. Eine Entwicklung des vollständigen Betriebssystems findet nicht im Rahmen dieses Projektes statt.\par
+Im Projekt umgesetzt werden soll davon eine reduzierte Form des \gls{WagonOS}. Eine Entwicklung des vollständigen Betriebssystems findet nicht im Rahmen dieses Projektes statt.\par
 Diese reduzierte Form des Betriebssystems soll eine Speicherung und Auswertung aller relevanter Daten auf dem Bordrechner ermöglichen. Eine weitere Datenspeicherung als 'Digitaler Zwilling' findet in der Cloud statt.
 
 
@@ -64,7 +64,7 @@ Diese Punkte werden in folgenden Unterkapiteln einzeln beleuchtet. Nach einer Be
 
 \subsection{Virtueller Güterwagen 4.0}
 Für eine, wie die bereits beschriebene, intelligente Vernetzung der Güterwagen wird nicht nur ein physischer Güterwagen mit Sensoren und Aktoren sowie deren Auswertung benötigt, sondern auch eine Kommunikationsmöglichkeit. Für diese wird eine virtuelle Entsprechung des Güterwagens benötigt: der virtuelle Güterwagen 4.0.\par
-Jeder Güterwagen 4.0 besitzt einen 'Digitalen Zwilling'. In ihm werden alle Zustände und Aktorstellungen gespeichert. Siehe dazu auch \ref{sec:dKomp}. Für die Speicherung der Daten und Kommunikation mit anderen Wagen wird das bereits angesprochene Betriebssystem 'WagonOS' benötigt.\par
+Jeder Güterwagen 4.0 besitzt einen 'Digitalen Zwilling'. In ihm werden alle Zustände und Aktorstellungen gespeichert. Siehe dazu auch \ref{sec:dKomp}. Für die Speicherung der Daten und Kommunikation mit anderen Wagen wird das bereits angesprochene Betriebssystem '\gls{WagonOS}' benötigt.\par
 Die Architektur dieser offenen Güterwagen-Software stützt sich auf folgende Punkte:
 \begin{itemize}
     \item Internettechnologien

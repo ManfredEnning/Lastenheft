@@ -1,5 +1,5 @@
 \subsection{Realisierung Datenkommunikation}\label{sec:dKomp}
-In diesem Kapitel geht es um die Ausführung der Datenkommunikation. Es teilt sich auf in die Teile Hardware und Software und ist zugehörig zum Arbeitspaket 5 - Datenkommunikation; genauer AP 5a: Entwicklung eines Hardware- und Software-Konzepts für die Kommunikation und behandelt die Ausführung der notwendigen Daten und deren Kommunikationsmöglichkeiten in Hard- und Software.\par
+In diesem Kapitel geht es um die Ausführung der Datenkommunikation. Es teilt sich auf in die Teile Hardware und Software und ist zugehörig zum Arbeitspaket 5 - Datenkommunikation; genauer AP 5a: Entwicklung eines Hardware- und Software-Konzepts für die Kommunikation und behandelt die Ausführung der notwendigen Daten und deren Kommunikationsmöglichkeiten in Hard- und Software.  Auch die Rechnerarchitektur wird hier beschrieben.\par
 Die entsprechenden Hardwarekomponenten sind in Abbildung \ref{fig:dKomp} in violett farblich markiert.
 \begin{figure}[hbt]
     \centering
@@ -27,6 +27,22 @@ Der Funk über die mittlere Distanz soll vorallem für eine Migration zur Verfü
 Bei einer Vollausrüstung von Wagen mit Kommunikation von Wagen zu Wagen über Funk und innerhalb der Wagen über Ethernet ist diese Kommunikation kaum störbar. Hier bietet der Güterwagen auch volles Potential für Zugautomatisierungen inklusive Zugtaufe, Bremsprobe und ep-Bremsen. Sogar ETCS Level 3 kann möglich sein.\par
 Aber auch bei nur einer Teilausrüstung der Wagen kann eine Nutzentfaltung durch Digitalisierung von Prozessen an der Ladestelle stattfinden. Eine Automatisierung ist dann in Verbindung mit stationärer Technik im Betrieb möglich.\par
 Die Vernetzung zur Lok kann mittels eines Dongles an der UIC 556-Schnittstelle über das Wire-Train-Bus-Gateway stattfinden.\par
+
+Damit eine sichere Datenhaltung und -übertragung möglich ist, wird die in Abbildung \ref{fig:Rechnerarchitektur} gezeigte Rechnerarchitektur vorgeschlagen.\par
+\begin{figure}[ht]
+    \centering
+    \input{Bilder/Rechnerarchitektur.tex}
+    \caption{Vorgeschlagene Rechnerarchitektur für sichere und nicht sichere Funktionen und Daten des Güterwagen 4.0}
+    \label{fig:Rechnerarchitektur}
+\end{figure}
+Im oberen Teil der Rechnerarchitektur ist der sicherheitskritische Bereich zu sehen. %Dieser ist (auf Dauer, wahrscheinlich) zulassungspflichtig. 
+Dieser besteht aus zwei Rechnern, die für eine Zweikanaligkeit sorgen, einem Speicher,  für alle notwendigen Daten und einem Zwischenspeicher für die Bedienung.\par
+Im unteren Teil ist der nicht sicherheitskritische Bereich. Dieser ist einkanalig ausgeführt. Dieser besteht aus dem Nahbereichsfunk und dem GSM-Modul als Fernbereichsfunk.\par
+Angedeutet sind der Bediener, dessen Schnittstelle der Nahbereichsfunk darstellt, das GSM-Modul, die Schnittstelle zur Cloud und die Sensoren, Aktoren und Kommunikationseinheiten im Wagen.\par
+Die beiden Rechner tauschen sich gegenseitig rückkopplungsfrei aus (gestrichelte graue Linie) und geben ihre Befehle (rote Pfeile nach außen) zweikanalig an Sensoren, Aktoren und die Kommunikationseinheiten im Wagen weiter. Die zurückkommenden Informationen (rote Pfeile zu Rechner 1 und Rechner 2) werden von den Rechnern verarbeitet und im Speicher (rote Pfeile zum Speicher) gesichert.\par
+Befehle aus der Nahbereichsschnittstelle werden vom Bediener gegeben (gepunktete Linie zum Nahbereichsfunk) und im Zwischenspeicher (nur im Stillstand) an die Rechner weiter gegeben (dünne rote Linien) und dort verarbeitet. Wird der Befehl zur Unzeit oder während der Bewegung gegeben, verfällt er. Er wird nicht weiter zwischen gespeichert und später verarbeitet.\par
+Alle notwendigen verarbeiteten Daten und Informationen werden im Speicher gespeichert (rote Pfeile zum Speicher) und dort entweder an den Nahbereichsfunk weitergegeben oder mit etwas Zeitverzug (und nur im Stillstand) über das GSM-Modul in der Cloud aktualisiert. Von dort aus sind sie für Cloud und Bediener einzusehen.%\par
+
 \subsubsection{Hardware}
 An Hardwarekomponenten sind Funkstellen für die Wagenkommunikation geplant.
 \begin{itemize}

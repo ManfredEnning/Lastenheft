@@ -13,21 +13,22 @@ Die einzelnen Komponenten bestehen aus Kombinationen der hier vorgestellten Subs
 \subsubsection{Energieversorgung}
 Die dauerhafte Versorgung des Güterwagens mit Energie stellt ein Novum im Güterver- kehr dar. Vor allem die Nachspeisung der Pufferbatterie durch verschiedene Quellen soll die Akzeptanz erhöhen. In Abbildung \ref{fig:GesSys} ist der Güterwagen 4.0 mit Radsatzgenerator und externer Ladeschnittstelle gezeigt (Kapitel \ref{sec:RSG}). Zusätzlich denkbar sind auch eine Aufladung über die Automatische Kupplung, fest verlegte Kabelstränge von einem Wagen zum nächsten bei fest verbundenen Wagengruppen, Solarpanels oder sogar Brennstoffzellen. %Diese haben je nach Anwendungsfall alle ihre Zielgruppe.
 \par
-Die Batterie (Kapitel \ref{sec:Batterie}) speist wiederum sämtliche Aktoren, Sensoren und die Bordelektronik. Diese Speisung erfolgt sowohl bei der Fahrt zur Aufnahme von Daten der Sensoren sowie der Aktorik der ep-Bremse, als auch bei Stillstand. Hier müssen Lademanagement und Betriebssystem (Kapitel \ref{sec:Lademanagment}) dafür sorgen, dass alle notwendigen Prozesse weiterlaufen, die Anderen aber heruntergefahren werden, oder die Aktualisierung von Daten seltener erfolgt.
+Die Batterie (Kapitel \ref{sec:Batterie}) speist wiederum sämtliche Aktoren, Sensoren und die Bordelektronik. Diese Speisung erfolgt sowohl bei der Fahrt zur Aufnahme von Daten der Sensoren sowie der Aktorik der \gls{ep-Bremsen}, als auch bei Stillstand. Hier müssen Lademanagement und Betriebssystem (Kapitel \ref{sec:Lademanagment}) dafür sorgen, dass alle notwendigen Prozesse weiterlaufen, die Anderen aber heruntergefahren werden, oder die Aktualisierung von Daten seltener erfolgt.
 
 
 \subsubsection{Bremse 4.0}
 Die Bremse des Güterwagen 4.0 bietet folgende Funktionen:
 \begin{itemize}
-    \item TSI-konformes Steuerventil mit automatischer Lastabbremsung und den \gls{Bremsart}en G und P (Kapitel \ref{sec:Bremsart}
+    \item TSI-konformes Steuerventil mit den \gls{Bremsart}en G und P (Kapitel \ref{sec:Bremsart})
     \item Fernbetätigte Endabsperrhähne (Kapitel \ref{sec:Endabsperrhahn})
     \item Fernbetätigung verschiedener Bremsfunktionen  (Kapitel \ref{sec:Bremsart})
     \begin{itemize}
         \item Schnelllösen
         \item Bremse aus
-        \item Bremsstellung ändern
+        \item Bremsstellung
         \item Feststellbremse
-        \item ep-Bremse
+        \item \gls{ep-Bremsen}n
+        \item Lastabbremsung
     \end{itemize}
     \item Anzeige des Zustands (drucklos, druckbeaufschlagt) der pneumatischen Kupplung (Kapitel \ref{sec:ZustandKupplung})
     \item Messung des C-Drucks (Kapitel \ref{sec:CDruck})
@@ -35,7 +36,7 @@ Die Bremse des Güterwagen 4.0 bietet folgende Funktionen:
 
 \subsubsection{Intelligente Vernetzung}
 Der Güterwagen 4.0 ist als 'intelligenter' Wagen im Sinne der Industrie 4.0 im Schienenverkehr geplant. Dafür benötigt er, neben der Energieversorgung und der teilautomatisierten Bremse, auch einen Bordrechner, der diese 'Intelligenz' liefert.\par
-Auf diesem Rechner soll als Betriebssystem das sogenannte '\gls{WagonOS}' installiert sein. Dieses bietet als Open Source-System ein offenes Betriebssystem mit vielen Ausbau- möglichkeiten. Das \gls{WagonOS} bietet den Nutzern des Güterwagen 4.0  diesen auf genau die benötigten Anwendungsfälle zu Optimieren und sogar die Möglichkeit eigene Applikationen zu erstellen.\par
+Auf diesem Rechner soll als Betriebssystem das sogenannte '\gls{WagonOS}' installiert sein. Dieses bietet als Open Source-System ein offenes Betriebssystem mit vielen Ausbaumöglichkeiten. Das \gls{WagonOS} bietet den Nutzern des Güterwagen 4.0  diesen auf genau die benötigten Anwendungsfälle zu Optimieren und sogar die Möglichkeit eigene Applikationen zu erstellen.\par
 Des Weiteren liegen auf dieser Speichereinheit dezentral alle für die Zugbildung und Instandhaltung wichtigen Informationen über den Wagen. Dazu gehören bauartspezifische Parameter wie Gewicht, Länge, Achszahl, maximal Zuladung und Höchstgeschwindigkeit genauso wie wagenspezifische Informationen wie Besitzer, Laufleistung, Informationen aus den Sensoren, letzte Wartungen und nächste Instandhaltungszyklen.\par
 Diese Informationen liegen ebenso als 'Digitaler Zwilling' in einer Cloud. Bei Verbindung des Wagens zum Internet und Änderung der Informationen auf dem Wagen wird dieser Zwilling regelmäßig aktualisiert.\par
 Im Verband mit anderen Wagen verhält sich der Güterwagen 4.0 'sozial' und teilt alle notwendigen Informationen über sich mit den anderen Wagen und der Lok als gleichberechtigte Partner. Durch die Verbindung von Wagen zu Wagen ist keine durchgehende Internetverbindung notwendig. Die Informationen können lokal ausgetauscht und später synchronisiert werden.\par

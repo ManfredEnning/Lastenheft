@@ -15,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%% Zeilennummern
 \linenumbers
 
-%\begin{comment}
+\begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lastenheft
 %Deckblatt Beginn
 \pagenumbering{roman}
@@ -35,7 +35,6 @@
 %Verzeichnisse Ende
 %Hauptteil Beginn
 \pagenumbering{arabic}
-    %\section{Einleitung} folgt \newpage
     \input{KapitelLH/Einleitung} \newpage
     \input{KapitelLH/Ist-Zustand} \newpage
     \input{KapitelLH/Abgrenzung.tex} \newpage
@@ -48,9 +47,9 @@
     \appendix
     \input{KapitelLH/Anhang_IDR.tex}\newpage
 %Anhang Ende
-%\end{comment}
+\end{comment}
 
-\begin{comment}
+%\begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pflichtenheft 
 %Deckblatt Beginn
 \pagenumbering{roman}
@@ -85,7 +84,8 @@
 \pagenumbering{Roman}
     \printbibliography[heading=bibintoc, title={Quellenverzeichnis}] \newpage
     \appendix
+    \input{KapitelPH/A_Bremse40.tex}\newpage
     \input{KapitelPH/Anhang_Bremse40.tex}
 %Anhang Ende
-\end{comment}
+%\end{comment}
 \end{document}

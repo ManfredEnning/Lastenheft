@@ -42,7 +42,7 @@ Möglich wäre beispielsweise eine schwingungsarme Metallbox, die sowohl die EMV
 Die Energieversorgung des Bordnetzes erfolgt mittels Systembatterie. Diese wird durch externe Versorgung gespeist. Weil im Rahmen des F\&E-Projekts keine Umläufe mit kalkulierbarem Streckenanteil geplant sind, wird die Batterie in der Regel im Stand mit Hilfe eines Netzgerätes geladen. Der Demonstrator soll darüber hinaus die Möglichkeit der Aufladung durch einen Achsdeckelgenerator beinhalten (Anpassung für unterschiedliche Einspeisespannungen). Siehe dazu auch Abbildung \ref{fig:Soll-EV}. 
 \begin{figure}[htp]
     \centering
-    \input{Bilder/EV.tex}
+    \includegraphics[width=\textwidth]{Bilder/20190706_SkizzeBatterieohneText.png}
     \caption{Beispielhafte Energieversorgung des Güterwagen 4.0}
     \label{fig:Soll-EV}
 \end{figure}
@@ -54,11 +54,23 @@ Die Nennspannung des Systems ist mit 24 VDC vorzusehen
 \begin{rem}[zu Anf. 10]
 Aufgrund der Prototypenentwicklung in diesem Projekt erscheint eine 24 V-Spannungsversorgung für dieses Projekt sinnvoll. Sowohl werden alle Grenzen der Berührspannungen im Kleinspannungsbereich eingehalten, als auch gibt es bereits sehr viele Produkte auf dieser Spannungsebene. Namentlich genannt die SPS, aber auch diverse Sensoren und Aktoren.
 \end{rem}
+
+\subsubsection{Einspeisung}
+\begin{feat}
+Es sind folgende externe Versorgungsmöglichkeiten für die \gls{Systembatterie} vorzusehen:
+\begin{itemize}
+    \item 100 - 240 VAC - Netzspannung mit Anpassungselektronik / Gleichsetzsteller
+    \item Achsdeckelgenerator mit Anpassungselektronik
+    \item Schnittstelle für DC-DC-Versorgung bspw. durch Solarpanels oder AK mit Anpassungselektronik
+%    \item Weitere
+\end{itemize}
+\end{feat}
+
 \subsubsection{Batterie}
 %Gepuffert werden soll das System durch eine Batterie. Diese Batterie soll genügend Leistung liefern um sämtliche Daten-, Kommunikations- und Aktorsteuerungsprozesse speisen zu können. Außerdem soll sie genügend Energie für den Erprobungsbetrieb bieten.\par
 %Die Batterie soll mittels Ladegerät von 230 V nachladbar sein, aber auch eine Schnittstelle für einen Achsdeckelgenerator bieten. Zum Aufladen wird dieser wahrscheinlich nicht geeignet sein, da keine entsprechenden Umlaufzyklen während der Testphase möglich sind. Die Batterie ist in einem Einschubkasten so anzubringen, dass sie von außen zugänglich, aber auch vor Steinschlag und ähnlichem während einer Fahrt geschützt ist.\par
 \begin{feat}
-Es ist eine \gls{Systembatterie} vorzusehen.
+Es ist eine \gls{Systembatterie} mit Batteriemanagementsystem vorzusehen.
 \end{feat}
 \begin{rem}[zu Anf. 10]1
 Die Batterie soll genügend Leistung, Spannung und Energie für sämtliche Daten-, Kommunikations- und Aktorprozesse liefern.
@@ -75,16 +87,6 @@ Das Fach ist so anzubringen, dass es von außen zugänglich, aber auch vor Schot
 \begin{rem} [zu Anf. 12]
 Zusätzlich muss die Befestigung des Kastens sicher und stoßgeschützt sein.
 \end{rem}
-
-\subsubsection{Externe Versorgung}
-\begin{feat}
-Es sind folgende externe Versorgungsmöglichkeiten für die \gls{Systembatterie} vorzusehen:
-\begin{itemize}
-    \item 100 - 240 VAC - Netzspannung mit Anpassungselektronik / Gleichsetzsteller
-    \item Achsdeckelgenerator mit Anpassungselektronik
-    \item Weitere
-\end{itemize}
-\end{feat}
 
 \subsubsection{Anschlusskasten und Leitungen}
 \begin{feat}
@@ -167,8 +169,11 @@ Für das Condition Monitoring werden folgende Sensoren benötigt:
     \begin{itemize}
         \item Zur Überwachung von: Stößen, Lagerzuständen und Flachstellen
     \end{itemize}
-    \item Laufleistung / Radumdrehung
-    %\item 
+    \item Laufleistung / Radumdrehung / Drehzahl
+    \item Gewicht der Ladung
+    \item GPS
+    \item Aktueller Radsatzdurchmesser
+    \item Historie der Bremsvorgänge
 \end{itemize}
 \end{feat}
 
@@ -176,10 +181,11 @@ Für das Condition Monitoring werden folgende Sensoren benötigt:
 \begin{feat}
 Weitere Benötigte Sensoren für den Forschungsbetrieb sind:
 \begin{itemize}
-    \item Drucksensoren in der \acrshort{HL} an strategischen Stellen
-    \item Drucksensor R-Behälter
+    %\item Drucksensoren in der \acrshort{HL} an strategischen Stellen
+    %\item Drucksensor R-Behälter
     \item Ladezustandsmessung der Batterie
     \item Lade- und Entladestrom
+    \item Türschalter für aufgesetzten Container (Schnittstelle Ladung / Wagen)
 \end{itemize}
 Diese sind vorzusehen.
 \end{feat}
